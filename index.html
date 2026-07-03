@@ -2,27 +2,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RRRSHALA — One Stop Centre for Cracking RAS Exam</title>
 <style>
-:root{--ink:#1d2433;--bg:#f4f6fb;--card:#fff;--line:#e4e8f2;--brand:#23252e;--brand2:#454a57;--accent:#e8a020;--accent-d:#c9851a;--good:#1f8a4c;--good-bg:#e7f6ec;--bad:#c0392b;--bad-bg:#fdecec;--muted:#6b7488;}
+:root{--ink:#1d2433;--bg:#f5f4ef;--card:#fff;--line:#e4e8f2;--brand:#23252e;--brand2:#454a57;--accent:#e8a020;--accent-d:#c9851a;--good:#1f8a4c;--good-bg:#e7f6ec;--bad:#c0392b;--bad-bg:#fdecec;--muted:#6b7488;}
 *{box-sizing:border-box}
 body{margin:0;font-family:'Segoe UI',system-ui,'Noto Sans',Arial,sans-serif;background:var(--bg);color:var(--ink)}
 a{color:var(--brand2)}
 .app{display:flex;min-height:100vh}
-.side{width:232px;background:linear-gradient(160deg,#34363f,#212229);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.side{width:262px;background:linear-gradient(160deg,#34363f,#212229);color:#fff;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
 .brand{padding:18px 16px 12px;border-bottom:1px solid rgba(255,255,255,.12)}
 .brand .logo{display:flex;align-items:center;gap:10px}
 .brand .mark{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.25)}
 .brand h1{font-size:16px;margin:0;font-weight:800}
 .brand p{margin:3px 0 0;font-size:10.5px;color:#c9b98a;letter-spacing:.4px;text-transform:uppercase}
-.brandtag{text-align:center;color:#e8c877;font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;font-weight:600;white-space:nowrap}
+.brandtag{text-align:center;color:#e8c877;font-size:8px;letter-spacing:.5px;text-transform:uppercase;margin-top:6px;font-weight:600;white-space:nowrap}
 .nav{padding:10px 8px;display:flex;flex-direction:column;gap:2px;flex:1;overflow-y:auto}
-.nav button{display:flex;align-items:center;gap:11px;background:transparent;border:0;color:#d8d0f0;padding:10px 12px;border-radius:9px;cursor:pointer;font-size:14px;text-align:left;font-weight:600}
+.nav button{display:flex;align-items:center;gap:11px;background:transparent;border:0;color:#cfcabb;padding:10px 12px;border-radius:9px;cursor:pointer;font-size:14px;text-align:left;font-weight:600}
 .nav button .ic{font-size:16px;width:20px;text-align:center}
 .nav button:hover{background:rgba(255,255,255,.08);color:#fff}
 .nav button.active{background:linear-gradient(90deg,var(--accent),var(--accent-d));color:#23252e}
 .nav button.active .badge.free{background:rgba(255,255,255,.35);color:#1d5e36;border-color:transparent}
 .nav button.active .badge.pro{background:rgba(255,255,255,.4);color:#6b4e0c;border-color:transparent}
 /* grouped nav */
-.nav .grphead{justify-content:space-between;color:#efeaff;font-weight:800;text-transform:uppercase;letter-spacing:.4px;font-size:11.5px;margin-top:6px}
+.nav .grphead{justify-content:space-between;color:#ece6d4;font-weight:800;text-transform:uppercase;letter-spacing:.4px;font-size:11.5px;margin-top:6px}
 .nav .grphead .ic{font-size:15px}
 .nav .grphead .car{font-size:11px;transition:transform .2s;opacity:.7}
 .nav .grp.open .grphead .car{transform:rotate(90deg)}
@@ -34,9 +34,9 @@ a{color:var(--brand2)}
 .badge{font-size:9px;font-weight:800;padding:2px 6px;border-radius:20px;letter-spacing:.3px;flex-shrink:0}
 .badge.free{background:rgba(46,158,91,.22);color:#7be0a4;border:1px solid rgba(46,158,91,.5)}
 .badge.pro{background:rgba(212,160,23,.22);color:#f3cf6b;border:1px solid rgba(212,160,23,.55)}
-.badge.soon{background:rgba(255,255,255,.12);color:#cfc7ee;border:1px solid rgba(255,255,255,.22)}
+.badge.soon{background:rgba(255,255,255,.12);color:#d8d0b8;border:1px solid rgba(255,255,255,.22)}
 .nav button.locked{cursor:not-allowed;opacity:.6}
-.nav button.locked:hover{background:transparent;color:#d8d0f0}
+.nav button.locked:hover{background:transparent;color:#cfcabb}
 .card.tile.locked{cursor:not-allowed;opacity:.72}
 .card.tile.locked:hover{transform:none;box-shadow:none}
 /* pro banner + lock */
@@ -57,9 +57,9 @@ a{color:var(--brand2)}
 .h-sec{font-size:14px;font-weight:800;color:var(--brand);text-transform:uppercase;letter-spacing:.5px;margin:0 0 12px}
 .grid{display:grid;gap:14px}
 .g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
-@media(max-width:880px){.g4,.g3,.g2{grid-template-columns:1fr 1fr}.side{width:60px}.brand h1,.brand p,.brandtag,.nav button span.tx,.side .foot{display:none}.nav button{justify-content:center}}
+@media(max-width:880px){.g4,.g3,.g2{grid-template-columns:1fr 1fr}.side{width:60px}.brand h1,.brand p,.brandtag,.nav button span.tx,.side .foot{display:none}.nav button{justify-content:center}}@media(max-width:600px){.g4,.g3,.g2{grid-template-columns:1fr}.side{width:52px}.content{padding:11px}.hero{padding:20px 15px}.hero h2{font-size:20px}.hero p{font-size:13px}.stat{padding:12px}.stat .n{font-size:22px}.vt{font-size:15px}.card{padding:13px}.h-sec{font-size:13px}.edtwo{flex-direction:column}}
 .stat{background:linear-gradient(160deg,#fff,#faf7ef);border:1px solid var(--line);border-radius:13px;padding:16px;text-align:center}
-.stat .n{font-size:27px;font-weight:800;color:var(--brand2)}
+.stat .n{font-size:27px;font-weight:800;color:#c9851a}
 .stat .l{font-size:11.5px;color:var(--muted);margin-top:2px;font-weight:600;text-transform:uppercase}
 .hero{background:linear-gradient(125deg,#23252e,#454a57 70%,#5a5f6e);color:#fff;border-radius:16px;padding:30px 26px;margin-bottom:18px}
 .hero h2{margin:0 0 8px;font-size:25px}.hero p{margin:0;color:#e0d8f5;max-width:640px;line-height:1.55}
@@ -569,14 +569,12 @@ function renderEdit(){const el=document.getElementById('view-edit');
   host.innerHTML=(e.items||[]).map(function(d,i){return (d.blocks||d.intro_en)?edCard(d,i):edLegacy(d);}).join('')})}
 function renderNews(){const el=document.getElementById('view-news');
  el.innerHTML=`<div class="card"><h2 class="h-sec">${LANG==='hi'?'आज की ख़बरें — समाचार-पत्र आधारित':"Today's News — from the newspapers"}</h2>
-  <p class="small muted">${LANG==='hi'?'द हिंदू, हिन्दुस्तान, टाइम्स ऑफ इंडिया (जयपुर) व अन्य स्रोतों से तैयार द्विभाषी समाचार सार एवं RPSC-पैटर्न प्रश्न। नीचे कैलेंडर से दिनांक चुनें।':'Bilingual news digest and RPSC-pattern MCQs compiled from The Hindu, Hindustan, TOI (Jaipur) and other sources. Pick a date below.'}</p>
+  <p class="small muted">${LANG==='hi'?'द हिंदू, हिन्दुस्तान, टाइम्स ऑफ इंडिया (जयपुर) व अन्य स्रोतों से तैयार द्विभाषी समाचार सार। नीचे कैलेंडर से दिनांक चुनें।':'Bilingual news digest compiled from The Hindu, Hindustan, TOI (Jaipur) and other sources. Pick a date below.'}</p>
   <div id="newscal" style="margin-top:8px"></div></div><div id="newsbody"></div>`;
  buildCalendar(document.getElementById('newscal'),NEWS_DATES,function(date){const host=document.getElementById('newsbody');if(!host)return;const e=NEWS_BYDATE[date];if(!e){host.innerHTML='';return}
   const dg=(e.digest||[]).map(d=>{const pts=(LANG==='hi'?d.points_hi:d.points_en).map(p=>`<li>${p}</li>`).join('');
     return `<div class="card"><div class="row" style="gap:12px;align-items:flex-start">${imgThumb((d.topic_en||'')+' '+(d.head_en||''),d.img)}<div style="flex:1"><div class="row" style="justify-content:space-between;align-items:flex-start;gap:10px"><b style="flex:1">${LANG==='hi'?d.head_hi:d.head_en}</b><span class="chip">${LANG==='hi'?d.topic_hi:d.topic_en}</span></div><ul style="margin:8px 0 6px 18px;line-height:1.55;font-size:13.5px">${pts}</ul><div class="muted small">${t('src')}: ${d.src}</div></div></div></div>`}).join('');
-  const items=(e.items||[]);
-  const qhead=`${items.length?imgBanner(domTheme(items)):''}<div class="card" style="border-left:4px solid var(--accent)"><div class="row" style="justify-content:space-between"><b>${LANG==='hi'?'समाचार आधारित प्रश्न (RPSC पैटर्न)':'News-based questions (RPSC pattern)'}</b><span class="chip">${items.length} ${t('qs')}</span></div></div>`;
-  host.innerHTML=anchorPlayer(date)+`<div class="card"><b>${LANG==='hi'?'समाचार सार':'News digest'} — ${LANG==='hi'?e.label_hi:e.label_en}</b></div>`+dg+qhead+items.map(q=>qCard(q)).join('')})}
+  host.innerHTML=anchorPlayer(date)+`<div class="card"><b>${LANG==='hi'?'समाचार सार':'News digest'} — ${LANG==='hi'?e.label_hi:e.label_en}</b></div>`+dg})}
 
 /* PRACTICE */
 let qz=[],qi=0,qsc=0;window.__quizActive=false;
