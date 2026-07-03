@@ -184,14 +184,14 @@ img{-webkit-user-drag:none;user-drag:none}
     <div class="sub">
      <button data-v="papers"><span class="lf"><span class="ic">&#128196;</span><span class="tx">Previous Years MCQ</span></span></button>
      <button data-v="dailyquiz"><span class="lf"><span class="ic">&#9889;</span><span class="tx">Daily Quiz</span></span></button>
-     <button data-v="thematic"><span class="lf"><span class="ic">&#129518;</span><span class="tx">Thematic Quiz</span></span><span class="badge pro">PRO</span></button>
      <button data-v="sujas"><span class="lf"><span class="ic">&#128240;</span><span class="tx">Sujas Based Quiz</span></span><span class="badge pro">PRO</span></button>
+     <button data-v="thematic"><span class="lf"><span class="ic">&#129518;</span><span class="tx">Thematic Quiz</span></span><span class="badge pro">PRO</span></button>
      <button data-v="mock"><span class="lf"><span class="ic">&#9201;</span><span class="tx">Mock Test</span></span><span class="badge pro">PRO</span></button>
     </div>
    </div>
 
    <button data-v="mains"><span class="lf"><span class="ic">&#9997;</span><span class="tx">Answer Writing</span></span><span class="badge pro">PRO</span></button>
-   <button data-v="material"><span class="lf"><span class="ic">&#128218;</span><span class="tx">Download Material</span></span></button>
+   <button data-v="material"><span class="lf"><span class="ic">&#128218;</span><span class="tx">Download Material</span></span><span class="badge pro">PRO</span></button>
    <button data-v="interview"><span class="lf"><span class="ic">&#127908;</span><span class="tx">Interview Prep</span></span><span class="badge pro">PRO</span></button>
    <button data-v="video"><span class="lf"><span class="ic">&#127909;</span><span class="tx">Video Lectures</span></span><span class="badge soon">SOON</span></button>
 
@@ -379,7 +379,7 @@ function saveProg(p){try{localStorage.setItem('rrr_prog',JSON.stringify(p))}catc
 function record(id,ok){const p=getProg();p.att=p.att||{};p.att[id]={c:ok?1:0,t:Date.now()};saveProg(p)}
 
 /* nav */
-var __LOCKED={thematic:1,mock:1,mains:1,interview:1,video:1};window.__LOCKED=__LOCKED;document.querySelectorAll('#nav button[data-v]').forEach(function(b){if(__LOCKED[b.dataset.v]){b.classList.add('locked');b.setAttribute('aria-disabled','true');var bd=b.querySelector('.badge');if(bd)bd.innerHTML='&#128274; '+bd.innerHTML;b.onclick=function(e){e.preventDefault();e.stopPropagation();};}else{b.onclick=function(){show(b.dataset.v);};}});
+var __LOCKED={thematic:1,mock:1,mains:1,material:1,interview:1,video:1};window.__LOCKED=__LOCKED;document.querySelectorAll('#nav button[data-v]').forEach(function(b){if(__LOCKED[b.dataset.v]){b.classList.add('locked');b.setAttribute('aria-disabled','true');var bd=b.querySelector('.badge');if(bd)bd.innerHTML='&#128274; '+bd.innerHTML;b.onclick=function(e){e.preventDefault();e.stopPropagation();};}else{b.onclick=function(){show(b.dataset.v);};}});
 document.querySelectorAll('#nav .grphead').forEach(h=>h.onclick=()=>h.parentElement.classList.toggle('open'));
 window.__cur='home';
 function show(v){if(window.__LOCKED&&window.__LOCKED[v])return;window.__cur=v;
@@ -423,7 +423,7 @@ function renderHome(){const p=getProg();const att=p.att?Object.keys(p.att).lengt
   ['mock','⏱️',t('mock'),hi?'पूरा 150-प्रश्न टाइमर टेस्ट।':'Full 150-Q timed mock test.','pro'],
   ['mains','✍️',t('mains'),hi?'उत्तर लेखन अभ्यास व मूल्यांकन।':'Answer-writing practice & evaluation.','pro'],
   ['interview','🎤',t('interview'),hi?'RAS साक्षात्कार हेतु मार्गदर्शन।':'Guidance for the RAS interview.','pro'],
-  ['material','📚',t('material'),hi?'रिपोर्ट व डाउनलोड।':'Reports & downloads.',''],
+  ['material','📚',t('material'),hi?'रिपोर्ट व डाउनलोड।':'Reports & downloads.','pro'],
   ['progress','📊',t('progress'),hi?'सटीकता, कमजोर विषय, गलतियाँ।':'Accuracy, weak themes, mistakes.','']
  ];
  var cards=tiles.map(function(x){var lk=x[4]==='pro';return '<div class="card tile'+(lk?' locked':'')+'"'+(lk?'':' onclick="show(\''+x[0]+'\')"')+'><div class="row" style="justify-content:space-between;align-items:flex-start;gap:8px"><h3 style="margin:0">'+x[1]+' '+x[2]+'</h3>'+(lk?'<span class="badge pro">&#128274; PRO</span>':'')+'</div><p>'+x[3]+'</p></div>';}).join('');
