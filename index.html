@@ -172,9 +172,9 @@ img{-webkit-user-drag:none;user-drag:none}
     <button class="grphead" data-g="ca"><span class="lf"><span class="ic">&#128240;</span><span class="tx">Current Affairs</span></span><span class="car">&#9656;</span></button>
     <div class="sub">
      <button data-v="caraj"><span class="lf"><span class="ic">&#127983;</span><span class="tx">Rajasthan Specific</span></span></button>
-     <button data-v="caind"><span class="lf"><span class="ic">&#127758;</span><span class="tx">India &amp; World</span></span></button>
+     <button data-v="caind" style="display:none"><span class="lf"><span class="ic">&#127758;</span><span class="tx">India &amp; World</span></span></button>
      <button data-v="news"><span class="lf"><span class="ic">&#128478;</span><span class="tx">Today's News</span></span></button>
-     <button data-v="daily"><span class="lf"><span class="ic">&#128197;</span><span class="tx">Daily Digest</span></span></button>
+     <button data-v="daily" style="display:none"><span class="lf"><span class="ic">&#128197;</span><span class="tx">Daily Digest</span></span></button>
      <button data-v="edit"><span class="lf"><span class="ic">&#128173;</span><span class="tx">Editorials &amp; Opinions</span></span></button>
     </div>
    </div>
@@ -416,9 +416,7 @@ function pick(id,k,el){const q=BYID[id];const box=document.getElementById('q-'+i
 function renderHome(){const p=getProg();const att=p.att?Object.keys(p.att).length:0;const hi=LANG==='hi';
  var tiles=[
   ['caraj','📍',t('caraj'),hi?'राजस्थान-केंद्रित समसामयिकी प्रश्न।':'Rajasthan-focused current-affairs MCQs.',''],
-  ['caind','🌐',t('caind'),hi?'राष्ट्रीय व अंतरराष्ट्रीय समसामयिकी।':'National & international current affairs.',''],
   ['news','🗞️',t('news'),hi?'आज के अख़बारों से समाचार सार व ऑडियो बुलेटिन।':"News digest & audio bulletin from today's papers.",''],
-  ['daily','📅',t('daily'),hi?'हर दिन की प्रमुख खबरों पर 5 प्रश्न।':'Five questions a day on key news.',''],
   ['edit','💭',t('edit'),hi?'संपादकीय व विचार — मनन हेतु बिंदु।':'Editorials & opinion — points to ponder.',''],
   ['papers','📄',t('papers'),hi?'2016–2024 के पाँच हल पेपर।':'5 solved papers (2016–2024).',''],
   ['dailyquiz','⚡',t('dailyquiz'),hi?'आज की समसामयिकी से त्वरित क्विज़।':"Quick quiz from today's current affairs.",''],
