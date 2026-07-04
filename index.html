@@ -162,6 +162,8 @@ img{-webkit-user-drag:none;user-drag:none}
 .mmb{border-left:3px solid;padding:5px 11px;margin:7px 0;background:#fff;border-radius:0 8px 8px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .mmbh{font-weight:800;font-size:12.5px}
 .mmbl{font-size:12px;color:#555;line-height:1.5;margin-top:1px}
+.mm-mobile{display:none}
+@media(max-width:759px){.mm-desktop{display:none}.mm-mobile{display:block}}
 @media(max-width:880px){.content{padding:13px 13px 80px}.nav .badge,.nav .car{display:none}.nav .sub button{padding-left:12px}.edpane{min-width:100%}.edcard{padding:13px}.edqbox{padding:11px 12px}.eddata{padding:10px}}
 .sitefoot{text-align:center;padding:16px 12px 24px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:22px}.sitefoot #vcount{color:var(--accent-d);font-weight:800}
 .botnav{display:none}.botsheet{display:none}.botsheet-bg{position:absolute;inset:0;background:rgba(0,0,0,.5)}.botsheet-panel{position:absolute;left:0;right:0;bottom:0;background:#22232b;border-radius:16px 16px 0 0;padding:8px 12px 18px;max-height:72vh;overflow:auto}.botsheet-grip{width:40px;height:4px;background:#4a4d57;border-radius:2px;margin:4px auto 8px}.sh-item{display:flex;justify-content:space-between;align-items:center;color:#e6e2d6;font-size:14.5px;padding:13px 6px;border-bottom:1px solid #33353f;cursor:pointer}.sh-item:active{background:#2b2d36}.sh-item .pro{color:#e8a020;font-size:10px;font-weight:800}
@@ -232,7 +234,7 @@ img{-webkit-user-drag:none;user-drag:none}
    <div id="view-interview" class="view hidden"></div>
    <div id="view-video" class="view hidden"></div>
   </div>
-  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 22:22</span></div>
+  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 22:26</span></div>
  </div>
 </div>
 <nav class="botnav" id="botnav"><button class="botitem on" data-g="home" onclick="botGo('home')"><span class="bi">&#127968;</span><span>Home</span></button><button class="botitem" data-g="ca" onclick="botSheet('ca')"><span class="bi">&#128240;</span><span>Affairs</span></button><button class="botitem" data-g="quiz" onclick="botSheet('quiz')"><span class="bi">&#129504;</span><span>Quiz</span></button><button class="botitem" data-g="progress" onclick="botGo('progress')"><span class="bi">&#128202;</span><span>Progress</span></button><button class="botitem" data-g="more" onclick="botSheet('more')"><span class="bi">&#9776;</span><span>More</span></button></nav><div class="botsheet" id="botsheet"><div class="botsheet-bg" onclick="botClose()"></div><div class="botsheet-panel" id="botsheet-panel"></div></div>
@@ -505,9 +507,11 @@ function edList(arr){return '<ul style="margin:6px 0 6px 18px;line-height:1.6;fo
 function edMindmapFrom(c,nodes){c=c||'';nodes=(nodes||[]).map(function(x){return (typeof x==='string')?{t:x,leaves:[]}:{t:(x.t||''),leaves:(x.leaves||[])};});
  var PAL=[['#3b5bdb','#eef1fe'],['#0c8599','#e2f6f9'],['#9c36b5','#f6e9fb'],['#2f9e44','#e8f7ed'],['#b07d0a','#faf2db'],['#c2255c','#fcebf0'],['#5f3dc4','#ede9fb'],['#1b7a3d','#e6f5ea']];
  function cl(t,m){t=t||'';return t.length>m?t.slice(0,m-1)+'…':t;}
- if((window.innerWidth||1000)<760){var mh='<div class="mmwrap"><div class="mmroot">'+esc(c)+'</div>';
-  nodes.forEach(function(nd,i){var p=PAL[i%PAL.length];mh+='<div class="mmb" style="border-left-color:'+p[0]+'"><span class="mmbh" style="color:'+p[0]+'">'+esc(nd.t)+'</span><div class="mmbl">'+nd.leaves.map(function(l){return esc(l)}).join(' &middot; ')+'</div></div>';});
-  return mh+'</div>';}
+ // stacked layout (shown on narrow screens via CSS) — always built so orientation
+ // changes swap layouts instantly with no re-render / no loss of answer or quiz state
+ var mh='<div class="mmwrap"><div class="mmroot">'+esc(c)+'</div>';
+ nodes.forEach(function(nd,i){var p=PAL[i%PAL.length];mh+='<div class="mmb" style="border-left-color:'+p[0]+'"><span class="mmbh" style="color:'+p[0]+'">'+esc(nd.t)+'</span><div class="mmbl">'+nd.leaves.map(function(l){return esc(l)}).join(' &middot; ')+'</div></div>';});
+ mh+='</div>';
  var n=nodes.length||1;var half=Math.ceil(n/2);var R=[],L=[];for(var i=0;i<n;i++){(i<half?R:L).push(i);}
  var leafH=22,pad=10,bgap=10;
  function bh(i){return Math.max(nodes[i].leaves.length,1)*leafH+pad;}
@@ -530,7 +534,7 @@ function edMindmapFrom(c,nodes){c=c||'';nodes=(nodes||[]).map(function(x){return
  var words=(c||'').split(' ');var ln=[],cur='';for(var wi=0;wi<words.length;wi++){if((cur+' '+words[wi]).trim().length<=11)cur=(cur+' '+words[wi]).trim();else{if(cur)ln.push(cur);cur=words[wi];}}if(cur)ln.push(cur);ln=ln.slice(0,3);
  box+='<rect x="'+Cx+'" y="'+(cyC-24)+'" width="'+Cw+'" height="48" rx="12" fill="url(#emc)"/>';
  var ty=cyC-(ln.length-1)*6-1;ln.forEach(function(t){box+='<text x="'+(Cx+Cw/2)+'" y="'+ty+'" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="700">'+esc(cl(t,12))+'</text>';ty+=12;});
- return s+conn+box+'</svg>';}
+ return '<div class="mm-mobile">'+mh+'</div><div class="mm-desktop">'+s+conn+box+'</svg></div>';}
 function edDebate(b){var lead=b.lead||'for';var favItems=L2(b.for_en,b.for_hi)||[];var agItems=L2(b.against_en,b.against_hi)||[];
  var favHead=(lead==='for')?L2('In favour — in detail','पक्ष में — विस्तार से'):L2('Some merits','कुछ गुण');
  var agHead=(lead==='against')?L2('Concerns — in detail','चिंताएँ — विस्तार से'):L2('Key counterpoints','मुख्य प्रतिवाद');
