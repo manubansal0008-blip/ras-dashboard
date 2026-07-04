@@ -255,7 +255,7 @@ img{-webkit-user-drag:none;user-drag:none}
    <div id="view-interview" class="view hidden"></div>
    <div id="view-video" class="view hidden"></div>
   </div>
-  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 23:39</span><br><span style="opacity:.6;font-size:11px">Privacy-friendly analytics &mdash; no cookies, no IP addresses or personal data stored.</span></div>
+  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 23:51</span><br><span style="opacity:.6;font-size:11px">Privacy-friendly analytics &mdash; no cookies, no IP addresses or personal data stored.</span></div>
  </div>
 </div>
 <nav class="botnav" id="botnav"><button class="botitem on" data-g="home" onclick="botGo('home')"><span class="bi">&#127968;</span><span>Home</span></button><button class="botitem" data-g="ca" onclick="botSheet('ca')"><span class="bi">&#128240;</span><span>Affairs</span></button><button class="botitem" data-g="quiz" onclick="botSheet('quiz')"><span class="bi">&#129504;</span><span>Quiz</span></button><button class="botitem" data-g="progress" onclick="botGo('progress')"><span class="bi">&#128202;</span><span>Progress</span></button><button class="botitem" data-g="more" onclick="botSheet('more')"><span class="bi">&#9776;</span><span>More</span></button></nav><div class="botsheet" id="botsheet"><div class="botsheet-bg" onclick="botClose()"></div><div class="botsheet-panel" id="botsheet-panel"></div></div>
@@ -734,7 +734,7 @@ function rsCard(it){var theme=L2(it.theme_en,it.theme_hi);var h='<div class="car
  h+=(it.mcqs||[]).map(function(q){return qCard(q)}).join('');
  return h+'</div>';}
 function renderCARaj(){var hi=LANG==='hi';var el=document.getElementById('view-caraj');
- el.innerHTML='<div class="card"><h2 class="h-sec">'+t('caraj')+'</h2><p class="small muted">'+(hi?'सुजस ई-बुलेटिन/DIPR आधारित राजस्थान-विशेष विश्लेषण — प्रत्येक विषय पर संक्षिप्त विश्लेषण, तथ्य व बहु-कथन प्रश्न। नीचे दिनांक चुनें।':'Rajasthan-special analysis from the Sujas e-Bulletin/DIPR — a short analysis, key facts and multi-statement questions per topic. Pick a date below.')+'</p><div id="rscal" style="margin-top:8px"></div></div><div id="rsbody"></div>';
+ el.innerHTML='<div class="card"><h2 class="h-sec">'+t('caraj')+'</h2><p class="small muted">'+(hi?'नीचे दिनांक चुनें।':'Pick a date below.')+'</p><div id="rscal" style="margin-top:8px"></div></div><div id="rsbody"></div>';
  var host=document.getElementById('rsbody');
  if(!RAJSPEC.length){host.innerHTML='<div class="card muted small">'+(hi?'शीघ्र ही राजस्थान-विशेष विश्लेषण जोड़ा जाएगा।':'Rajasthan-special analysis will be added soon.')+'</div>';return;}
  buildCalendar(document.getElementById('rscal'),RAJSPEC_DATES,function(date){var e=RAJSPEC_BYDATE[date];if(!host)return;if(!e){host.innerHTML='';return}host.innerHTML=(e.items||[]).map(function(it){return rsCard(it)}).join('')});}
