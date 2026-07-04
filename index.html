@@ -232,7 +232,7 @@ img{-webkit-user-drag:none;user-drag:none}
    <div id="view-interview" class="view hidden"></div>
    <div id="view-video" class="view hidden"></div>
   </div>
-  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 22:00</span></div>
+  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 22:22</span></div>
  </div>
 </div>
 <nav class="botnav" id="botnav"><button class="botitem on" data-g="home" onclick="botGo('home')"><span class="bi">&#127968;</span><span>Home</span></button><button class="botitem" data-g="ca" onclick="botSheet('ca')"><span class="bi">&#128240;</span><span>Affairs</span></button><button class="botitem" data-g="quiz" onclick="botSheet('quiz')"><span class="bi">&#129504;</span><span>Quiz</span></button><button class="botitem" data-g="progress" onclick="botGo('progress')"><span class="bi">&#128202;</span><span>Progress</span></button><button class="botitem" data-g="more" onclick="botSheet('more')"><span class="bi">&#9776;</span><span>More</span></button></nav><div class="botsheet" id="botsheet"><div class="botsheet-bg" onclick="botClose()"></div><div class="botsheet-panel" id="botsheet-panel"></div></div>
@@ -514,7 +514,7 @@ function edMindmapFrom(c,nodes){c=c||'';nodes=(nodes||[]).map(function(x){return
  function sh(a){var s=0;a.forEach(function(i){s+=bh(i)+bgap;});return s?s-bgap:0;}
  var H=Math.max(sh(R),sh(L),120)+28;var cyC=Math.round(H/2);
  var LLx=8,LLw=152,LBx=170,LBw=120,Cx=298,Cw=84,RBx=392,RBw=120,RLx=520,RLw=152;
- var s='<svg width="100%" viewBox="0 0 680 '+H+'" role="img" aria-label="mind map" style="background:#fcfbff;border:1px solid var(--line);border-radius:12px;margin-top:4px;font-family:inherit">';
+ var s='<svg width="680" height="'+H+'" viewBox="0 0 680 '+H+'" preserveAspectRatio="xMidYMid meet" role="img" aria-label="mind map" style="display:block;width:100%;height:auto;max-width:100%;background:#fcfbff;border:1px solid var(--line);border-radius:12px;margin-top:4px;font-family:inherit">';
  s+='<defs><linearGradient id="emc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#454a57"/><stop offset="1" stop-color="#23252e"/></linearGradient></defs>';
  var conn='',box='';
  function side(a,R_){var totH=sh(a);var y=Math.round((H-totH)/2);a.forEach(function(i){var nd=nodes[i];var b=bh(i);var bcy=Math.round(y+b/2);var col=PAL[i%PAL.length];
