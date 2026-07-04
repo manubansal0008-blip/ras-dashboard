@@ -162,8 +162,11 @@ img{-webkit-user-drag:none;user-drag:none}
 .mmb{border-left:3px solid;padding:5px 11px;margin:7px 0;background:#fff;border-radius:0 8px 8px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .mmbh{font-weight:800;font-size:12.5px}
 .mmbl{font-size:12px;color:#555;line-height:1.5;margin-top:1px}
-.mm-mobile{display:none}
-@media(max-width:880px){.mm-desktop{display:none}.mm-mobile{display:block}}
+/* mindmap: reliable stacked layout is the DEFAULT (phones, tablets, small laptops).
+   The SVG radial only appears on true wide desktop, so no mobile/tablet browser can
+   ever hit the fragile inline-SVG sizing. */
+.mm-desktop{display:none}.mm-mobile{display:block}
+@media(min-width:1025px){.mm-desktop{display:block}.mm-mobile{display:none}}
 @media(max-width:880px){.content{padding:13px 13px 80px}.nav .badge,.nav .car{display:none}.nav .sub button{padding-left:12px}.edpane{min-width:100%}.edcard{padding:13px}.edqbox{padding:11px 12px}.eddata{padding:10px}}
 .sitefoot{text-align:center;padding:16px 12px 24px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:22px}.sitefoot #vcount{color:var(--accent-d);font-weight:800}
 .botnav{display:none}.botsheet{display:none}.botsheet-bg{position:absolute;inset:0;background:rgba(0,0,0,.5)}.botsheet-panel{position:absolute;left:0;right:0;bottom:0;background:#22232b;border-radius:16px 16px 0 0;padding:8px 12px 18px;max-height:72vh;overflow:auto}.botsheet-grip{width:40px;height:4px;background:#4a4d57;border-radius:2px;margin:4px auto 8px}.sh-item{display:flex;justify-content:space-between;align-items:center;color:#e6e2d6;font-size:14.5px;padding:13px 6px;border-bottom:1px solid #33353f;cursor:pointer}.sh-item:active{background:#2b2d36}.sh-item .pro{color:#e8a020;font-size:10px;font-weight:800}
@@ -243,7 +246,7 @@ img{-webkit-user-drag:none;user-drag:none}
    <div id="view-interview" class="view hidden"></div>
    <div id="view-video" class="view hidden"></div>
   </div>
-  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 22:51</span></div>
+  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 22:58</span></div>
  </div>
 </div>
 <nav class="botnav" id="botnav"><button class="botitem on" data-g="home" onclick="botGo('home')"><span class="bi">&#127968;</span><span>Home</span></button><button class="botitem" data-g="ca" onclick="botSheet('ca')"><span class="bi">&#128240;</span><span>Affairs</span></button><button class="botitem" data-g="quiz" onclick="botSheet('quiz')"><span class="bi">&#129504;</span><span>Quiz</span></button><button class="botitem" data-g="progress" onclick="botGo('progress')"><span class="bi">&#128202;</span><span>Progress</span></button><button class="botitem" data-g="more" onclick="botSheet('more')"><span class="bi">&#9776;</span><span>More</span></button></nav><div class="botsheet" id="botsheet"><div class="botsheet-bg" onclick="botClose()"></div><div class="botsheet-panel" id="botsheet-panel"></div></div>
