@@ -64,6 +64,12 @@ a{color:var(--brand2)}
 .stat .l{font-size:11.5px;color:var(--muted);margin-top:2px;font-weight:600;text-transform:uppercase}
 .hero{background:linear-gradient(125deg,#23252e,#454a57 70%,#5a5f6e);color:#fff;border-radius:16px;padding:30px 26px;margin-bottom:18px}
 .hero h2{margin:0 0 8px;font-size:25px}.hero p{margin:0;color:#e0d8f5;max-width:640px;line-height:1.55}
+.countdown{display:flex;gap:10px;margin:0 0 16px;flex-wrap:wrap}
+.cd-pill{flex:1;min-width:200px;background:linear-gradient(160deg,#2a2c35,#3b3e49);border:1px solid rgba(232,160,32,.35);border-radius:11px;padding:10px 13px;display:flex;align-items:center;gap:11px}
+.cd-pill .cd-num{font-size:22px;font-weight:800;color:#e8a020;line-height:1;min-width:40px;text-align:center;font-variant-numeric:tabular-nums}
+.cd-pill .cd-exam{font-size:12px;font-weight:700;color:#fff}
+.cd-pill .cd-sub{font-size:10.5px;color:#c7cad3;margin-top:1px}
+@media(max-width:600px){.cd-pill{padding:9px 11px}.cd-pill .cd-num{font-size:20px;min-width:36px}}
 .tile{cursor:pointer;border-left:4px solid var(--accent)}
 .tile:hover{box-shadow:0 8px 20px rgba(40,20,90,.12)}
 .tile h3{margin:0 0 5px;color:var(--brand);font-size:15px}.tile p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.5}
@@ -255,7 +261,7 @@ img{-webkit-user-drag:none;user-drag:none}
    <div id="view-interview" class="view hidden"></div>
    <div id="view-video" class="view hidden"></div>
   </div>
-  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 05 Jul 00:54</span><br><span style="opacity:.6;font-size:11px">Privacy-friendly analytics &mdash; no cookies, no IP addresses or personal data stored.</span></div>
+  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 05 Jul 01:11</span><br><span style="opacity:.6;font-size:11px">Privacy-friendly analytics &mdash; no cookies, no IP addresses or personal data stored.</span></div>
  </div>
 </div>
 <nav class="botnav" id="botnav"><button class="botitem on" data-g="home" onclick="botGo('home')"><span class="bi">&#127968;</span><span>Home</span></button><button class="botitem" data-g="ca" onclick="botSheet('ca')"><span class="bi">&#128240;</span><span>Affairs</span></button><button class="botitem" data-g="quiz" onclick="botSheet('quiz')"><span class="bi">&#129504;</span><span>Quiz</span></button><button class="botitem" data-g="progress" onclick="botGo('progress')"><span class="bi">&#128202;</span><span>Progress</span></button><button class="botitem" data-g="more" onclick="botSheet('more')"><span class="bi">&#9776;</span><span>More</span></button></nav><div class="botsheet" id="botsheet"><div class="botsheet-bg" onclick="botClose()"></div><div class="botsheet-panel" id="botsheet-panel"></div></div>
@@ -466,6 +472,10 @@ function renderHome(){const p=getProg();const att=p.att?Object.keys(p.att).lengt
  var cards=tiles.map(function(x){var lk=x[4]==='pro';return '<div class="card tile'+(lk?' locked':'')+'"'+(lk?'':' onclick="show(\''+x[0]+'\')"')+'><div class="row" style="justify-content:space-between;align-items:flex-start;gap:8px"><h3 style="margin:0">'+x[1]+' '+x[2]+'</h3>'+(lk?'<span class="badge pro">&#128274; PRO</span>':'')+'</div><p>'+x[3]+'</p></div>';}).join('');
  document.getElementById('view-home').innerHTML=`
  <div class="hero"><h2>RRRSHALA — One Stop Centre for Cracking RAS Exam</h2><p>${hi?'आरएएस की सम्पूर्ण तैयारी — समसामयिकी, क्विज़, उत्तर लेखन, साक्षात्कार व (जल्द) वीडियो लेक्चर। नीचे किसी अनुभाग पर टैप करें।':'Complete RAS prep — current affairs, quizzes, answer writing, interview prep, and (soon) video lectures. Tap any section below.'}</p></div>
+ <div class="countdown">
+   <div class="cd-pill"><div class="cd-num">${Math.max(0,Math.ceil((new Date(2026,11,6)-new Date())/864e5))}</div><div><div class="cd-exam">${hi?'आरएएस प्रारंभिक परीक्षा':'RAS Prelims'}</div><div class="cd-sub">${hi?'दिन शेष · 6 दिसम्बर 2026':'days to go · 6 Dec 2026'}</div></div></div>
+   <div class="cd-pill"><div class="cd-num">${Math.max(0,Math.ceil((new Date(2027,4,1)-new Date())/864e5))}</div><div><div class="cd-exam">${hi?'आरएएस मुख्य परीक्षा':'RAS Mains'}</div><div class="cd-sub">${hi?'दिन शेष · 1 मई 2027':'days to go · 1 May 2027'}</div></div></div>
+ </div>
  <div class="grid g3" style="margin-top:16px">`+cards+`</div>`}
 
 /* PAPERS */
