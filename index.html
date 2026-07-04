@@ -159,9 +159,17 @@ img{-webkit-user-drag:none;user-drag:none}
 .eddata{background:#eef5ff;border:1px solid #c6dcf5;border-radius:12px;padding:10px 13px;margin:6px 0}
 .mmwrap{margin-top:4px;border:1px solid var(--line);border-radius:12px;padding:10px;background:#fcfbff}
 .mmroot{background:linear-gradient(135deg,#454a57,#23252e);color:#fff;font-weight:800;padding:8px 12px;border-radius:9px;text-align:center;font-size:13px;margin-bottom:8px}
-.mmb{border-left:3px solid;padding:5px 11px;margin:7px 0;background:#fff;border-radius:0 8px 8px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
-.mmbh{font-weight:800;font-size:12.5px}
-.mmbl{font-size:12px;color:#555;line-height:1.5;margin-top:1px}
+.mmtree{position:relative;margin-top:10px;padding:2px 0}
+.mmtree::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(#cfd3dc,#e3dfd2);transform:translateX(-50%);border-radius:2px}
+.mmbranch{position:relative;display:flex;align-items:center;width:100%;margin:9px 0}
+.mmbranch.mml{justify-content:flex-start}
+.mmbranch.mmr{justify-content:flex-end}
+.mmwire{width:4%;min-width:9px;height:2px;flex:none}
+.mmdot{width:7px;height:7px;border-radius:50%;flex:none;margin:0 -3px;z-index:1;box-shadow:0 0 0 2px #fcfbff}
+.mmnode{position:relative;width:46%;flex:none;border:1px solid var(--line);border-top:3px solid;background:#fff;border-radius:10px;padding:8px 10px 9px;box-shadow:0 1px 4px rgba(0,0,0,.09)}
+.mmbnum{position:absolute;top:-11px;right:8px;width:19px;height:19px;border-radius:50%;color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.mmbh{font-weight:800;font-size:12px;padding-right:15px;line-height:1.25}
+.mmbl{font-size:11px;color:#555;line-height:1.45;margin-top:3px}
 /* mindmap: reliable stacked layout is the DEFAULT (phones, tablets, small laptops).
    The SVG radial only appears on true wide desktop, so no mobile/tablet browser can
    ever hit the fragile inline-SVG sizing. */
@@ -246,7 +254,7 @@ img{-webkit-user-drag:none;user-drag:none}
    <div id="view-interview" class="view hidden"></div>
    <div id="view-video" class="view hidden"></div>
   </div>
-  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 22:58</span></div>
+  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 04 Jul 23:19</span></div>
  </div>
 </div>
 <nav class="botnav" id="botnav"><button class="botitem on" data-g="home" onclick="botGo('home')"><span class="bi">&#127968;</span><span>Home</span></button><button class="botitem" data-g="ca" onclick="botSheet('ca')"><span class="bi">&#128240;</span><span>Affairs</span></button><button class="botitem" data-g="quiz" onclick="botSheet('quiz')"><span class="bi">&#129504;</span><span>Quiz</span></button><button class="botitem" data-g="progress" onclick="botGo('progress')"><span class="bi">&#128202;</span><span>Progress</span></button><button class="botitem" data-g="more" onclick="botSheet('more')"><span class="bi">&#9776;</span><span>More</span></button></nav><div class="botsheet" id="botsheet"><div class="botsheet-bg" onclick="botClose()"></div><div class="botsheet-panel" id="botsheet-panel"></div></div>
@@ -516,9 +524,12 @@ function edMindmapFrom(c,nodes){c=c||'';nodes=(nodes||[]).map(function(x){return
  function cl(t,m){t=t||'';return t.length>m?t.slice(0,m-1)+'…':t;}
  // stacked layout (shown on narrow screens via CSS) — always built so orientation
  // changes swap layouts instantly with no re-render / no loss of answer or quiz state
- var mh='<div class="mmwrap"><div class="mmroot">'+esc(c)+'</div>';
- nodes.forEach(function(nd,i){var p=PAL[i%PAL.length];mh+='<div class="mmb" style="border-left-color:'+p[0]+'"><span class="mmbh" style="color:'+p[0]+'">'+esc(nd.t)+'</span><div class="mmbl">'+nd.leaves.map(function(l){return esc(l)}).join(' &middot; ')+'</div></div>';});
- mh+='</div>';
+ var mh='<div class="mmwrap"><div class="mmroot">'+esc(c)+'</div><div class="mmtree">';
+ nodes.forEach(function(nd,i){var p=PAL[i%PAL.length];var side=(i%2===0)?'mml':'mmr';
+  var node='<div class="mmnode" style="border-top-color:'+p[0]+'"><span class="mmbnum" style="background:'+p[0]+'">'+(i+1)+'</span><div class="mmbh" style="color:'+p[0]+'">'+esc(nd.t)+'</div><div class="mmbl">'+nd.leaves.map(function(l){return esc(l)}).join(' &middot; ')+'</div></div>';
+  var wire='<div class="mmwire" style="background:'+p[0]+'"></div><span class="mmdot" style="background:'+p[0]+'"></span>';
+  mh+='<div class="mmbranch '+side+'">'+(side==='mml'?node+wire:wire+node)+'</div>';});
+ mh+='</div></div>';
  var n=nodes.length||1;var half=Math.ceil(n/2);var R=[],L=[];for(var i=0;i<n;i++){(i<half?R:L).push(i);}
  var leafH=22,pad=10,bgap=10;
  function bh(i){return Math.max(nodes[i].leaves.length,1)*leafH+pad;}
