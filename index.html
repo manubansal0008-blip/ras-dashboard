@@ -255,7 +255,7 @@ img{-webkit-user-drag:none;user-drag:none}
    <div id="view-interview" class="view hidden"></div>
    <div id="view-video" class="view hidden"></div>
   </div>
-  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 05 Jul 00:16</span><br><span style="opacity:.6;font-size:11px">Privacy-friendly analytics &mdash; no cookies, no IP addresses or personal data stored.</span></div>
+  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 05 Jul 00:19</span><br><span style="opacity:.6;font-size:11px">Privacy-friendly analytics &mdash; no cookies, no IP addresses or personal data stored.</span></div>
  </div>
 </div>
 <nav class="botnav" id="botnav"><button class="botitem on" data-g="home" onclick="botGo('home')"><span class="bi">&#127968;</span><span>Home</span></button><button class="botitem" data-g="ca" onclick="botSheet('ca')"><span class="bi">&#128240;</span><span>Affairs</span></button><button class="botitem" data-g="quiz" onclick="botSheet('quiz')"><span class="bi">&#129504;</span><span>Quiz</span></button><button class="botitem" data-g="progress" onclick="botGo('progress')"><span class="bi">&#128202;</span><span>Progress</span></button><button class="botitem" data-g="more" onclick="botSheet('more')"><span class="bi">&#9776;</span><span>More</span></button></nav><div class="botsheet" id="botsheet"><div class="botsheet-bg" onclick="botClose()"></div><div class="botsheet-panel" id="botsheet-panel"></div></div>
@@ -491,7 +491,7 @@ function renderPapers(){const yc=YEARS.map(y=>`<button class="pill ${y===pY?'on'
 /* CURRENT AFFAIRS */
 function renderCA(){const el=document.getElementById('view-ca');
  el.innerHTML=`<div class="card"><h2 class="h-sec">${LANG==='hi'?'राजस्थान समसामयिकी — दिनांकवार':'Rajasthan Current Affairs — by date'}</h2>
-  <p class="small muted">${LANG==='hi'?'सुजस ई-बुलेटिन/DIPR के तथ्यों से तैयार RAS-पैटर्न प्रश्न। कैलेंडर से दिनांक चुनें — चिह्नित दिनांकों पर प्रश्न उपलब्ध हैं।':'RAS-pattern MCQs from Sujas e-Bulletin/DIPR facts. Pick a date from the calendar — highlighted dates have questions.'}</p>
+  <p class="small muted">${LANG==='hi'?'सुजस ई-बुलेटिन/DIPR के तथ्यों से तैयार प्रश्न। कैलेंडर से दिनांक चुनें — चिह्नित दिनांकों पर प्रश्न उपलब्ध हैं।':'MCQs from Sujas e-Bulletin/DIPR facts. Pick a date from the calendar — highlighted dates have questions.'}</p>
   <div id="cacal" style="margin-top:8px"></div></div><div id="caq"></div>`;
  buildCalendar(document.getElementById('cacal'),CA_DATES,function(date){const e=CA_DATES[date];const host=document.getElementById('caq');if(!host)return;
   if(!e){host.innerHTML='';return}const list=e.ids.map(id=>BYID[id]).filter(Boolean);
@@ -730,7 +730,7 @@ function rsCard(it){var theme=L2(it.theme_en,it.theme_hi);var h='<div class="car
  if((L2(it.steps_en,it.steps_hi)||[]).length){h+='<div class="edh">'+L2('Government steps','सरकारी कदम')+'</div>'+edList(L2(it.steps_en,it.steps_hi));}
  if(L2(it.stake_en,it.stake_hi)){h+='<div class="edh">'+L2('Stakeholders','हितधारक')+'</div><p class="edp">'+L2(it.stake_en,it.stake_hi)+'</p>';}
  if(L2(it.relev_en,it.relev_hi)){h+='<div class="edh">'+L2('Why it matters for RAS','RAS हेतु महत्व')+'</div><p class="edp">'+L2(it.relev_en,it.relev_hi)+'</p>';}
- h+='<div class="edh">'+L2('Practice questions (RAS pattern)','अभ्यास प्रश्न (RAS पैटर्न)')+'</div>';
+ h+='<div class="edh">'+L2('Practice questions','अभ्यास प्रश्न')+'</div>';
  h+=(it.mcqs||[]).map(function(q){return qCard(q)}).join('');
  return h+'</div>';}
 function renderCARaj(){var hi=LANG==='hi';var el=document.getElementById('view-caraj');
