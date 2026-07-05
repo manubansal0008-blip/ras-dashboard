@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=794">
+<title>RRRSHALA — Feature Sample Booklet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{background:#888;font-family:'Inter','Noto Sans Devanagari',sans-serif;color:#1d2433}
+.hi{font-family:'Noto Sans Devanagari','Inter',sans-serif}
+.page{position:relative;width:794px;height:1123px;background:#f4f2ec;overflow:hidden;margin:0 auto 22px;page-break-after:always;box-shadow:0 4px 18px rgba(0,0,0,.25)}
+.page.pad{padding:34px 40px}
+.en{display:block} .hi{display:block;color:#4a5568}
+.phead{display:flex;align-items:center;gap:12px;border-bottom:3px solid #e2a12b;padding-bottom:12px;margin-bottom:16px}
+.ph-mark{flex:0 0 auto;line-height:0}
+.ph-tag{font-size:11px;letter-spacing:2px;color:#e2a12b;font-weight:700}
+.ph-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:22px;color:#23252e;line-height:1.15}
+.ph-hi{font-size:15px;color:#6f7788;font-weight:600}
+.lead{font-size:14px;line-height:1.5;color:#404a5c;margin-bottom:14px}
+.lead2{font-size:12.5px;line-height:1.45;color:#6f7788;margin:10px 0}
+.card{background:#fff;border:1px solid #e6e1d5;border-radius:14px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.qcard{margin-bottom:14px}
+.qtop{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.chip{font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.3px}
+.chip-t{background:#eef1f6;color:#3a465a}
+.chip-d{background:#fdeede;color:#b7761a}
+.chip-b{background:#23252e;color:#f6cf6a;margin-left:auto}
+.qtext{font-size:13.5px;line-height:1.5;color:#222b39;margin-bottom:12px}
+.qtext .hi{margin-top:6px;font-size:13px}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;border:1px solid #e6e1d5;border-radius:9px;margin-bottom:7px;font-size:12.5px}
+.opt-correct{border-color:#3ba55d;background:#eef8f1}
+.ol{flex:0 0 22px;height:22px;border-radius:50%;background:#eef1f6;color:#41506a;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:11px}
+.opt-correct .ol{background:#3ba55d;color:#fff}
+.ot{flex:1} .ot .hi{color:#5a6577;font-size:12px}
+.tick{color:#3ba55d;font-weight:800;align-self:center}
+.ansline{font-size:12.5px;margin-top:4px;color:#2f3a4a} .ansline b{color:#2b7a45;font-size:14px}
+.exp{margin-top:11px;background:#faf7ef;border:1px solid #efe6d0;border-left:3px solid #e2a12b;border-radius:8px;padding:10px 12px;font-size:12px;line-height:1.45}
+.exp-h{font-weight:700;color:#23252e;font-size:11px;letter-spacing:.4px;margin-bottom:4px}
+.exp .hi{margin-top:5px}
+.audio{display:flex;align-items:center;gap:14px;background:#23252e;color:#eef;border-radius:14px;padding:14px 18px;margin-top:6px}
+.au-ic{font-size:26px}
+.au-t b{color:#f6cf6a;font-size:14px} .au-t .en{font-size:12px;color:#cfd4e0;margin-top:3px} .au-t .hi{font-size:11.5px;color:#aab2c4}
+.au-bar{margin-left:auto;display:flex;align-items:center;gap:8px;background:#2c2f39;border:1px solid #444;border-radius:20px;padding:6px 12px}
+.play{color:#f6cf6a} .time{font-size:11px;color:#aeb6c6}
+.wave{width:66px;height:14px;background:repeating-linear-gradient(90deg,#f6cf6a 0 2px,transparent 2px 5px);opacity:.7;border-radius:2px}
+.anchor-hero{display:flex;gap:20px;align-items:center;background:linear-gradient(160deg,#22232b,#2f313b);border:1px solid rgba(247,217,119,.28);border-radius:16px;padding:20px 22px;margin-bottom:14px}
+.ah-left{flex:0 0 auto;text-align:center} .ah-ava{line-height:0}
+.ah-badge{margin-top:9px;display:inline-flex;align-items:center;gap:6px;background:#b23b32;color:#fff;font-size:10.5px;font-weight:800;letter-spacing:1.5px;padding:4px 12px;border-radius:20px}
+.ah-badge .dot{width:7px;height:7px;border-radius:50%;background:#ffd0cc}
+.ah-right{flex:1}
+.ah-title{font-family:'Poppins';font-weight:700;font-size:18px;color:#fff} .ah-title span{color:#aab2c4;font-size:12.5px;font-weight:500}
+.ah-date{color:#f0c860;font-size:12px;margin:4px 0 12px}
+.ah-player{display:flex;align-items:center;gap:12px;background:#191a20;border:1px solid #3a3d47;border-radius:24px;padding:9px 14px}
+.ahp-play{width:30px;height:30px;border-radius:50%;background:linear-gradient(180deg,#f6cf6a,#e2a12b);color:#3a2c05;display:flex;align-items:center;justify-content:center;font-size:13px;flex:0 0 auto}
+.ahp-wave{flex:1;height:20px;background:repeating-linear-gradient(90deg,#f6cf6a 0 2px,transparent 2px 6px);opacity:.55;border-radius:2px}
+.ahp-time{font-size:11px;color:#aeb6c6;flex:0 0 auto}
+.ah-voices{display:flex;gap:9px;margin-top:11px;flex-wrap:wrap}
+.vchip{background:rgba(255,255,255,.06);border:1px solid rgba(247,217,119,.22);color:#e7d9a6;font-size:11px;padding:6px 12px;border-radius:20px}
+.an-script{background:#fff;border:1px solid #e6e1d5;border-left:3px solid #e2a12b;border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.ans-h{font-weight:700;color:#e2a12b;font-size:11px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:7px}
+.an-script .en{font-size:12.5px;line-height:1.55;color:#2b3547;font-style:italic}
+.an-script .hi{font-size:12px;line-height:1.55;color:#5a6577;font-style:italic;margin-top:7px}
+.anchor-feats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}
+.afeat{background:#fff;border:1px solid #e6e1d5;border-radius:12px;padding:13px 11px;text-align:center}
+.af-ic{font-size:21px} .afeat b{display:block;font-size:12.5px;color:#23252e;margin-top:5px} .afeat span{font-size:10.5px;color:#6f7788;display:block;margin-top:2px}
+.featgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.feat{display:flex;gap:11px;background:#fff;border:1px solid #e6e1d5;border-radius:12px;padding:13px}
+.fi{font-size:22px} .ft b{font-size:13.5px;color:#23252e} .ft .en{font-size:11.5px;color:#54607a;margin-top:3px;line-height:1.4} .ft .hi{font-size:11px;color:#7a8397;margin-top:2px}
+.how{background:#fff;border:1px solid #e6e1d5;border-radius:12px;padding:15px 18px}
+.how-h{font-weight:700;color:#23252e;margin-bottom:10px;font-size:13px}
+.how-row{display:flex;gap:11px;align-items:center;font-size:12.5px;margin-bottom:8px;color:#3a465a}
+.hn{flex:0 0 24px;height:24px;border-radius:50%;background:#e2a12b;color:#3a2c05;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:12px}
+.ed-intro{margin-bottom:12px}
+.ed-topic{font-family:'Poppins';font-weight:700;color:#23252e;font-size:15px;margin-bottom:6px}
+.ed-topic-hi{color:#6f7788;font-weight:500;font-size:13px}
+.ed-intro .en{font-size:12.5px;line-height:1.5} .ed-intro .hi{font-size:12px;margin-top:6px}
+.ed-key{background:#fff;border:1px solid #e6e1d5;border-radius:12px;padding:13px 16px;margin-bottom:12px}
+.edb-h{font-weight:700;color:#e2a12b;font-size:11px;letter-spacing:.6px;margin-bottom:8px;text-transform:uppercase}
+.numrow{font-size:12px;line-height:1.4;padding:6px 0 6px 16px;border-left:2px solid #e2a12b;margin-bottom:5px;color:#33405a}
+.edb-h2{font-weight:700;color:#23252e;font-size:13.5px;margin:6px 0 9px}
+.deb{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:12px}
+.deb-col{border-radius:11px;padding:12px 13px}
+.deb-against{background:#fdf0ef;border:1px solid #f4d4d0}
+.deb-for{background:#eef8f1;border:1px solid #c9e8d4}
+.dh{font-weight:700;font-size:12px;margin-bottom:7px}
+.deb-against .dh{color:#b23b32} .deb-for .dh{color:#2b7a45}
+.deb ul{list-style:none} .deb li{font-size:11px;line-height:1.35;padding-left:12px;position:relative;margin-bottom:6px;color:#3a4658}
+.deb li:before{content:'\2022';position:absolute;left:0;color:#e2a12b}
+.mm-note{background:#fff;border:1px dashed #e2a12b;border-radius:11px;padding:11px 14px;font-size:12px;color:#3a465a}
+.mm-note b{color:#23252e} .mm-note .hi{color:#6f7788;font-size:11px;margin-top:3px}
+.mm-wrap{position:relative;width:714px;height:656px;margin:4px auto 0}
+.mm-svg{position:absolute;left:0;top:0}
+.mm-node{position:absolute;width:212px;background:#fff;border:1.5px solid;border-radius:11px;box-shadow:0 1px 5px rgba(0,0,0,.07);overflow:hidden}
+.mm-nh{color:#fff;font-weight:700;font-size:12.5px;padding:6px 12px 7px;line-height:1.1}
+.mm-nh span{display:block;font-weight:500;font-size:10.5px;opacity:.9;margin-top:1px}
+.mm-node ul{list-style:none;padding:7px 12px 9px}
+.mm-node li{font-size:11px;color:#3a4658;line-height:1.3;padding-left:12px;position:relative;margin-bottom:4px}
+.mm-node li:last-child{margin-bottom:0}
+.mm-node li:before{content:'';position:absolute;left:0;top:6px;width:5px;height:5px;border-radius:50%;background:#c4c8d1}
+.mm-center{position:absolute;width:176px;text-align:center;background:linear-gradient(160deg,#23252e,#3b3e49);color:#fff;border:2px solid #f6cf6a;border-radius:14px;padding:12px 10px;box-shadow:0 5px 16px rgba(0,0,0,.22)}
+.mm-center b{display:block;font-family:'Poppins';font-size:15px;line-height:1.15}
+.mm-center span{font-size:11px;color:#f6cf6a;display:block;margin-top:2px}
+.mm-cap{text-align:center;font-size:11px;color:#6f7788;margin-top:10px;font-style:italic}
+.q-mains{margin-bottom:12px} .q-mains .en{font-size:13.5px;font-weight:600;color:#222b39;margin-top:8px;line-height:1.45} .q-mains .hi{font-size:12.5px;color:#5a6577;margin-top:5px}
+.awbox{background:#fff;border:1.5px solid #cfd6e2;border-radius:12px;margin-bottom:12px;overflow:hidden}
+.aw-h{background:#f3f5f9;padding:8px 14px;font-size:11px;font-weight:700;color:#41506a;letter-spacing:.4px}
+.aw-body{padding:13px 15px;font-size:12px;line-height:1.55;color:#2b3547;min-height:118px}
+.caret{color:#e2a12b;font-weight:700}
+.aw-foot{display:flex;align-items:center;padding:9px 14px;border-top:1px solid #e6e1d5;font-size:11px;color:#6f7788}
+.aw-btn{margin-left:auto;background:#e2a12b;color:#3a2c05;font-weight:700;padding:6px 14px;border-radius:20px;font-size:11.5px}
+.aicard{background:#23252e;border-radius:14px;padding:16px 18px;color:#e9ecf4}
+.ai-top{display:flex;align-items:center;gap:9px;margin-bottom:13px}
+.ai-ic{font-size:20px} .ai-top b{font-size:15px;color:#fff}
+.ai-score{margin-left:auto;font-family:'Poppins';font-weight:800;font-size:26px;color:#f6cf6a;line-height:1} .ai-score span{font-size:13px;color:#aab2c4}
+.ai-band{background:#2b7a45;color:#fff;font-size:10.5px;font-weight:700;padding:4px 10px;border-radius:20px}
+.ai-crits{margin-bottom:12px}
+.ai-how{background:#2c2f39;border-radius:10px;padding:10px 13px;font-size:11.5px;line-height:1.4;color:#cfd4e0;margin-bottom:12px}
+.ai-how b{color:#f6cf6a} .ai-how .hi{color:#aab2c4;margin-top:4px;font-size:11px}
+.aw-foot .over{color:#b23b32;font-weight:700}
+.selfbox{background:#fff;border:1px solid #e6e1d5;border-radius:12px;padding:14px 16px;margin-top:12px}
+.sb-h{font-weight:700;color:#23252e;font-size:13px} .sb-h .sb-out{display:block;font-weight:500;font-size:10.5px;color:#6f7788;margin-top:3px;line-height:1.4}
+.sb-rows{display:flex;flex-wrap:wrap;gap:7px;margin:11px 0}
+.sb-chip{font-size:11px;padding:5px 11px;border-radius:20px;background:#f3f5f9;color:#8a93a5;border:1px solid #e6e1d5}
+.sb-chip.on{background:#eef8f1;color:#2b7a45;border-color:#c9e8d4;font-weight:600}
+.sb-bar{height:9px;background:#eef1f6;border-radius:5px;overflow:hidden} .sb-bar div{height:100%;background:linear-gradient(90deg,#e2a12b,#f6cf6a);border-radius:5px}
+.sb-sc{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:12px;color:#6f7788} .sb-sc b{color:#23252e;font-size:17px;font-family:'Poppins'}
+.cr{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.crn{flex:0 0 205px;font-size:11.5px;color:#cfd4e0}
+.crbar{flex:1;height:8px;background:#3a3d47;border-radius:5px;overflow:hidden}
+.crfill{display:block;height:100%;background:linear-gradient(90deg,#e2a12b,#f6cf6a);border-radius:5px}
+.crm{flex:0 0 52px;text-align:right;font-weight:700;font-size:12.5px;color:#f6cf6a} .crmx{color:#8b93a5;font-size:10.5px;font-weight:500}
+.ai-fb{background:#2c2f39;border-radius:10px;padding:12px 14px;font-size:11.5px;line-height:1.45}
+.ai-fb b{color:#f6cf6a;font-size:11px;display:block;margin-bottom:5px} .ai-fb .en{color:#d5dae4} .ai-fb .hi{color:#aab2c4;margin-top:5px}
+.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.st{background:#fff;border:1px solid #e6e1d5;border-radius:11px;padding:12px;text-align:center}
+.st b{display:block;font-family:'Poppins';font-weight:800;font-size:19px;color:#23252e} .st span{font-size:10.5px;color:#6f7788}
+.selrow{display:flex;align-items:center;gap:9px;margin-bottom:11px;flex-wrap:wrap}
+.sel-l{font-size:11.5px;font-weight:700;color:#6f7788;flex:0 0 122px}
+.mchips{display:flex;gap:6px;flex-wrap:wrap}
+.mchip,.setchip{font-size:11px;padding:6px 12px;border-radius:20px;background:#fff;border:1px solid #e6e1d5;color:#41506a}
+.mon-on,.set-on{background:#e2a12b;border-color:#e2a12b;color:#3a2c05;font-weight:700}
+.prog{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.pg-card{background:#23252e;border-radius:12px;padding:16px;text-align:center;color:#fff}
+.pg-n{font-family:'Poppins';font-weight:800;font-size:28px;color:#f6cf6a} .pg-l{font-size:11px;color:#aab2c4;margin-top:3px}
+.scheme{background:#fff;border:1px solid #e6e1d5;border-radius:12px;padding:16px 18px}
+.sc-h{font-weight:700;color:#23252e;font-size:13px;margin-bottom:11px}
+.sc-row{display:flex;justify-content:space-between;font-size:12.5px;padding:8px 0;border-bottom:1px dashed #e6e1d5;color:#3a465a}
+.sc-row b{color:#e2a12b;font-weight:800}
+.sc-tot{display:flex;justify-content:space-between;font-size:13.5px;padding-top:10px;font-weight:800;color:#23252e} .sc-tot b{color:#2b7a45}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tc{background:#fff;border:1px solid #e6e1d5;border-radius:12px;padding:15px}
+.tc-h{font-weight:700;color:#23252e;font-size:13.5px;margin-bottom:7px}
+.tc .en{font-size:12px;color:#54607a;line-height:1.4} .tc .hi{font-size:11px;color:#7a8397;margin-top:4px}
+.cover{width:100%;height:100%;background:linear-gradient(160deg,#22232b,#2b2d36 55%,#34363f);color:#fff;display:flex;flex-direction:column;padding:44px 46px}
+.cov-live{align-self:center;background:linear-gradient(180deg,#f6cf6a,#e2a12b);color:#3a2c05;font-weight:800;font-size:13px;letter-spacing:1px;padding:8px 22px;border-radius:22px}
+.cov-top{text-align:center}
+.cov-mark{margin:24px 0 14px;display:flex;justify-content:center}
+.cov-brand{font-family:'Poppins';font-weight:800;font-size:58px;letter-spacing:3px}
+.cov-brand span{color:#f6cf6a}
+.cov-sub{color:#f0c860;font-size:19px;font-weight:600;margin-top:4px}
+.cov-tag{color:#aab2c4;font-size:12.5px;letter-spacing:2px;margin-top:10px}
+.cov-bi{color:#dfe3ec;font-size:14px;margin-top:8px}
+.cov-mid{margin-top:34px;background:rgba(255,255,255,.05);border:1px solid rgba(247,217,119,.25);border-radius:16px;padding:22px}
+.cov-mid-h{text-align:center;color:#f6cf6a;font-weight:700;font-size:15px;margin-bottom:16px}
+.cov-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cg{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:11px;padding:13px 15px}
+.cg b{color:#fff;font-size:14px;display:block} .cg span{color:#aab2c4;font-size:11.5px}
+.cov-cta{margin-top:auto;text-align:center;background:linear-gradient(180deg,#f6cf6a,#e2a12b);border-radius:16px;padding:18px}
+.cc-web{font-family:'Poppins';font-weight:800;font-size:30px;color:#23252e}
+.cc-tg{color:#5a4708;font-size:15px;margin-top:4px} .cc-tg b{color:#23252e}
+.back{width:100%;height:100%;background:linear-gradient(160deg,#22232b,#2b2d36 55%,#34363f);color:#fff;display:flex;flex-direction:column;align-items:center;padding:54px 46px;text-align:center}
+.bk-mark{line-height:0;margin-bottom:14px}
+.bk-brand{font-family:'Poppins';font-weight:800;font-size:46px;letter-spacing:3px} .bk-brand span{color:#f6cf6a}
+.bk-sub{color:#f0c860;font-size:16px;margin-top:4px}
+.bk-line{width:80px;height:4px;background:#e2a12b;border-radius:2px;margin:22px 0}
+.bk-h{font-family:'Poppins';font-weight:700;font-size:22px;margin-bottom:22px}
+.bk-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:520px}
+.bk-c{background:rgba(255,255,255,.05);border:1px solid rgba(247,217,119,.28);border-radius:14px;padding:20px 14px}
+.bk-ic{font-size:26px} .bk-l{color:#f6cf6a;font-size:12px;letter-spacing:1px;margin-top:6px;text-transform:uppercase}
+.bk-v{font-family:'Poppins';font-weight:700;font-size:19px;margin-top:4px} .bk-vs{color:#aab2c4;font-size:12px}
+.bk-note{margin-top:30px;font-size:13px;color:#dfe3ec;line-height:1.6} .bk-note .hi{color:#aab2c4;font-size:12px}
+.bk-share{margin-top:26px;background:#e2a12b;color:#3a2c05;font-weight:700;font-size:12.5px;padding:10px 20px;border-radius:22px}
+
+@page{size:A4;margin:0}
+html,body{background:#fff!important;margin:0;padding:0}
+#doc{}
+.page{margin:0 auto!important;box-shadow:none!important;page-break-after:always}
+.page:last-child{page-break-after:auto}
+@media print{.page{margin:0!important}}
+</style></head><body>
+<div id="doc"><section class="page">
+<div class="cover">
+  <div class="cov-top">
+    <div class="cov-live">SAMPLE BOOKLET &middot; नमूना पुस्तिका</div>
+    <div class="cov-mark"><svg viewBox="0 0 44 44" width="96" height="96" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+    <div class="cov-brand">RRR<span>SHALA</span></div>
+    <div class="cov-sub">One Stop Centre for Cracking the RAS Exam</div>
+    <div class="cov-tag">RE-INVENTING &middot; RE-BUILDING &middot; RE-ASSURING</div>
+    <div class="cov-bi">100% Bilingual &middot; English + हिंदी &middot; Updated Daily</div>
+  </div>
+  <div class="cov-mid">
+    <div class="cov-mid-h">A quick look inside &mdash; real samples of what you get</div>
+    <div class="cov-grid">
+      <div class="cg"><b>Daily Current Affairs</b><span>MCQs with answers &amp; audio</span></div>
+      <div class="cg"><b>Editorial Analysis</b><span>Debates, data &amp; mind maps</span></div>
+      <div class="cg"><b>Answer Writing</b><span>with AI evaluation</span></div>
+      <div class="cg"><b>750+ PYQs</b><span>year &amp; theme-wise</span></div>
+      <div class="cg"><b>Sujas Quiz</b><span>300 Rajasthan CA Qs</span></div>
+      <div class="cg"><b>Rajasthan Specific</b><span>daily exam-ready facts</span></div>
+    </div>
+  </div>
+  <div class="cov-cta">
+    <div class="cc-web">www.rrrshala.com</div>
+    <div class="cc-tg">Telegram: <b>@rrrshala</b> &middot; t.me/rrrshala</div>
+  </div>
+</div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">OVERVIEW &middot; एक नज़र में</div>
+      <div class="ph-title">Everything a RAS aspirant needs <span class="ph-hi">RAS की पूरी तैयारी, एक ही जगह</span></div></div>
+    </div><div class="lead">RRRSHALA brings the entire RAS preparation cycle — reading, revising and answer-writing — into one clean, bilingual dashboard that updates every single day.</div>
+ <div class="featgrid"><div class="feat"><div class="fi">&#128240;</div><div class="ft"><b>Daily Current Affairs &amp; News</b>
+    <div class="en">Top stories from the day's newspapers, as crisp bilingual MCQs — with a Listen button on every item.</div><div class="hi">रोज़ाना करेंट अफेयर्स — हर आइटम पर ऑडियो सहित।</div></div></div><div class="feat"><div class="fi">&#128173;</div><div class="ft"><b>Editorials &amp; Opinions</b>
+    <div class="en">Each editorial broken into debate, data, mind map and a 10-mark model answer.</div><div class="hi">संपादकीय — पक्ष-विपक्ष, आँकड़े, माइंड मैप व 10-अंकीय मॉडल उत्तर।</div></div></div><div class="feat"><div class="fi">&#9997;</div><div class="ft"><b>Answer Writing + AI Evaluation</b>
+    <div class="en">Type your mains answer and get an instant AI score with point-wise feedback.</div><div class="hi">उत्तर लिखें और तुरंत AI मूल्यांकन व सुझाव पाएँ।</div></div></div><div class="feat"><div class="fi">&#128196;</div><div class="ft"><b>Previous-Year MCQs</b>
+    <div class="en">750+ RPSC PYQs, filterable by year and theme, with options in both languages.</div><div class="hi">750+ पिछले वर्षों के प्रश्न — वर्ष व थीम अनुसार।</div></div></div><div class="feat"><div class="fi">&#129504;</div><div class="ft"><b>Sujas Monthly Quiz</b>
+    <div class="en">300 Rajasthan current-affairs questions from the Sujas e-bulletin, month-wise.</div><div class="hi">सुजस मासिक क्विज़ — 300 राजस्थान प्रश्न।</div></div></div><div class="feat"><div class="fi">&#128205;</div><div class="ft"><b>Rajasthan Specific</b>
+    <div class="en">Daily exam-ready Rajasthan facts and questions you won't want to miss.</div><div class="hi">राजस्थान विशेष — रोज़ाना परीक्षा-केंद्रित तथ्य व प्रश्न।</div></div></div></div>
+ <div class="how">
+   <div class="how-h">How it works &middot; कैसे चलता है</div>
+   <div class="how-row"><span class="hn">1</span><span>Open on any phone or laptop — no app, no login needed to start.</span></div>
+   <div class="how-row"><span class="hn">2</span><span>Toggle English / हिंदी anywhere with one tap.</span></div>
+   <div class="how-row"><span class="hn">3</span><span>Read, attempt quizzes, write answers, and track your progress.</span></div>
+ </div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">CURRENT AFFAIRS &middot; करेंट अफेयर्स</div>
+      <div class="ph-title">Daily News &amp; Current-Affairs Quiz <span class="ph-hi">रोज़ाना समसामयिकी क्विज़</span></div></div>
+    </div><div class="lead">Every day's key stories become exam-style MCQs — statement-based, match-the-following and more — with the correct answer and a crisp bilingual explanation.</div>
+ <div class="card qcard">
+      <div class="qtop"><span class="chip chip-t">Statement-based</span><span class="chip chip-b">Daily CA</span></div>
+      <div class="qtext"><div class="en">Consider the following statements regarding the recent Reserve Bank of India (RBI) monetary policy:<br>(I) The Monetary Policy Committee kept the repo rate unchanged at 5.25% with a neutral stance.<br>(II) The Marginal Standing Facility (MSF) rate and the Bank Rate are both fixed at 6.50%.<br>(III) The Standing Deposit Facility (SDF) rate stands at 5.00%.<br>Select the correct answer using the codes below:</div><div class="hi">हाल की भारतीय रिज़र्व बैंक (RBI) मौद्रिक नीति के संबंध में निम्नलिखित कथनों पर विचार कीजिए:<br>(I) मौद्रिक नीति समिति ने रेपो दर को 5.25% पर अपरिवर्तित रखते हुए तटस्थ रुख अपनाया।<br>(II) सीमांत स्थायी सुविधा (MSF) दर तथा बैंक दर दोनों 6.50% पर निर्धारित हैं।<br>(III) स्थायी जमा सुविधा (SDF) दर 5.00% पर है।<br>नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए:</div></div>
+      <div class="opts"><div class="opt"><span class="ol">A</span>
+      <span class="ot"><span class="en">I and II only</span><span class="hi">केवल I और II</span></span></div><div class="opt opt-correct"><span class="ol">B</span>
+      <span class="ot"><span class="en">I and III only</span><span class="hi">केवल I और III</span></span><span class="tick">&#10003;</span></div><div class="opt"><span class="ol">C</span>
+      <span class="ot"><span class="en">II and III only</span><span class="hi">केवल II और III</span></span></div><div class="opt"><span class="ol">D</span>
+      <span class="ot"><span class="en">I, II and III</span><span class="hi">I, II और III</span></span></div></div>
+      <div class="ansline">Correct Answer &middot; सही उत्तर: <b>B</b></div>
+      <div class="exp"><div class="exp-h">Why? &middot; व्याख्या</div>
+        <div class="en">Statement II is false: the MSF rate and the Bank Rate are at 5.50%, not 6.50%. The repo rate (5.25%) and SDF (5.00%) are correct.</div>
+        <div class="hi">कथन II गलत है: MSF दर और बैंक दर 6.50% नहीं बल्कि 5.50% पर हैं। रेपो दर (5.25%) व SDF (5.00%) सही हैं।</div></div>
+    </div>
+ <div class="audio">
+   <div class="au-ic">&#128266;</div>
+   <div class="au-t"><b>Listen to any item — Audio Speaker</b>
+   <div class="en">A Listen button on every news item and editorial reads it aloud, so you can revise on the move.</div>
+   <div class="hi">हर न्यूज़ आइटम व संपादकीय पर 'सुनें' बटन — चलते-फिरते रिवीज़न।</div></div>
+   <div class="au-bar"><span class="play">&#9654;</span><span class="wave"></span><span class="time">02:14</span></div>
+ </div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">AUDIO ANCHOR &middot; ऑडियो एंकर</div>
+      <div class="ph-title">Daily Audio News Anchor <span class="ph-hi">रोज़ाना ऑडियो न्यूज़ एंकर</span></div></div>
+    </div><div class="lead">Short on time? Press play. A ten-minute bilingual audio bulletin where a news anchor decodes the day's newspapers <b>the way an examiner reads them</b> &mdash; so you revise hands-free on the move, in English or हिंदी.</div>
+ <div class="anchor-hero">
+   <div class="ah-left"><div class="ah-ava"><svg viewBox="0 0 120 120" width="104" height="104" xmlns="http://www.w3.org/2000/svg">
+ <circle cx="60" cy="60" r="57" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.6"/>
+ <circle cx="60" cy="44" r="15" fill="none" stroke="#f6cf6a" stroke-width="2.6"/>
+ <path d="M33 92 C33 74 44 66 60 66 C76 66 87 74 87 92 Z" fill="#f6cf6a" opacity="0.14"/>
+ <path d="M33 92 C33 74 44 66 60 66 C76 66 87 74 87 92" fill="none" stroke="#f6cf6a" stroke-width="2.6" stroke-linejoin="round"/>
+ <rect x="56" y="84" width="8" height="16" rx="4" fill="#f6cf6a"/>
+ <path d="M51 95 a9 9 0 0 0 18 0" fill="none" stroke="#f6cf6a" stroke-width="2.2"/>
+ <line x1="60" y1="104" x2="60" y2="110" stroke="#f6cf6a" stroke-width="2.2"/>
+</svg></div><div class="ah-badge"><span class="dot"></span>ON AIR</div></div>
+   <div class="ah-right">
+     <div class="ah-title">Daily Newspaper Analysis <span>&middot; दैनिक समाचार-पत्र विश्लेषण</span></div>
+     <div class="ah-date">Fresh episode every morning &middot; रोज़ सुबह नया एपिसोड</div>
+     <div class="ah-player"><span class="ahp-play">&#9654;</span><span class="ahp-wave"></span><span class="ahp-time">00:00 / 09:52</span></div>
+     <div class="ah-voices"><span class="vchip">&#127908; English &middot; natural neural voice</span><span class="vchip">&#127908; हिंदी &middot; प्राकृतिक न्यूरल आवाज़</span></div>
+   </div>
+ </div>
+ <div class="an-script"><div class="ans-h">What the anchor says &middot; एंकर की ज़ुबानी</div>
+   <div class="en">&ldquo;Namaskar, and a very warm welcome to all RAS aspirants. I am your news anchor &mdash; and for the next ten minutes we will decode today's newspapers, the way an examiner reads them. Keep a pen and notebook ready, because every story carries a possible RAS Prelims question.&rdquo;</div>
+   <div class="hi">&ldquo;नमस्कार! सभी आर.ए.एस. अभ्यर्थियों का हार्दिक स्वागत है। मैं हूँ आपका न्यूज़ एंकर &mdash; अगले दस मिनट तक हम आज के अख़बारों को उसी नज़र से पढ़ेंगे, जिस नज़र से एक परीक्षक पढ़ता है।&rdquo;</div>
+ </div>
+ <div class="anchor-feats">
+   <div class="afeat"><div class="af-ic">&#127760;</div><b>Both languages</b><span>English &amp; हिंदी episodes</span></div>
+   <div class="afeat"><div class="af-ic">&#9201;</div><b>~10 minutes</b><span>a crisp daily digest</span></div>
+   <div class="afeat"><div class="af-ic">&#127891;</div><b>Exam-angled</b><span>every story = a question</span></div>
+   <div class="afeat"><div class="af-ic">&#128241;</div><b>Hands-free</b><span>revise while commuting</span></div>
+ </div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">EDITORIALS &amp; OPINIONS &middot; संपादकीय</div>
+      <div class="ph-title">Editorial Analysis — the way toppers read <span class="ph-hi">संपादकीय विश्लेषण</span></div></div>
+    </div><div class="card ed-intro"><div class="ed-topic">Pachpadra Refinery: 'Registhan to Refinesthan' <span class="ed-topic-hi">&middot; पचपदरा रिफाइनरी: 'रेगिस्तान से रिफाइनस्थान'</span></div>
+   <div class="en">On 4 July 2026 PM Modi dedicated the HPCL Rajasthan Refinery at Pachpadra (Balotra) to the nation — India&#x27;s first integrated refinery-cum-petrochemical complex — as part of a ~Rs 1.05 lakh crore package of works for Rajasthan.</div>
+   <div class="hi">4 जुलाई 2026 को प्रधानमंत्री मोदी ने पचपदरा (बालोतरा) की एचपीसीएल राजस्थान रिफाइनरी — भारत की पहली एकीकृत रिफाइनरी-सह-पेट्रोकेमिकल कॉम्प्लेक्स — राष्ट्र को समर्पित की, जो राजस्थान हेतु ~₹1.05 लाख करोड़ के कार्यों का हिस्सा है।</div></div>
+ <div class="ed-key"><div class="edb-h">Key numbers &middot; मुख्य आँकड़े</div><div class="numrow">Nelson Complexity Index 17.0 — the highest of any Indian refinery; produces 14 grades of polyethylene and 21 of polypropylene (India&#x27;s largest polypropylene unit).</div><div class="numrow">A 1,095-km pipeline network feeds it (crude line Pachpadra-Mundra 489 km; raw-water line Nachna-Pachpadra 230 km) plus 1.5 MMTPA of local Barmer (Mangala) crude.</div><div class="numrow">It anchors a downstream ecosystem — a Petrozone, plastic park and logistics hub — feeding plastics, packaging, textiles and auto-part industries.</div><div class="numrow">Global context (IEA): world refining capacity may fall 1-1.5 million barrels/day by 2030 as older refineries in the US, Europe and China shut.</div></div>
+ <div class="edb-h2">The debate — is a mega-refinery the right bet for arid Rajasthan?</div>
+ <div class="deb">
+   <div class="deb-col deb-against"><div class="dh">&#10007; Concerns &middot; चिंताएँ</div><ul><li>Yet a water-hungry, emissions-heavy plant in an arid zone needs strict green safeguards.</li><li>And a global peak in oil demand could leave costly assets stranded over time.</li></ul></div>
+   <div class="deb-col deb-for"><div class="dh">&#10003; Merits &middot; गुण</div><ul><li>It cuts import dependence and captures value by making petrochemicals at home.</li><li>It industrialises western Rajasthan — ~Rs 21,000 cr/yr revenue and tens of thousands of jobs.</li><li>It builds a downstream cluster (plastics, textiles, auto) via the Petrozone and plastic park.</li><li>Global refining capacity is shrinking, so a modern high-complexity refinery is strategically timed.</li><li>It monetises local Barmer crude and deepens India&#x27;s energy security.</li></ul></div>
+ </div>
+ <div class="mm-note"><b>&#43; Mind maps &amp; diagrams:</b> every editorial also ships with a visual mind map (see next page), flow-chart or comparison box for fast revision. <span class="hi">हर संपादकीय के साथ माइंड मैप / फ्लो-चार्ट भी।</span></div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">MIND MAP &middot; माइंड मैप</div>
+      <div class="ph-title">One editorial at a glance <span class="ph-hi">एक संपादकीय — एक नज़र में</span></div></div>
+    </div><div class="lead">Every editorial is also distilled into a one-glance <b>mind map</b> &mdash; the central issue in the middle, with branches for context, key facts, gains, concerns and the way ahead. Ideal for last-minute revision. <span class="hi">हर संपादकीय एक माइंड मैप में भी &mdash; तेज़ रिवीज़न के लिए।</span></div>
+     <div class='mm-wrap'><svg class='mm-svg' viewBox='0 0 714 656' width='714' height='656'><path d='M357,328 C284,328 284,40 212,40' fill='none' stroke='#e2a12b' stroke-width='2.2' opacity='.5'/><circle cx='212' cy='40' r='3.2' fill='#e2a12b'/><path d='M357,328 C284,328 284,296 212,296' fill='none' stroke='#2b7a45' stroke-width='2.2' opacity='.5'/><circle cx='212' cy='296' r='3.2' fill='#2b7a45'/><path d='M357,328 C284,328 284,566 212,566' fill='none' stroke='#2f6f9f' stroke-width='2.2' opacity='.5'/><circle cx='212' cy='566' r='3.2' fill='#2f6f9f'/><path d='M357,328 C430,328 430,40 502,40' fill='none' stroke='#7a4fa3' stroke-width='2.2' opacity='.5'/><circle cx='502' cy='40' r='3.2' fill='#7a4fa3'/><path d='M357,328 C430,328 430,296 502,296' fill='none' stroke='#b23b32' stroke-width='2.2' opacity='.5'/><circle cx='502' cy='296' r='3.2' fill='#b23b32'/><path d='M357,328 C430,328 430,566 502,566' fill='none' stroke='#0f8a8a' stroke-width='2.2' opacity='.5'/><circle cx='502' cy='566' r='3.2' fill='#0f8a8a'/><circle cx='357' cy='328' r='4' fill='#23252e'/></svg><div class='mm-node' style='left:0px;top:14px;border-color:#e2a12b'><div class='mm-nh' style='background:#e2a12b'>Why now<span>अभी क्यों</span></div><ul><li>Dedicated 4 July 2026</li><li>Rs 1.05 lakh cr package</li><li>India&#x27;s 23rd refinery</li></ul></div><div class='mm-node' style='left:0px;top:270px;border-color:#2b7a45'><div class='mm-nh' style='background:#2b7a45'>What it is<span>क्या है</span></div><ul><li>9 MMTPA + 2.4 petrochem</li><li>HRRL 74:26 JV</li><li>Nelson index 17.0</li></ul></div><div class='mm-node' style='left:0px;top:540px;border-color:#2f6f9f'><div class='mm-nh' style='background:#2f6f9f'>Economic gains<span>आर्थिक लाभ</span></div><ul><li>~Rs 21,000 cr/yr</li><li>35,000+ jobs</li><li>Petrozone &amp; plastic park</li></ul></div><div class='mm-node' style='left:502px;top:14px;border-color:#7a4fa3'><div class='mm-nh' style='background:#7a4fa3'>Engineering<span>अभियांत्रिकी</span></div><ul><li>40x Eiffel steel</li><li>5x Burj concrete</li><li>1,095 km pipelines</li></ul></div><div class='mm-node' style='left:502px;top:270px;border-color:#b23b32'><div class='mm-nh' style='background:#b23b32'>Concerns<span>चिंताएँ</span></div><ul><li>Water in arid zone</li><li>Carbon emissions</li><li>Oil-demand peak</li></ul></div><div class='mm-node' style='left:502px;top:540px;border-color:#0f8a8a'><div class='mm-nh' style='background:#0f8a8a'>Way ahead<span>आगे की राह</span></div><ul><li>Zero-liquid-discharge</li><li>Skill the locals</li><li>Specialty chemicals</li></ul></div><div class='mm-center' style='left:269px;top:294px'><b>Pachpadra Refinery</b><span>पचपदरा रिफाइनरी</span></div></div>
+     <div class="mm-cap">Actual mind map for the editorial on the previous page &middot; पिछले पृष्ठ के संपादकीय का माइंड मैप</div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">ANSWER WRITING &middot; उत्तर लेखन</div>
+      <div class="ph-title">Write answers — checked by AI <span class="ph-hi">उत्तर लिखें — AI से जाँच</span></div></div>
+    </div><div class="card q-mains"><span class="chip chip-b">Mains &middot; 10 marks &middot; 150 words</span>
+   <div class="en">The Pachpadra refinery marks a turning point for Rajasthan&#x27;s economy but raises sustainability concerns in an arid region. Discuss.</div><div class="hi">पचपदरा रिफाइनरी राजस्थान की अर्थव्यवस्था हेतु मोड़ है किंतु शुष्क क्षेत्र में स्थिरता संबंधी चिंताएँ उठाती है। विवेचना कीजिए।</div></div>
+ <div class="awbox"><div class="aw-h">Your answer &middot; आपका उत्तर</div>
+   <div class="aw-body">The dedication of the HPCL Rajasthan Refinery (HRRL) at Pachpadra, Balotra, is a landmark in Rajasthan&#x27;s industrial journey and the state&#x27;s first integrated refinery-cum-petrochemical complex — yet it forces a hard question about industrialising an arid region sustainably. Structurally, the Rs 79,459-crore plant is a 74:26 HPCL–Rajasthan joint venture that refines 9 MMTPA of crude and produces 2.4 MTPA of petrochemicals, with a Nelson Complexity Index of 17.0, among India&#x27;s highest, enabling high-value products rather than plain fuels. Economically it offers import substitution, roughly Rs 21,000 crore in annual revenue and over 35,000 direct and indirect jobs, while a downstream Petrozone anchors plastics, packaging and textiles and local Barmer (Mangala) crude is monetised, deepening energy security. A roughly 1,095-km pipeline network ties it to the Barmer fields and the coast, giving it national, not merely state, significance. However, in a water-scarce, arid zone the refinery&#x27;s water demand and carbon emissions demand strict safeguards, and a coming global peak in oil demand risks stranding such capital-heavy assets. The way forward lies in mandatory zero-liquid-discharge and recycled water, skilling locals for refinery and downstream jobs, and a progressive pivot toward specialty chemicals and green hydrogen. If ecological guardrails and a specialty-chemical pivot are built in from the start, Pachpadra can transform western Rajasthan&#x27;s economy while respecting its fragile desert ecology — turning &#x27;Registhan&#x27; into a genuine &#x27;Refinesthan&#x27;.<span class="caret">|</span></div>
+   <div class="aw-foot"><span class="over">225 / 150 words &middot; over limit</span><span class="aw-btn">Evaluate with AI &#9889;</span></div>
+ </div>
+ <div class="aicard">
+   <div class="ai-top"><span class="ai-ic">&#129302;</span><b>AI Evaluation</b>
+     <span class="ai-score">6.0<span>/10</span></span><span class="ai-band">RAS scaling &middot; max 6.5</span></div>
+   <div class="ai-how">One holistic mark &mdash; weighed on <b>relevance</b>, <b>structure</b> and <b>data &amp; analysis</b>, then capped by the word limit (150 words &rarr; max 6.5; fewer words a lower cap; over by &gt;20% &minus;0.5). <span class="hi">एक समग्र अंक &mdash; प्रासंगिकता, संरचना व तथ्य/विश्लेषण पर; शब्द-सीमा अनुसार अधिकतम 6.5।</span></div>
+   <div class="ai-fb"><b>Feedback &middot; सुझाव</b>
+     <div class="en">Comprehensive, well-structured and data-rich, with a balanced view of gains and ecological concerns — content worthy of the 6.5 ceiling. At 225 words it exceeds the 150-word limit by more than 20%, so a 0.5 penalty gives 6.0/10.</div>
+     <div class="hi">व्यापक, सुसंरचित व तथ्य-समृद्ध; लाभ व पारिस्थितिक चिंताओं का संतुलित विश्लेषण — विषयवस्तु 6.5 योग्य। 225 शब्द 150 की सीमा 20% से अधिक होने पर 0.5 दंड सहित 6.0/10।</div>
+   </div>
+ </div>
+ <div class="selfbox">
+   <div class="sb-h">Self-assessment &middot; स्व-मूल्यांकन <span class="sb-out">Tick what your answer actually did — a transparent 10-mark checklist you score yourself &middot; अपने उत्तर का स्वयं मूल्यांकन (10 में से)</span></div>
+   <div class="sb-rows"><span class="sb-chip on">&#10003; Intro frames the demand</span><span class="sb-chip on">&#10003; Balanced arguments</span><span class="sb-chip on">&#10003; Data &amp; examples</span><span class="sb-chip on">&#10003; Structure &amp; flow</span><span class="sb-chip">Crisp way-forward</span></div>
+   <div class="sb-bar"><div style="width:80%"></div></div>
+   <div class="sb-sc"><span>Your self-score &middot; आपका स्व-अंक</span><b>8 / 10</b></div>
+ </div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">PREVIOUS YEARS &middot; पिछले वर्ष</div>
+      <div class="ph-title">Previous-Year Question Bank <span class="ph-hi">पिछले वर्षों का प्रश्न-कोष</span></div></div>
+    </div><div class="lead">750+ genuine RPSC previous-year questions, filterable by year and theme, each with both-language options and the verified answer key.</div>
+ <div class="statrow">
+   <div class="st"><b>750+</b><span>PYQs</span></div>
+   <div class="st"><b>2016&#8211;2024</b><span>years covered</span></div>
+   <div class="st"><b>12+</b><span>themes</span></div>
+   <div class="st"><b>EN+हिं</b><span>bilingual</span></div>
+ </div>
+ <div class="card qcard">
+      <div class="qtop"><span class="chip chip-t">MCQ</span><span class="chip chip-b">RPSC 2021</span></div>
+      <div class="qtext"><div class="en">From the following temples of Rajasthan identify the temples of Rajasthan identify the temples which were built in the Gurjar-Pratihar period : (I) Adivarah temple of Ahad (II) Harshat Mata temple of Abhaneri (III) Neelkanth temple of Rajorgarh (IV) Harihar temple of Osian - Codes :</div><div class="hi">राजस्थान के निम्नलिखित मंदिरों में से गुर्जर-प्रतिहार काल में निर्मित मंदिरों को चुनिए : (I) आहड़ का आदिवराह मंदिर (II) आभानेरी का हर्षतमाता का मंदिर (III) राजोरगढ़ का नीलकंठ मंदिर (IV) ओसियाँ का हरिहर मंदिर - कूट-</div></div>
+      <div class="opts"><div class="opt"><span class="ol">A</span>
+      <span class="ot"><span class="en">I and IV</span><span class="hi">I और IV</span></span></div><div class="opt"><span class="ol">B</span>
+      <span class="ot"><span class="en">I, II and IV</span><span class="hi">I, II और IV</span></span></div><div class="opt"><span class="ol">C</span>
+      <span class="ot"><span class="en">II and IV</span><span class="hi">II और IV</span></span></div><div class="opt opt-correct"><span class="ol">D</span>
+      <span class="ot"><span class="en">I, II, III and IV</span><span class="hi">I, II, III और IV</span></span><span class="tick">&#10003;</span></div></div>
+      <div class="ansline">Correct Answer &middot; सही उत्तर: <b>D</b></div>
+      
+    </div>
+ <div class="mm-note"><b>Filter as you like:</b> pick a year (e.g., 2021) or a theme (Polity, History, Economy, Geography, Science) and practise a focused set. <span class="hi">वर्ष या थीम चुनकर केंद्रित अभ्यास करें।</span></div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">SUJAS QUIZ &middot; सुजस क्विज़</div>
+      <div class="ph-title">Sujas Monthly Rajasthan Quiz <span class="ph-hi">सुजस मासिक राजस्थान क्विज़</span></div></div>
+    </div><div class="lead">300 UPSC-toughness questions built from the Rajasthan Government's <b>Sujas</b> e-bulletin — organised month-wise, in sets of 5 or 10, timed and distraction-free.</div>
+ <div class="selrow"><span class="sel-l">Choose month &middot; माह चुनें</span><div class="mchips"><span class="mchip">Nov&#8211;Jan</span><span class="mchip">Feb</span><span class="mchip">Mar</span><span class="mchip">Apr</span><span class="mchip">May</span><span class="mchip mon-on">June</span></div></div>
+ <div class="selrow"><span class="sel-l">Set size &middot; सेट</span><span class="setchip set-on">5 Qs</span><span class="setchip">10 Qs</span><span class="setchip">Mix of all</span></div>
+ <div class="card qcard">
+      <div class="qtop"><span class="chip chip-t">Assertion-Reason</span><span class="chip chip-d">Hard</span><span class="chip chip-b">Sujas &middot; June 2026</span></div>
+      <div class="qtext"><div class="en">Assertion (A): Rajasthan became the first state in the country to launch &#x27;Outbound Portability&#x27; under the Mukhyamantri Ayushman Arogya Yojana.<br>Reason (R): Under this facility, people of the state can avail cashless treatment even in other states.<br>Select the correct answer:</div><div class="hi">कथन (A): मुख्यमंत्री आयुष्मान आरोग्य योजना के अंतर्गत &#x27;आउटबाउंड पोर्टेबिलिटी&#x27; आरंभ करने वाला राजस्थान देश का पहला राज्य बना।<br>कारण (R): इस सुविधा के तहत प्रदेश के लोग अन्य राज्यों में भी कैशलेस इलाज करा सकेंगे।<br>सही उत्तर चुनिए:<br>कठिनाई: कठिन</div></div>
+      <div class="opts"><div class="opt"><span class="ol">A</span>
+      <span class="ot"><span class="en">Both A and R are true and R is the correct explanation of A</span><span class="hi">A और R दोनों सही हैं तथा R, A की सही व्याख्या है</span></span></div><div class="opt opt-correct"><span class="ol">B</span>
+      <span class="ot"><span class="en">Both A and R are true but R is NOT the correct explanation of A</span><span class="hi">A और R दोनों सही हैं परंतु R, A की सही व्याख्या नहीं है</span></span><span class="tick">&#10003;</span></div><div class="opt"><span class="ol">C</span>
+      <span class="ot"><span class="en">A is true but R is false</span><span class="hi">A सही है परंतु R गलत है</span></span></div><div class="opt"><span class="ol">D</span>
+      <span class="ot"><span class="en">A is false but R is true</span><span class="hi">A गलत है परंतु R सही है</span></span></div></div>
+      <div class="ansline">Correct Answer &middot; सही उत्तर: <b>B</b></div>
+      <div class="exp"><div class="exp-h">Why? &middot; व्याख्या</div>
+        <div class="en">The issue confirms that Rajasthan was the first state to launch Outbound Portability under the Ayushman Arogya Yojana, and that under it residents can get cashless treatment in other states too. Both A and R are factually correct. However, R describes what the facility does, not why Rajasthan became the &#x27;first&#x27; state; being first is a matter of timing of launch, so R does not by itself explain the assertion of primacy. Hence both are true but R is not the correct explanation.</div>
+        <div class="hi">अंक पुष्टि करता है कि आयुष्मान आरोग्य योजना के अंतर्गत आउटबाउंड पोर्टेबिलिटी आरंभ करने वाला राजस्थान पहला राज्य बना और इसके तहत निवासी अन्य राज्यों में भी कैशलेस इलाज करा सकते हैं। A और R दोनों सही हैं, परंतु R यह बताता है कि सुविधा क्या करती है, न कि राजस्थान &#x27;पहला&#x27; क्यों बना; &#x27;पहला&#x27; होना आरंभ की समयबद्धता का विषय है। अतः दोनों सही पर R व्याख्या नहीं है।</div></div>
+    </div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">RAJASTHAN SPECIFIC &middot; राजस्थान विशेष</div>
+      <div class="ph-title">Rajasthan-Specific Daily Insights <span class="ph-hi">राजस्थान विशेष — रोज़ाना</span></div></div>
+    </div><div class="card ed-intro"><div class="ed-topic">Yamuna Water Project: Rajasthan-Haryana MoA to quench Shekhawati&#x27;s thirst</div>
+   <div class="en">At the Pachpadra (Balotra) event on 4 July 2026, PM Modi credited the Rajasthan-Haryana Yamuna Water Project MoA — a roughly Rs 34,102 crore scheme that fulfils a 30-plus-year demand to bring Yamuna water to the parched Shekhawati region.</div>
+   <div class="hi">4 जुलाई 2026 को पचपदरा (बालोतरा) कार्यक्रम में प्रधानमंत्री मोदी ने राजस्थान-हरियाणा यमुना जल परियोजना समझौते का उल्लेख किया — लगभग 34,102 करोड़ रुपए की यह परियोजना शेखावाटी क्षेत्र में यमुना जल पहुँचाने की 30 वर्ष से अधिक पुरानी माँग पूरी करती है।</div></div>
+ <div class="lead2">Each entry gives you the context, the exam angle, and ready MCQs — so a single Rajasthan story becomes 2&#8211;3 marks in your pocket.</div>
+ <div class="card qcard">
+      <div class="qtop"><span class="chip chip-t">Statement-based</span><span class="chip chip-d">Medium</span><span class="chip chip-b">Rajasthan Specific</span></div>
+      <div class="qtext"><div class="en">Consider the following statements regarding the Yamuna Water Project MoA (2026):<br>(I) It was signed between the Governments of Rajasthan and Haryana.<br>(II) Rajasthan&#x27;s water will be drawn from the Hathnikund Barrage located in Haryana.<br>(III) The project mainly benefits the Mewar region of Rajasthan.<br>Which of the statements given above is/are correct?</div><div class="hi">यमुना जल परियोजना समझौते (2026) के संबंध में निम्नलिखित कथनों पर विचार कीजिए:<br>(I) यह राजस्थान व हरियाणा सरकारों के मध्य हुआ।<br>(II) राजस्थान का जल हरियाणा स्थित हथिनीकुंड बैराज से लिया जाएगा।<br>(III) परियोजना मुख्यतः राजस्थान के मेवाड़ क्षेत्र को लाभ देती है।<br>उपर्युक्त में से कौन-से कथन सही हैं?<br>कठिनाई: मध्यम</div></div>
+      <div class="opts"><div class="opt opt-correct"><span class="ol">A</span>
+      <span class="ot"><span class="en">I and II only</span><span class="hi">केवल I और II</span></span><span class="tick">&#10003;</span></div><div class="opt"><span class="ol">B</span>
+      <span class="ot"><span class="en">II and III only</span><span class="hi">केवल II और III</span></span></div><div class="opt"><span class="ol">C</span>
+      <span class="ot"><span class="en">I and III only</span><span class="hi">केवल I और III</span></span></div><div class="opt"><span class="ol">D</span>
+      <span class="ot"><span class="en">I, II and III</span><span class="hi">I, II और III</span></span></div></div>
+      <div class="ansline">Correct Answer &middot; सही उत्तर: <b>A</b></div>
+      <div class="exp"><div class="exp-h">Why? &middot; व्याख्या</div>
+        <div class="en">Statement III is false: the project benefits the Shekhawati region (Sikar, Jhunjhunu, Churu), not Mewar. Statements I and II are correct.</div>
+        <div class="hi">कथन III गलत है: परियोजना शेखावाटी क्षेत्र (सीकर, झुंझुनूं, चूरू) को लाभ देती है, मेवाड़ को नहीं। कथन I व II सही हैं।</div></div>
+    </div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">MY PROGRESS &middot; मेरी प्रगति</div>
+      <div class="ph-title">Track scores &amp; self-assess <span class="ph-hi">अंक ट्रैक करें व स्व-मूल्यांकन</span></div></div>
+    </div><div class="lead">Every quiz you attempt is scored and saved, so you can see accuracy trends by theme and revise your weak areas. Mains answers use a transparent 10-mark self-assessment scheme.</div>
+ <div class="prog">
+   <div class="pg-card"><div class="pg-n">78%</div><div class="pg-l">Avg. accuracy</div></div>
+   <div class="pg-card"><div class="pg-n">1,240</div><div class="pg-l">Qs attempted</div></div>
+   <div class="pg-card"><div class="pg-n">31</div><div class="pg-l">Day streak</div></div>
+ </div>
+ <div class="scheme"><div class="sc-h">10-mark self-assessment scheme &middot; 10-अंकीय स्व-मूल्यांकन</div>
+   <div class="sc-row"><span>Introduction frames the demand</span><b>2</b></div>
+   <div class="sc-row"><span>Core arguments &amp; balance</span><b>3</b></div>
+   <div class="sc-row"><span>Examples, data &amp; schemes</span><b>3</b></div>
+   <div class="sc-row"><span>Structure, headings &amp; flow</span><b>1</b></div>
+   <div class="sc-row"><span>Conclusion / way forward</span><b>1</b></div>
+   <div class="sc-tot"><span>Total</span><b>10</b></div>
+ </div></section><section class="page pad"><div class="phead">
+      <div class="ph-mark"><svg viewBox="0 0 44 44" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+      <div class="ph-txt"><div class="ph-tag">ANY DEVICE &middot; किसी भी डिवाइस</div>
+      <div class="ph-title">Bilingual &amp; app-like on mobile <span class="ph-hi">द्विभाषी व मोबाइल पर ऐप जैसा</span></div></div>
+    </div><div class="lead">Built for how aspirants actually study — one tap switches the entire dashboard between English and हिंदी, and on a phone it feels like an app with a bottom tab bar.</div>
+ <div class="twocol">
+   <div class="tc"><div class="tc-h">&#127760; Fully Bilingual</div><div class="en">Questions, options, explanations, editorials and answers — all in English + हिंदी, switchable anywhere.</div><div class="hi">हर चीज़ अंग्रेज़ी व हिंदी में — कहीं भी बदलें।</div></div>
+   <div class="tc"><div class="tc-h">&#128241; App-like on Mobile</div><div class="en">Left menu becomes a bottom tab bar; open in your browser, no install, no cost to begin.</div><div class="hi">मोबाइल पर नीचे टैब-बार; कोई इंस्टॉल नहीं।</div></div>
+   <div class="tc"><div class="tc-h">&#128266; Listen Anywhere</div><div class="en">Audio on news &amp; editorials for hands-free revision.</div><div class="hi">न्यूज़ व संपादकीय पर ऑडियो।</div></div>
+   <div class="tc"><div class="tc-h">&#128260; Updated Daily</div><div class="en">Fresh current affairs, editorials and Rajasthan insights every single day.</div><div class="hi">हर दिन नया कंटेंट।</div></div>
+ </div></section><section class="page">
+<div class="back">
+  <div class="bk-mark"><svg viewBox="0 0 44 44" width="84" height="84" xmlns="http://www.w3.org/2000/svg">
+<rect width="44" height="44" rx="11" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1"/>
+<path d="M22 7 C19.5 11 19.5 14.5 22 17.6 C24.5 14.5 24.5 11 22 7 Z" fill="#f6cf6a"/>
+<path d="M17 11.5 C15.8 14.6 16.9 17.6 19 18.9 C17.8 16 17.6 13.5 17 11.5 Z" fill="#f6cf6a"/>
+<path d="M27 11.5 C28.2 14.6 27.1 17.6 25 18.9 C26.2 16 26.4 13.5 27 11.5 Z" fill="#f6cf6a"/>
+<path d="M11.5 25.5 L32.5 25.5 L29.5 33 C25.5 36 18.5 36 14.5 33 Z" fill="#1b1c22" stroke="#f6cf6a" stroke-width="1.1" stroke-linejoin="round"/>
+<circle cx="11.5" cy="25.5" r="1.7" fill="#f6cf6a"/><circle cx="32.5" cy="25.5" r="1.7" fill="#f6cf6a"/>
+<rect x="19" y="35.4" width="6" height="1.6" rx="0.8" fill="#f6cf6a"/></svg></div>
+  <div class="bk-brand">RRR<span>SHALA</span></div>
+  <div class="bk-sub">One Stop Centre for Cracking the RAS Exam</div>
+  <div class="bk-line"></div>
+  <div class="bk-h">Start free today — तैयारी अभी शुरू करें</div>
+  <div class="bk-grid">
+    <div class="bk-c"><div class="bk-ic">&#127760;</div><div class="bk-l">Website</div><div class="bk-v">www.rrrshala.com</div></div>
+    <div class="bk-c"><div class="bk-ic">&#9992;</div><div class="bk-l">Telegram</div><div class="bk-v">@rrrshala</div><div class="bk-vs">t.me/rrrshala</div></div>
+  </div>
+  <div class="bk-note">Free to start &middot; Bilingual &middot; Works on any phone or laptop — no app needed.<br><span class="hi">शुरुआत बिल्कुल फ्री &middot; द्विभाषी &middot; किसी भी फ़ोन/लैपटॉप पर।</span></div>
+  <div class="bk-share">Share with every RAS aspirant you know &middot; हर RAS अभ्यर्थी तक पहुँचाएँ</div>
+</div></section></div>
+</body></html>
