@@ -261,7 +261,7 @@ img{-webkit-user-drag:none;user-drag:none}
    <div id="view-interview" class="view hidden"></div>
    <div id="view-video" class="view hidden"></div>
   </div>
-  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 05 Jul 09:39</span><br><span style="opacity:.6;font-size:11px">Privacy-friendly analytics &mdash; no cookies, no IP addresses or personal data stored.</span></div>
+  <div class="sitefoot">&copy; 2026 RRRSHALA &middot; <span>&#128065; <span id="vcount">&hellip;</span> visitors</span> &middot; <span style="opacity:.65">build 05 Jul 09:49</span><br><span style="opacity:.6;font-size:11px">Privacy-friendly analytics &mdash; no cookies, no IP addresses or personal data stored.</span></div>
  </div>
 </div>
 <nav class="botnav" id="botnav"><button class="botitem on" data-g="home" onclick="botGo('home')"><span class="bi">&#127968;</span><span>Home</span></button><button class="botitem" data-g="ca" onclick="botSheet('ca')"><span class="bi">&#128240;</span><span>Affairs</span></button><button class="botitem" data-g="quiz" onclick="botSheet('quiz')"><span class="bi">&#129504;</span><span>Quiz</span></button><button class="botitem" data-g="progress" onclick="botGo('progress')"><span class="bi">&#128202;</span><span>Progress</span></button><button class="botitem" data-g="more" onclick="botSheet('more')"><span class="bi">&#9776;</span><span>More</span></button></nav><div class="botsheet" id="botsheet"><div class="botsheet-bg" onclick="botClose()"></div><div class="botsheet-panel" id="botsheet-panel"></div></div>
@@ -366,8 +366,9 @@ function evalAnswer(rb,text,marks){const norm=normalize(text);const words=norm?n
  let cov= total? got/total : 0;
  let mark=Math.round(Math.pow(cov,1.5)*marks*2)/2;
  if(cov>=0.999 && words< Math.max(3, lim*0.3)) mark=Math.min(mark, Math.round(marks*0.75*2)/2);
+ var capm=marks===10?6.5:(marks===5?3.5:marks); if(mark>capm)mark=capm;
  const over=words>lim*1.2; if(over) mark=Math.max(0, mark-0.5);
- if(mark>marks)mark=marks;
+ if(mark>capm)mark=capm; if(mark<0)mark=0;
  return {mark:mark, cov:Math.round(cov*100), words:words, lim:lim, hits:hits, miss:miss, over:over}}
 function wc(rid,lim){const t=document.getElementById('ta-'+rid);if(!t)return;const w=normalize(t.value).split(' ').filter(Boolean).length;const el=document.getElementById('wc-'+rid);if(el){el.textContent=w+' / '+lim;el.style.color=w>lim*1.2?'var(--bad)':'var(--muted)'}}
 function openAtt(rid,marks){const host=document.getElementById('att-'+rid);if(!host)return;
@@ -589,7 +590,7 @@ async function edEval(eid,marks){var ta=document.getElementById('eta-'+eid);if(!
   try{var resp=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q,answer:txt,marks:marks,wordlimit:150,model:model,keypoints:kp})});if(!resp.ok)throw 0;var dd=await resp.json();res.innerHTML=edResult(dd.mark,marks,dd.feedback||'',model,(dd.wordcount!=null?dd.wordcount:null));return;}
   catch(e){res.innerHTML='<div class="small" style="color:var(--bad)">'+L2('Could not reach AI server — showing offline check.','AI सर्वर तक नहीं पहुँचा — ऑफलाइन जाँच।')+'</div>';}}
  var low=txt.toLowerCase();var hit=0;var missed=[];kp.forEach(function(k){var key=(k||'').toLowerCase();var first=key.split(' ')[0];if(key&&(low.indexOf(key)>=0||(first.length>3&&low.indexOf(first)>=0)))hit++;else missed.push(k);});
- var cov=kp.length?hit/kp.length:0;var words=txt.trim()?txt.trim().split(/\s+/).length:0;var _sc=marks>=10,_smax=6.5,_wl=(d.words||150),_ln='';var mark=cov*marks;if(_sc){if(mark>_smax)mark=_smax;if(words>0&&words<_wl){var _cap=Math.round(_smax*(words/_wl)*2)/2;if(mark>_cap){mark=_cap;_ln=L2('\nUnder '+_wl+'-word limit ('+words+' words): mark capped at '+_cap+'/'+marks+'.','\n'+_wl+' शब्द-सीमा से कम ('+words+' शब्द): अधिकतम '+_cap+'/'+marks+'।');}}else if(words>_wl*1.2){mark=mark-0.5;_ln=L2('\nExceeded '+_wl+'-word limit by >20% ('+words+' words): 0.5-mark penalty.','\n'+_wl+' शब्द-सीमा 20% से अधिक पार ('+words+' शब्द): 0.5 अंक दंड।');}}else{if(words<40)mark=Math.min(mark,marks*0.4);}mark=Math.round(mark*2)/2;if(mark<0)mark=0;var _mmax=_sc?_smax:marks;if(mark>_mmax)mark=_mmax;
+ var cov=kp.length?hit/kp.length:0;var words=txt.trim()?txt.trim().split(/\s+/).length:0;var _sc=marks===10,_smax=6.5,_wl=(d.words||150),_ln='';var mark=cov*marks;if(_sc){if(mark>_smax)mark=_smax;if(words>0&&words<_wl){var _cap=Math.round(_smax*(words/_wl)*2)/2;if(mark>_cap){mark=_cap;_ln=L2('\nUnder '+_wl+'-word limit ('+words+' words): mark capped at '+_cap+'/'+marks+'.','\n'+_wl+' शब्द-सीमा से कम ('+words+' शब्द): अधिकतम '+_cap+'/'+marks+'।');}}else if(words>_wl*1.2){mark=mark-0.5;_ln=L2('\nExceeded '+_wl+'-word limit by >20% ('+words+' words): 0.5-mark penalty.','\n'+_wl+' शब्द-सीमा 20% से अधिक पार ('+words+' शब्द): 0.5 अंक दंड।');}}else{if(words<40)mark=Math.min(mark,marks*0.4);}mark=Math.round(mark*2)/2;if(mark<0)mark=0;var _mmax=_sc?_smax:marks;if(mark>_mmax)mark=_mmax;
  var fb=L2('Offline check — covered '+hit+' of '+kp.length+' key points. Connect an AI grader (gear icon in Answer Writing) for detailed feedback.','ऑफलाइन जाँच — '+kp.length+' में से '+hit+' मुख्य बिंदु शामिल। विस्तृत फीडबैक हेतु AI ग्रेडर जोड़ें।');
  res.innerHTML=edResult(mark,marks,fb+_ln,model,words)+(missed.length?'<div class="exp" style="border-left-color:var(--bad)"><b>'+L2('Points you may have missed','छूटे संभावित बिंदु')+':</b> '+esc(missed.join('; '))+'</div>':'');}
 function edSelf(eid,marks){var host=document.getElementById('eself-'+eid);if(!host)return;if(host.dataset.open){host.innerHTML='';host.dataset.open='';return;}host.dataset.open='1';
