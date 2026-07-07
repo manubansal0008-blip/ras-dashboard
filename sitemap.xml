@@ -9,4 +9,31 @@
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/?lang=hi"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/"/>
   </url>
+  <url>
+    <loc>https://www.rrrshala.com/ras/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/ras/national-parks-of-rajasthan/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/national-parks-of-rajasthan/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/national-parks-of-rajasthan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/national-parks-of-rajasthan/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/ras/national-parks-of-rajasthan/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/national-parks-of-rajasthan/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/national-parks-of-rajasthan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/national-parks-of-rajasthan/"/>
+  </url>
 </urlset>
