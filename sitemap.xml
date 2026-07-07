@@ -37,6 +37,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/national-parks-of-rajasthan/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/ras/ras-exam-dates/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-exam-dates/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-exam-dates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-exam-dates/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/ras/ras-exam-dates/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-exam-dates/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-exam-dates/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-exam-dates/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/ras/ras-salary/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -71,5 +89,23 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-syllabus/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-syllabus/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-syllabus/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/ras/ras-vacancy/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-vacancy/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-vacancy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-vacancy/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/ras/ras-vacancy/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-vacancy/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-vacancy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-vacancy/"/>
   </url>
 </urlset>
