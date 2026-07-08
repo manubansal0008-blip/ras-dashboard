@@ -541,6 +541,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-07/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/news/2026-07-08/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-08/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-08/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-08/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/news/2026-07-08/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-08/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-08/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-08/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>daily</changefreq>
@@ -710,5 +728,23 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-07/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-07/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-07/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/editorials/2026-07-08/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-08/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-08/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-08/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/editorials/2026-07-08/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-08/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-08/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-08/"/>
   </url>
 </urlset>
