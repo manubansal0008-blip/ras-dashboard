@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.rrrshala.com/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/?lang=en"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/ras/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/"/>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/current-affairs/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/"/>
@@ -389,7 +389,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/news/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/"/>
@@ -613,8 +613,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-09/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/news/2026-07-10/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-10/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-10/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-10/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/news/2026-07-10/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-10/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-10/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-10/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/"/>
@@ -820,8 +838,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-09/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/editorials/2026-07-10/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-10/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-10/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-10/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/editorials/2026-07-10/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-10/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-10/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-10/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/mains-answers/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/"/>
@@ -1583,5 +1619,59 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/trading-blows-amid-talks-the-us-iran-and-the-fragile-future-of-the-str/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/trading-blows-amid-talks-the-us-iran-and-the-fragile-future-of-the-str/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/trading-blows-amid-talks-the-us-iran-and-the-fragile-future-of-the-str/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/lost-in-the-celebration-of-trade-pacts-why-the-deal-that-matters-most/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/lost-in-the-celebration-of-trade-pacts-why-the-deal-that-matters-most/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/lost-in-the-celebration-of-trade-pacts-why-the-deal-that-matters-most/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/lost-in-the-celebration-of-trade-pacts-why-the-deal-that-matters-most/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/lost-in-the-celebration-of-trade-pacts-why-the-deal-that-matters-most/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/lost-in-the-celebration-of-trade-pacts-why-the-deal-that-matters-most/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/lost-in-the-celebration-of-trade-pacts-why-the-deal-that-matters-most/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/lost-in-the-celebration-of-trade-pacts-why-the-deal-that-matters-most/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/the-long-road-to-ethanol-what-brazil-s-90-year-fuel-journey-teaches-a/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-long-road-to-ethanol-what-brazil-s-90-year-fuel-journey-teaches-a/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-long-road-to-ethanol-what-brazil-s-90-year-fuel-journey-teaches-a/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-long-road-to-ethanol-what-brazil-s-90-year-fuel-journey-teaches-a/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/the-long-road-to-ethanol-what-brazil-s-90-year-fuel-journey-teaches-a/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-long-road-to-ethanol-what-brazil-s-90-year-fuel-journey-teaches-a/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-long-road-to-ethanol-what-brazil-s-90-year-fuel-journey-teaches-a/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-long-road-to-ethanol-what-brazil-s-90-year-fuel-journey-teaches-a/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
   </url>
 </urlset>
