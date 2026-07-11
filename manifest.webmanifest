@@ -1,0 +1,26 @@
+{
+  "name": "RRRSHALA — RAS Prelims 2026",
+  "short_name": "RRRSHALA",
+  "description": "Free daily current affairs, newspaper MCQs, editorials and mock tests for RPSC RAS 2026 — bilingual English & Hindi.",
+  "id": "/",
+  "start_url": "/?src=app",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#23252e",
+  "theme_color": "#23252e",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["education"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Today's News", "short_name": "News", "url": "/?src=app&tab=news" },
+    { "name": "Daily Quiz", "short_name": "Quiz", "url": "/?src=app&tab=quiz" },
+    { "name": "Editorials", "short_name": "Editorials", "url": "/?src=app&tab=editorials" }
+  ]
+}
