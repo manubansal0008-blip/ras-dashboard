@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.rrrshala.com/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/?lang=en"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/ras/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/"/>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/current-affairs/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/"/>
@@ -388,8 +388,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/current-affairs/2026-07-09/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/current-affairs/2026-07-11/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/current-affairs/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/current-affairs/2026-07-11/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/current-affairs/2026-07-11/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/current-affairs/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/current-affairs/2026-07-11/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/news/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/"/>
@@ -631,8 +649,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-10/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/news/2026-07-11/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-11/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/news/2026-07-11/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-11/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/"/>
@@ -856,8 +892,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-10/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/editorials/2026-07-11/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-11/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/editorials/2026-07-11/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-11/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-11/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/mains-answers/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/"/>
@@ -1673,5 +1727,59 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/accountability-after-resignation-what-tabling-the-justice-varma-report/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/you-vote-therefore-you-are-the-hidden-consequences-of-deletion-from-th/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/you-vote-therefore-you-are-the-hidden-consequences-of-deletion-from-th/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/you-vote-therefore-you-are-the-hidden-consequences-of-deletion-from-th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/you-vote-therefore-you-are-the-hidden-consequences-of-deletion-from-th/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/you-vote-therefore-you-are-the-hidden-consequences-of-deletion-from-th/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/you-vote-therefore-you-are-the-hidden-consequences-of-deletion-from-th/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/you-vote-therefore-you-are-the-hidden-consequences-of-deletion-from-th/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/you-vote-therefore-you-are-the-hidden-consequences-of-deletion-from-th/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/from-uranium-to-the-indo-pacific-the-melbourne-summit-and-the-maturing/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/from-uranium-to-the-indo-pacific-the-melbourne-summit-and-the-maturing/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/from-uranium-to-the-indo-pacific-the-melbourne-summit-and-the-maturing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/from-uranium-to-the-indo-pacific-the-melbourne-summit-and-the-maturing/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/from-uranium-to-the-indo-pacific-the-melbourne-summit-and-the-maturing/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/from-uranium-to-the-indo-pacific-the-melbourne-summit-and-the-maturing/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/from-uranium-to-the-indo-pacific-the-melbourne-summit-and-the-maturing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/from-uranium-to-the-indo-pacific-the-melbourne-summit-and-the-maturing/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
   </url>
 </urlset>
