@@ -6,7 +6,7 @@
  *   - cross-origin     -> passthrough (Umami, Firebase, fonts, etc. — never cached).
  * Bump CACHE to force all clients onto a new shell.
  */
-const CACHE = 'rrrshala-v1';
+const CACHE = 'rrrshala-v2';
 const SHELL = [
   '/',
   '/index.html',
