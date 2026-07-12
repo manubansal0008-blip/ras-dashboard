@@ -685,6 +685,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-11/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/news/2026-07-12/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-12/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-12/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-12/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/news/2026-07-12/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-12/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-12/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-12/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>daily</changefreq>
@@ -926,6 +944,24 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-11/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-11/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-11/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/editorials/2026-07-12/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-12/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-12/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-12/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/editorials/2026-07-12/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-12/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-12/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-12/"/>
   </url>
   <url>
     <loc>https://www.rrrshala.com/mains-answers/</loc>
@@ -1799,5 +1835,41 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/screens-and-children-should-india-follow-australia-and-lock-minors-out/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/twenty-five-years-of-brahmos-from-a-secret-office-to-the-mainstay-of-i/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/twenty-five-years-of-brahmos-from-a-secret-office-to-the-mainstay-of-i/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/twenty-five-years-of-brahmos-from-a-secret-office-to-the-mainstay-of-i/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/twenty-five-years-of-brahmos-from-a-secret-office-to-the-mainstay-of-i/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/twenty-five-years-of-brahmos-from-a-secret-office-to-the-mainstay-of-i/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/twenty-five-years-of-brahmos-from-a-secret-office-to-the-mainstay-of-i/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/twenty-five-years-of-brahmos-from-a-secret-office-to-the-mainstay-of-i/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/twenty-five-years-of-brahmos-from-a-secret-office-to-the-mainstay-of-i/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
   </url>
 </urlset>
