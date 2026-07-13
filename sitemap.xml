@@ -442,6 +442,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/current-affairs/2026-07-12/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/current-affairs/2026-07-13/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/current-affairs/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/current-affairs/2026-07-13/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/current-affairs/2026-07-13/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/current-affairs/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/current-affairs/2026-07-13/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/news/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>daily</changefreq>
@@ -721,6 +739,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-12/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/news/2026-07-13/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-13/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/news/2026-07-13/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-13/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>daily</changefreq>
@@ -980,6 +1016,24 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-12/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-12/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-12/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/editorials/2026-07-13/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-13/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/editorials/2026-07-13/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-13/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-13/"/>
   </url>
   <url>
     <loc>https://www.rrrshala.com/mains-answers/</loc>
@@ -1889,5 +1943,59 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/young-hearts-at-risk-why-heart-attacks-are-catching-indians-younger/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/the-oil-conundrum-india-s-crude-imports-need-a-strategy-not-just-a-dis/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-oil-conundrum-india-s-crude-imports-need-a-strategy-not-just-a-dis/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-oil-conundrum-india-s-crude-imports-need-a-strategy-not-just-a-dis/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-oil-conundrum-india-s-crude-imports-need-a-strategy-not-just-a-dis/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/the-oil-conundrum-india-s-crude-imports-need-a-strategy-not-just-a-dis/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-oil-conundrum-india-s-crude-imports-need-a-strategy-not-just-a-dis/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-oil-conundrum-india-s-crude-imports-need-a-strategy-not-just-a-dis/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-oil-conundrum-india-s-crude-imports-need-a-strategy-not-just-a-dis/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/justice-on-vacation-five-crore-indians-wait-while-the-courts-take-a-br/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/justice-on-vacation-five-crore-indians-wait-while-the-courts-take-a-br/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/justice-on-vacation-five-crore-indians-wait-while-the-courts-take-a-br/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/justice-on-vacation-five-crore-indians-wait-while-the-courts-take-a-br/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/justice-on-vacation-five-crore-indians-wait-while-the-courts-take-a-br/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/justice-on-vacation-five-crore-indians-wait-while-the-courts-take-a-br/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/justice-on-vacation-five-crore-indians-wait-while-the-courts-take-a-br/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/justice-on-vacation-five-crore-indians-wait-while-the-courts-take-a-br/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/self-inflicted-solitude-the-making-of-israel-s-retreat-into-isolation/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/self-inflicted-solitude-the-making-of-israel-s-retreat-into-isolation/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/self-inflicted-solitude-the-making-of-israel-s-retreat-into-isolation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/self-inflicted-solitude-the-making-of-israel-s-retreat-into-isolation/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/self-inflicted-solitude-the-making-of-israel-s-retreat-into-isolation/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/self-inflicted-solitude-the-making-of-israel-s-retreat-into-isolation/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/self-inflicted-solitude-the-making-of-israel-s-retreat-into-isolation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/self-inflicted-solitude-the-making-of-israel-s-retreat-into-isolation/"/>
   </url>
 </urlset>
