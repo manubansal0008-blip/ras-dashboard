@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.rrrshala.com/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/?lang=en"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/ras/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/"/>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/current-affairs/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/"/>
@@ -443,7 +443,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/news/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/"/>
@@ -722,7 +722,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/"/>
@@ -983,7 +983,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/mains-answers/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/"/>
