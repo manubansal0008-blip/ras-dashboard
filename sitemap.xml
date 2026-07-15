@@ -919,6 +919,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-14/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/news/2026-07-15/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-15/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-15/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-15/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/news/2026-07-15/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-15/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-15/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-15/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>daily</changefreq>
@@ -1214,6 +1232,24 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-14/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-14/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-14/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/editorials/2026-07-15/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-15/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-15/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-15/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/editorials/2026-07-15/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-15/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-15/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-15/"/>
   </url>
   <url>
     <loc>https://www.rrrshala.com/mains-answers/</loc>
@@ -2249,5 +2285,77 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/draft-regulations-for-use-of-ai-in-courts-2026-efficiency-without-abdi/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/draft-regulations-for-use-of-ai-in-courts-2026-efficiency-without-abdi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/draft-regulations-for-use-of-ai-in-courts-2026-efficiency-without-abdi/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/rajasthan-s-assembly-at-75-fewer-sittings-weaker-accountability/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/rajasthan-s-assembly-at-75-fewer-sittings-weaker-accountability/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/rajasthan-s-assembly-at-75-fewer-sittings-weaker-accountability/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/rajasthan-s-assembly-at-75-fewer-sittings-weaker-accountability/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/rajasthan-s-assembly-at-75-fewer-sittings-weaker-accountability/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/rajasthan-s-assembly-at-75-fewer-sittings-weaker-accountability/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/rajasthan-s-assembly-at-75-fewer-sittings-weaker-accountability/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/rajasthan-s-assembly-at-75-fewer-sittings-weaker-accountability/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/the-anaemia-fight-and-a-missing-injection/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-anaemia-fight-and-a-missing-injection/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-anaemia-fight-and-a-missing-injection/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-anaemia-fight-and-a-missing-injection/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/the-anaemia-fight-and-a-missing-injection/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-anaemia-fight-and-a-missing-injection/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-anaemia-fight-and-a-missing-injection/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-anaemia-fight-and-a-missing-injection/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/skilling-for-a-viksit-rajasthan-turning-youth-into-an-asset/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/skilling-for-a-viksit-rajasthan-turning-youth-into-an-asset/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/skilling-for-a-viksit-rajasthan-turning-youth-into-an-asset/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/skilling-for-a-viksit-rajasthan-turning-youth-into-an-asset/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/skilling-for-a-viksit-rajasthan-turning-youth-into-an-asset/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/skilling-for-a-viksit-rajasthan-turning-youth-into-an-asset/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/skilling-for-a-viksit-rajasthan-turning-youth-into-an-asset/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/skilling-for-a-viksit-rajasthan-turning-youth-into-an-asset/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/inflation-ticks-up-the-rbi-s-balancing-act/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/inflation-ticks-up-the-rbi-s-balancing-act/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/inflation-ticks-up-the-rbi-s-balancing-act/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/inflation-ticks-up-the-rbi-s-balancing-act/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/inflation-ticks-up-the-rbi-s-balancing-act/</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/inflation-ticks-up-the-rbi-s-balancing-act/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/inflation-ticks-up-the-rbi-s-balancing-act/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/inflation-ticks-up-the-rbi-s-balancing-act/"/>
   </url>
 </urlset>
