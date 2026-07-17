@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.rrrshala.com/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/?lang=en"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/ras/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/"/>
@@ -254,7 +254,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/current-affairs/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/"/>
@@ -605,7 +605,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/news/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/"/>
@@ -955,8 +955,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-16/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/news/2026-07-17/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-17/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-17/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-17/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/news/2026-07-17/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/2026-07-17/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/news/2026-07-17/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/news/2026-07-17/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/"/>
@@ -1288,8 +1306,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-16/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/editorials/2026-07-17/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-17/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-17/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-17/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/editorials/2026-07-17/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-17/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-17/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-17/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/mains-answers/</loc>
-    <lastmod>2026-07-16</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/"/>
@@ -2465,5 +2501,77 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/delhi-s-ev-push-ambition-meets-the-two-wheeler-reality/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/delhi-s-ev-push-ambition-meets-the-two-wheeler-reality/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/delhi-s-ev-push-ambition-meets-the-two-wheeler-reality/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/ahead-of-the-big-deal-why-india-must-strike-a-careful-balance-on-tarif/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/ahead-of-the-big-deal-why-india-must-strike-a-careful-balance-on-tarif/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/ahead-of-the-big-deal-why-india-must-strike-a-careful-balance-on-tarif/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/ahead-of-the-big-deal-why-india-must-strike-a-careful-balance-on-tarif/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/ahead-of-the-big-deal-why-india-must-strike-a-careful-balance-on-tarif/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/ahead-of-the-big-deal-why-india-must-strike-a-careful-balance-on-tarif/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/ahead-of-the-big-deal-why-india-must-strike-a-careful-balance-on-tarif/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/ahead-of-the-big-deal-why-india-must-strike-a-careful-balance-on-tarif/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/a-grammatical-subject-for-democracy-the-politics-of-accountability/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/a-grammatical-subject-for-democracy-the-politics-of-accountability/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/a-grammatical-subject-for-democracy-the-politics-of-accountability/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/a-grammatical-subject-for-democracy-the-politics-of-accountability/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/a-grammatical-subject-for-democracy-the-politics-of-accountability/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/a-grammatical-subject-for-democracy-the-politics-of-accountability/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/a-grammatical-subject-for-democracy-the-politics-of-accountability/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/a-grammatical-subject-for-democracy-the-politics-of-accountability/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/a-transforming-nato-and-the-space-it-opens-for-india/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/a-transforming-nato-and-the-space-it-opens-for-india/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/a-transforming-nato-and-the-space-it-opens-for-india/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/a-transforming-nato-and-the-space-it-opens-for-india/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/a-transforming-nato-and-the-space-it-opens-for-india/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/a-transforming-nato-and-the-space-it-opens-for-india/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/a-transforming-nato-and-the-space-it-opens-for-india/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/a-transforming-nato-and-the-space-it-opens-for-india/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
   </url>
 </urlset>
