@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.rrrshala.com/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/?lang=en"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/ras/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/"/>
@@ -254,7 +254,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/current-affairs/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/current-affairs/"/>
@@ -623,7 +623,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/news/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/news/"/>
@@ -992,7 +992,7 @@
   </url>
   <url>
     <loc>https://www.rrrshala.com/editorials/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/"/>
@@ -1342,8 +1342,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-17/"/>
   </url>
   <url>
+    <loc>https://www.rrrshala.com/editorials/2026-07-23/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-23/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-23/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-23/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/editorials/2026-07-23/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/editorials/2026-07-23/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/editorials/2026-07-23/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/editorials/2026-07-23/"/>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/mains-answers/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/"/>
@@ -2591,5 +2609,95 @@
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/the-cybersecurity-lesson-in-e-rickshaws/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/tear-gas-at-the-gates-when-the-republic-stops-listening-to-its-young/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/tear-gas-at-the-gates-when-the-republic-stops-listening-to-its-young/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/tear-gas-at-the-gates-when-the-republic-stops-listening-to-its-young/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/tear-gas-at-the-gates-when-the-republic-stops-listening-to-its-young/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/tear-gas-at-the-gates-when-the-republic-stops-listening-to-its-young/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/tear-gas-at-the-gates-when-the-republic-stops-listening-to-its-young/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/tear-gas-at-the-gates-when-the-republic-stops-listening-to-its-young/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/tear-gas-at-the-gates-when-the-republic-stops-listening-to-its-young/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/leaked-papers-leaking-future-the-real-education-emergency/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/leaked-papers-leaking-future-the-real-education-emergency/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/leaked-papers-leaking-future-the-real-education-emergency/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/leaked-papers-leaking-future-the-real-education-emergency/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/leaked-papers-leaking-future-the-real-education-emergency/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/leaked-papers-leaking-future-the-real-education-emergency/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/leaked-papers-leaking-future-the-real-education-emergency/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/leaked-papers-leaking-future-the-real-education-emergency/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/death-in-the-deep-what-the-teesta-tunnel-buried-along-with-its-workers/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/death-in-the-deep-what-the-teesta-tunnel-buried-along-with-its-workers/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/death-in-the-deep-what-the-teesta-tunnel-buried-along-with-its-workers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/death-in-the-deep-what-the-teesta-tunnel-buried-along-with-its-workers/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/death-in-the-deep-what-the-teesta-tunnel-buried-along-with-its-workers/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/death-in-the-deep-what-the-teesta-tunnel-buried-along-with-its-workers/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/death-in-the-deep-what-the-teesta-tunnel-buried-along-with-its-workers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/death-in-the-deep-what-the-teesta-tunnel-buried-along-with-its-workers/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/choked-at-the-gate-of-tears-the-narrow-strait-holding-a-third-of-india/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/choked-at-the-gate-of-tears-the-narrow-strait-holding-a-third-of-india/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/choked-at-the-gate-of-tears-the-narrow-strait-holding-a-third-of-india/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/choked-at-the-gate-of-tears-the-narrow-strait-holding-a-third-of-india/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/choked-at-the-gate-of-tears-the-narrow-strait-holding-a-third-of-india/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/choked-at-the-gate-of-tears-the-narrow-strait-holding-a-third-of-india/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/choked-at-the-gate-of-tears-the-narrow-strait-holding-a-third-of-india/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/choked-at-the-gate-of-tears-the-narrow-strait-holding-a-third-of-india/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/mains-answers/thirsty-giants-the-ai-boom-drinking-india-s-water-and-power/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/thirsty-giants-the-ai-boom-drinking-india-s-water-and-power/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/thirsty-giants-the-ai-boom-drinking-india-s-water-and-power/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/thirsty-giants-the-ai-boom-drinking-india-s-water-and-power/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/mains-answers/thirsty-giants-the-ai-boom-drinking-india-s-water-and-power/</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/mains-answers/thirsty-giants-the-ai-boom-drinking-india-s-water-and-power/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/mains-answers/thirsty-giants-the-ai-boom-drinking-india-s-water-and-power/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/mains-answers/thirsty-giants-the-ai-boom-drinking-india-s-water-and-power/"/>
   </url>
 </urlset>
