@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Live RAS Current Affairs — Auto Updated</title>
-<meta name="description" content="Automatically updated daily current affairs for RPSC RAS. Shows live count.">
+<meta name="description" content="Automatically updated daily current affairs for RPSC RAS with Rajasthan focus.">
 <link rel="canonical" href="https://www.rrrshala.com/current-affairs/live.html">
 <style>
 *{box-sizing:border-box}
@@ -39,7 +39,7 @@ h1{font-size:28px;line-height:1.22;margin:6px 0 8px}
 <div class="wrap">
   <p class="crumb"><a href="https://www.rrrshala.com/">Home</a> &rsaquo; <a href="https://www.rrrshala.com/current-affairs/">Current Affairs</a> &rsaquo; Live</p>
   <h1>Live RAS Current Affairs <span id="count" class="count">…</span> <span class="refresh" onclick="loadFeeds()">↻ Refresh</span></h1>
-  <p class="intro">Automatically fetched from PIB, The Hindu and Indian Express. Updates every time you open this page. Rajasthan-relevant items are highlighted.</p>
+  <p class="intro">Automatically fetched from Dainik Bhaskar Rajasthan, PIB, The Hindu and Indian Express. Rajasthan-relevant items are highlighted.</p>
   <div class="tabs">
     <button class="active" data-filter="all">All</button>
     <button data-filter="rajasthan">Rajasthan</button>
@@ -52,11 +52,12 @@ h1{font-size:28px;line-height:1.22;margin:6px 0 8px}
 </div>
 <script>
 const FEEDS = [
+  { url: 'https://www.bhaskar.com/rss-v1--category-1740.xml', source: 'Dainik Bhaskar RJ', type: 'rajasthan' },
   { url: 'https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3&reg=48', source: 'PIB', type: 'pib' },
   { url: 'https://www.thehindu.com/news/national/feeder/default.rss', source: 'The Hindu', type: 'national' },
   { url: 'https://indianexpress.com/section/india/feed/', source: 'Indian Express', type: 'national' }
 ];
-const RAJ_KEYWORDS = /rajasthan|jaipur|jodhpur|udaipur|kota|ajmer|bikaner|riico|dipr|bhajanlal|rajasthan government|rajasthan assembly|panchayat|mineral|pokhran|jaisalmer|tilonia|barefoot/i;
+const RAJ_KEYWORDS = /rajasthan|jaipur|jodhpur|udaipur|kota|ajmer|bikaner|riico|dipr|bhajanlal|rajasthan government|rajasthan assembly|panchayat|mineral|pokhran|jaisalmer|tilonia|barefoot|sujas/i;
 let allItems = [];
 let currentFilter = 'all';
 
@@ -67,13 +68,13 @@ async function fetchFeed(feed) {
     if (!res.ok) return [];
     const data = await res.json();
     if (data.status !== 'ok' || !data.items) return [];
-    return data.items.slice(0, 15).map(item => ({
+    return data.items.slice(0, 12).map(item => ({
       title: item.title || 'Untitled',
       link: item.link || '#',
       date: item.pubDate || new Date().toISOString(),
       source: feed.source,
       type: feed.type,
-      isRaj: RAJ_KEYWORDS.test(item.title || '')
+      isRaj: feed.type === 'rajasthan' || RAJ_KEYWORDS.test(item.title || '')
     }));
   } catch (e) { return []; }
 }
