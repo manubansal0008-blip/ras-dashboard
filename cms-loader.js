@@ -96,8 +96,81 @@
     };
   }
 
+
+  // News Anchor: prefer Indian-accent voices (en-IN, then hi-IN), let visitor choose, remember choice
+  function patchAnchorVoice() {
+    if (window.__ivoice || typeof window.pickVoice !== 'function') return;
+    window.__ivoice = true;
+    function ls(k, v) { try { if (v === undefined) return localStorage.getItem(k) || ''; localStorage.setItem(k, v); } catch (e) { return ''; } }
+    function score(v, want) {
+      var L = (v.lang || '').toLowerCase().replace(/_/g, '-'), n = (v.name || '').toLowerCase(), s = 0;
+      if (want === 'en') { if (L.indexOf('en-in') === 0) s = 100; else if (L.indexOf('hi') === 0) s = 60; else if (L.indexOf('en') === 0) s = 10; else return -1; }
+      else { if (L.indexOf('hi') === 0) s = 100; else return -1; }
+      if (/natural|neural|online|enhanced|premium/.test(n)) s += 20;
+      if (/google/.test(n)) s += 12;
+      if (/neerja|heera|swara|kalpana|aditi|raveena|lekha|rishi|prabhat|madhur|india|hindi|हिन्दी/.test(n)) s += 8;
+      if (/heera|neerja|swara|kalpana|lekha|aditi/.test(n)) s += 5; // female anchor voices first
+      return s;
+    }
+    function ranked(lang) {
+      var want = lang === 'hi' ? 'hi' : 'en', vs = [];
+      try { vs = window.speechSynthesis.getVoices() || []; } catch (e) {}
+      return vs.map(function (v) { return { v: v, s: score(v, want) }; }).filter(function (x) { return x.s >= 0; })
+        .sort(function (a, b) { return b.s - a.s; }).map(function (x) { return x.v; });
+    }
+    window.pickVoice = function (lang) {
+      var list = ranked(lang), saved = ls('rrrVoice_' + (lang === 'hi' ? 'hi' : 'en'));
+      for (var i = 0; i < list.length; i++) if (list[i].name === saved) return list[i];
+      return list[0] || null;
+    };
+    if (typeof window._aNext === 'function') {
+      window._aNext = function (st) {
+        if (_aI >= _aQ.length) { _aStopKeep(); if (st) st.textContent = ''; return; }
+        var u = new SpeechSynthesisUtterance(_aQ[_aI]); var v = window.pickVoice(LANG);
+        u.lang = v ? v.lang : (LANG === 'hi' ? 'hi-IN' : 'en-IN'); if (v) u.voice = v;
+        u.rate = anchorRate; u.pitch = 1;
+        u.onend = function () { _aI++; window._aNext(st); }; u.onerror = function () { _aI++; window._aNext(st); };
+        window.speechSynthesis.speak(u);
+      };
+    }
+    window.rrrSetVoice = function (name) { ls('rrrVoice_' + (LANG === 'hi' ? 'hi' : 'en'), name); };
+    function label(v) {
+      var L = (v.lang || '').toLowerCase().replace(/_/g, '-');
+      var tag = L.indexOf('en-in') === 0 ? '🇮🇳 EN' : L.indexOf('hi') === 0 ? '🇮🇳 हिं' : L.toUpperCase();
+      return tag + ' · ' + (v.name || '').replace(/Microsoft |Google |\(.*?\)| - .*/g, '').trim().slice(0, 22);
+    }
+    if (typeof window.anchorPlayer === 'function') {
+      var origPlayer = window.anchorPlayer;
+      window.anchorPlayer = function (date) {
+        var html = origPlayer.apply(this, arguments);
+        try {
+          var list = ranked(LANG), cur = window.pickVoice(LANG);
+          if (list.length > 1) {
+            var sel = '<select onchange="rrrSetVoice(this.value)" title="voice" style="padding:6px 8px;margin-right:4px;max-width:190px">' +
+              list.slice(0, 12).map(function (v) { var nm = (v.name || '').replace(/"/g, ''); return '<option value="' + nm + '"' + (cur && v.name === cur.name ? ' selected' : '') + '>' + label(v) + '</option>'; }).join('') + '</select>';
+            html = html.replace('<button class="btn amber"', sel + '<button class="btn amber"');
+          }
+          var hasIndian = list.some(function (v) { var L = (v.lang || '').toLowerCase().replace(/_/g, '-'); return L.indexOf('en-in') === 0 || L.indexOf('hi') === 0; });
+          if (!hasIndian) html = html.replace('<div id="anchorstatus"', '<div class="small muted" style="margin-top:6px">' + (LANG === 'hi' ? 'इस डिवाइस में भारतीय आवाज़ उपलब्ध नहीं है — फ़ोन की Text-to-speech सेटिंग में Hindi / English (India) आवाज़ डाउनलोड करें।' : 'No Indian voice on this device — install "English (India)" or Hindi in your phone/PC text-to-speech settings.') + '</div><div id="anchorstatus"');
+        } catch (e) {}
+        return html;
+      };
+    }
+    function refreshBar() {
+      try {
+        var bar = document.querySelector('.anchorbar'); if (!bar || bar.querySelector('select[title=voice]')) return;
+        var b = bar.querySelector('button.btn.amber'); var m = b && (b.getAttribute('onclick') || '').match(/anchorPlay\('([^']+)'\)/);
+        if (m) bar.outerHTML = window.anchorPlayer(m[1]);
+      } catch (e) {}
+    }
+    try { window.speechSynthesis.addEventListener('voiceschanged', refreshBar); } catch (e) {}
+    setTimeout(refreshBar, 1500);
+    document.addEventListener('click', function () { setTimeout(refreshBar, 300); }, true);
+  }
+
   ready(function () {
     patchDailyQuiz();
+    patchAnchorVoice();
     stripRelev();
     try { if (window.__cur_v === 'caraj' && typeof render === 'function') render('caraj'); } catch (e) {}
     var db = firebase.firestore();
