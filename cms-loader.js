@@ -175,6 +175,14 @@
   // RRR full-length mock tests: list them first in the Mock Test view; unlock the Mock tile on Home
   function patchMocks() {
     if (window.__rrrmock) return; window.__rrrmock = true;
+    try {
+      if (window.__LOCKED) delete window.__LOCKED.mock;
+      document.querySelectorAll('#nav [data-v="mock"]').forEach(function (b) {
+        b.classList.remove('locked'); b.removeAttribute('aria-disabled');
+        var bd = b.querySelector('.badge'); if (bd) bd.remove();
+        b.onclick = function (e) { if (e) e.preventDefault(); show('mock'); };
+      });
+    } catch (e) {}
     if (typeof window.renderMock === 'function') {
       var oR = window.renderMock;
       window.renderMock = function () {
