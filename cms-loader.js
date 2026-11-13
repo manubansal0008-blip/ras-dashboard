@@ -53,6 +53,10 @@
       });
       DD_DATES[d.date] = { label_en: d.label_en, label_hi: d.label_hi, ids: qs.map(function (q) { return q.id; }) };
       if (has('DDMETA') && d.date >= (DDMETA.date || '')) { DDMETA.date = d.date; DDMETA.label_en = d.label_en; DDMETA.label_hi = d.label_hi; }
+    } else if (type === 'mock' && d.code) {
+      window.RRRMOCKS = window.RRRMOCKS || {};
+      (d.questions || []).forEach(function (q) { BYID[q.id] = q; });
+      window.RRRMOCKS[d.code] = d;
     } else if (type === 'sujas' && has('SUJASQ') && d.code) {
       var gi = SUJASQ.findIndex(function (g) { return g.code === d.code; });
       if (gi >= 0) SUJASQ[gi] = d; else SUJASQ.unshift(d);
@@ -168,8 +172,73 @@
     document.addEventListener('click', function () { setTimeout(refreshBar, 300); }, true);
   }
 
+  // RRR full-length mock tests: list them first in the Mock Test view; unlock the Mock tile on Home
+  function patchMocks() {
+    if (window.__rrrmock) return; window.__rrrmock = true;
+    if (typeof window.renderMock === 'function') {
+      var oR = window.renderMock;
+      window.renderMock = function () {
+        var r = oR.apply(this, arguments);
+        try {
+          var sel = document.getElementById('mkpaper'), M = window.RRRMOCKS || {};
+          if (sel && !window.__mockActive) {
+            Object.keys(M).sort().reverse().forEach(function (c) {
+              var o = document.createElement('option'); o.value = c; o.textContent = LANG === 'hi' ? M[c].label_hi : M[c].label_en; sel.insertBefore(o, sel.firstChild);
+            });
+            if (Object.keys(M).length) {
+              var first = Object.keys(M).sort()[0]; sel.value = first;
+              var card = sel.closest('.card'); if (card && !document.getElementById('rrrmocknote')) {
+                var n = document.createElement('p'); n.id = 'rrrmocknote'; n.className = 'small muted'; n.style.marginTop = '10px';
+                n.textContent = LANG === 'hi' ? 'RRR मॉक टेस्ट: RPSC पैटर्न पर नए 150 प्रश्न · 3 घंटे · प्रत्येक प्रश्न 4/3 अंक (कुल 200) · गलत उत्तर पर 1/3 कटौती।' : 'RRR Mock Tests: fresh 150 questions on the RPSC pattern · 3 hours · 4/3 mark each (200 total) · 1/3 negative marking.';
+                card.appendChild(n);
+              }
+            }
+          }
+        } catch (e) {}
+        return r;
+      };
+    }
+    if (typeof window.startMock === 'function') {
+      var oS = window.startMock;
+      window.startMock = function () {
+        var sel = document.getElementById('mkpaper'), M = window.RRRMOCKS || {};
+        if (!sel || !M[sel.value]) return oS.apply(this, arguments);
+        var mins = +document.getElementById('mktime').value;
+        mock = { set: M[sel.value].questions.slice(), ans: {}, end: Date.now() + mins * 60000, paper: sel.value };
+        window.__mockActive = true; renderMockRun();
+        clearInterval(window.__mt); window.__mt = setInterval(tickMock, 1000);
+      };
+    }
+    if (typeof window.submitMock === 'function') {
+      var oSub = window.submitMock;
+      window.submitMock = function () {
+        var isRRR = mock && window.RRRMOCKS && window.RRRMOCKS[mock.paper];
+        var r = oSub.apply(this, arguments);
+        if (isRRR) try {
+          var cor = 0, wr = 0; mock.set.forEach(function (q) { var a = mock.ans[q.id]; if (a && a !== '__NA__') { if (a === q.a) cor++; else wr++; } });
+          var big = document.querySelector('#view-mock .big');
+          if (big) big.innerHTML = ((cor - wr / 3) * 4 / 3).toFixed(2) + ' / 200';
+        } catch (e) {}
+        return r;
+      };
+    }
+    if (typeof window.renderHome === 'function') {
+      var oH = window.renderHome;
+      window.renderHome = function () {
+        var r = oH.apply(this, arguments);
+        try {
+          document.querySelectorAll('#view-home .tile.locked').forEach(function (t) {
+            if (/150/.test(t.textContent)) { t.classList.remove('locked'); t.style.cursor = 'pointer'; t.onclick = function () { show('mock'); }; var b = t.querySelector('.badge'); if (b) b.remove(); }
+          });
+        } catch (e) {}
+        return r;
+      };
+    }
+  }
+
   ready(function () {
     patchDailyQuiz();
+    patchMocks();
     patchAnchorVoice();
     stripRelev();
     try { if (window.__cur_v === 'caraj' && typeof render === 'function') render('caraj'); } catch (e) {}
