@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>RRR Shala Admin</title>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<style>
+:root{--bg:#f5f3ee;--card:#fff;--ink:#1f2a3a;--muted:#6b7280;--line:#e5e1d8;--accent:#e8a020;--ok:#1f8a4c;--bad:#c0392b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:var(--ink);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+header h1{font-size:17px;margin:0;flex:1}header a{color:#ffd58a}
+main{max-width:980px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:7px 14px;font-weight:600;cursor:pointer}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#1f2a3a}
+label{display:block;font-size:13px;font-weight:600;margin:10px 0 4px}
+input,textarea,select{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+textarea{min-height:70px;resize:vertical}textarea.json{min-height:340px;font:12px/1.4 ui-monospace,Consolas,monospace}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(max-width:640px){.row{grid-template-columns:1fr}}
+.btn{border:0;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer;background:var(--ink);color:#fff}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn.acc{background:var(--accent);color:var(--ink)}.btn.red{background:var(--bad)}
+.item{border:1px dashed var(--line);border-radius:10px;padding:12px;margin:10px 0;position:relative}
+.item .x{position:absolute;top:8px;right:8px}
+.muted{color:var(--muted);font-size:13px}.msg{margin-top:10px;font-weight:600}.ok{color:var(--ok)}.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:7px;border-bottom:1px solid var(--line);text-align:left}
+.hidden{display:none}.pill{font-size:11px;padding:2px 8px;border-radius:10px;background:#eef}
+</style>
+</head>
+<body>
+<header><h1>⚙ RRR Shala — Admin Panel</h1><span id="who" class="muted" style="color:#cbd5e1"></span><a href="/">← Site</a><button id="outBtn" class="btn alt hidden" onclick="auth.signOut()">Sign out</button></header>
+<main>
+ <div id="gate" class="card">
+  <p>Sign in with the admin Google account to manage content.</p>
+  <button class="btn acc" onclick="auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())">Sign in with Google</button>
+  <div id="gateMsg" class="msg bad"></div>
+ </div>
+
+ <div id="app" class="hidden">
+  <div class="tabs" id="tabs">
+   <button data-t="news" class="on">Today's News</button>
+   <button data-t="dailyquiz">Daily Quiz (MCQs)</button>
+   <button data-t="rajspec">Rajasthan Specific</button>
+   <button data-t="edit">Editorials</button>
+   <button data-t="list">All entries</button>
+  </div>
+
+  <div id="editor" class="card">
+   <div class="row">
+    <div><label>Date</label><input type="date" id="date"></div>
+    <div><label>Mode</label><select id="mode"><option value="form">Simple form</option><option value="json">Paste JSON (bulk)</option></select></div>
+   </div>
+   <div id="formArea"></div>
+   <div id="jsonArea" class="hidden">
+    <label>JSON for this date <span class="muted">— same structure the site uses; Claude can prepare this for you</span></label>
+    <textarea id="json" class="json" spellcheck="false"></textarea>
+   </div>
+   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+    <button class="btn acc" onclick="save(true)">Publish</button>
+    <button class="btn alt" onclick="save(false)">Save as draft</button>
+    <button class="btn alt" onclick="loadEntry()">Load existing for this date</button>
+   </div>
+   <div id="msg" class="msg"></div>
+  </div>
+
+  <div id="listCard" class="card hidden">
+   <table><thead><tr><th>Section</th><th>Date</th><th>Status</th><th>Updated</th><th></th></tr></thead><tbody id="rows"></tbody></table>
+  </div>
+ </div>
+</main>
+
+<script>
+var ADMIN_EMAILS=['manubansal0008@gmail.com'];
+firebase.initializeApp({"apiKey":"AIzaSyC1h0iHOgH2i1PQviNLn1pqhpvADuKG-7c","authDomain":"rrrshala-c2972.firebaseapp.com","projectId":"rrrshala-c2972","storageBucket":"rrrshala-c2972.firebasestorage.app","messagingSenderId":"959909527846","appId":"1:959909527846:web:ac1b8d74a34d3223d641e7"});
+var auth=firebase.auth(),db=firebase.firestore(),TAB='news';
+var MEN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var MHI=['जनवरी','फ़रवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितंबर','अक्टूबर','नवंबर','दिसंबर'];
+var PREFIX={news:['',''],dailyquiz:['',''],rajspec:['Rajasthan Specific — ','राजस्थान विशेष — '],edit:['Editorials & Opinion — ','संपादकीय व विचार — ']};
+function $(id){return document.getElementById(id)}
+function esc(s){return (s||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function labels(date,t){var p=date.split('-'),d=+p[2],m=+p[1]-1,y=p[0];return{label_en:PREFIX[t][0]+d+' '+MEN[m]+' '+y,label_hi:PREFIX[t][1]+d+' '+MHI[m]+' '+y}}
+function lines(v){return v.split('\n').map(function(s){return s.trim()}).filter(Boolean)}
+function msg(t,ok){$('msg').textContent=t;$('msg').className='msg '+(ok?'ok':'bad')}
+
+auth.onAuthStateChanged(function(u){
+ var em=((u&&u.email)||'').toLowerCase(),ok=ADMIN_EMAILS.indexOf(em)>=0;
+ $('who').textContent=u?u.email:'';$('outBtn').classList.toggle('hidden',!u);
+ $('gate').classList.toggle('hidden',ok);$('app').classList.toggle('hidden',!ok);
+ $('gateMsg').textContent=(u&&!ok)?'This account is not an admin.':'';
+ if(ok)setTab('news');
+});
+$('tabs').onclick=function(e){var t=e.target.dataset.t;if(t)setTab(t)};
+$('mode').onchange=function(){showMode()};
+$('date').valueAsDate=new Date();
+
+function setTab(t){TAB=t;document.querySelectorAll('#tabs button').forEach(function(b){b.classList.toggle('on',b.dataset.t===t)});
+ var isList=t==='list';$('editor').classList.toggle('hidden',isList);$('listCard').classList.toggle('hidden',!isList);
+ if(isList)return listAll();
+ var formOK=(t==='news'||t==='dailyquiz');$('mode').value=formOK?'form':'json';$('mode').disabled=!formOK;
+ $('formArea').innerHTML='';$('json').value='';msg('',true);
+ if(formOK)addBlock();showMode();
+}
+function showMode(){var j=$('mode').value==='json';$('formArea').classList.toggle('hidden',j);$('jsonArea').classList.toggle('hidden',!j);
+ if(j&&!$('json').value){try{$('json').value=JSON.stringify(collect(),null,2)}catch(e){}}}
+
+function addBlock(pre){pre=pre||{};var w=document.createElement('div');w.className='item';
+ if(TAB==='news'){w.innerHTML='<button class="btn red x" onclick="this.parentNode.remove()">✕</button>'+
+  '<div class="row"><div><label>Topic (EN)</label><input data-k="topic_en"></div><div><label>विषय (HI)</label><input data-k="topic_hi"></div></div>'+
+  '<div class="row"><div><label>Headline (EN)</label><input data-k="head_en"></div><div><label>शीर्षक (HI)</label><input data-k="head_hi"></div></div>'+
+  '<div class="row"><div><label>Points (EN) — one per line</label><textarea data-k="points_en"></textarea></div><div><label>बिंदु (HI) — प्रति पंक्ति एक</label><textarea data-k="points_hi"></textarea></div></div>'+
+  '<label>Source</label><input data-k="src">';}
+ else{w.innerHTML='<button class="btn red x" onclick="this.parentNode.remove()">✕</button>'+
+  '<div class="row"><div><label>Subject (EN)</label><input data-k="sub" placeholder="Economy / Polity…"></div><div><label>विषय (HI)</label><input data-k="sub_hi"></div></div>'+
+  '<div class="row"><div><label>Question (EN)</label><textarea data-k="eq"></textarea></div><div><label>प्रश्न (HI)</label><textarea data-k="hq"></textarea></div></div>'+
+  ['A','B','C','D'].map(function(o){return '<div class="row"><div><label>Option '+o+' (EN)</label><input data-k="eo'+o+'"></div><div><label>विकल्प '+o+' (HI)</label><input data-k="ho'+o+'"></div></div>'}).join('')+
+  '<div class="row"><div><label>Correct answer</label><select data-k="a"><option>A</option><option>B</option><option>C</option><option>D</option></select></div><div><label>Type</label><input data-k="type" placeholder="Statement-based / Direct"></div></div>'+
+  '<div class="row"><div><label>Explanation (EN)</label><textarea data-k="exp_en"></textarea></div><div><label>व्याख्या (HI)</label><textarea data-k="exp_hi"></textarea></div></div>'+
+  '<label>Source</label><input data-k="src">';}
+ $('formArea').appendChild(w);
+ Object.keys(pre).forEach(function(k){var v=pre[k];if(k==='eo'||k==='ho'){Object.keys(v||{}).forEach(function(o){var f=w.querySelector('[data-k="'+k+o+'"]');if(f)f.value=v[o]})}else{var f=w.querySelector('[data-k="'+k+'"]');if(f)f.value=Array.isArray(v)?v.join('\n'):v}});
+ if(!$('addBtn')){var b=document.createElement('button');b.id='addBtn';b.className='btn alt';b.textContent='+ Add another';b.onclick=function(){addBlock()};$('formArea').after(b)}
+}
+
+function collect(){var date=$('date').value;if(!date)throw Error('Pick a date');
+ var base=Object.assign({date:date},labels(date,TAB));
+ if($('mode').value==='json'){var o=JSON.parse($('json').value);o.date=date;if(!o.label_en)Object.assign(o,labels(date,TAB));return o}
+ var blocks=[].slice.call($('formArea').querySelectorAll('.item'));
+ if(TAB==='news'){base.digest=blocks.map(function(w){var g=function(k){return w.querySelector('[data-k="'+k+'"]').value.trim()};
+  return{topic_en:g('topic_en'),topic_hi:g('topic_hi'),head_en:g('head_en'),head_hi:g('head_hi'),points_en:lines(g('points_en')),points_hi:lines(g('points_hi')),src:g('src')}}).filter(function(x){return x.head_en||x.head_hi});return base}
+ base.questions=blocks.map(function(w,i){var g=function(k){return w.querySelector('[data-k="'+k+'"]').value.trim()};
+  return{id:'DD-'+date+'-'+(i+1),y:'DD',date:date,n:i+1,th:'Daily Digest',sub:g('sub'),sub_hi:g('sub_hi'),type:g('type')||'Direct',a:g('a'),eq:g('eq'),
+   eo:{A:g('eoA'),B:g('eoB'),C:g('eoC'),D:g('eoD')},hq:g('hq'),ho:{A:g('hoA'),B:g('hoB'),C:g('hoC'),D:g('hoD')},exp_en:g('exp_en'),exp_hi:g('exp_hi'),src:g('src')}}).filter(function(q){return q.eq||q.hq});
+ return base}
+
+function save(pub){var d;try{d=collect()}catch(e){return msg('Error: '+e.message,false)}
+ db.collection('cms').doc(TAB+'_'+d.date).set({type:TAB,date:d.date,json:JSON.stringify(d),published:!!pub,updatedAt:firebase.firestore.FieldValue.serverTimestamp(),by:auth.currentUser.email})
+ .then(function(){msg((pub?'Published ✓ — live on the site within a minute ':'Draft saved ✓ ')+'('+TAB+' · '+d.date+')',true)})
+ .catch(function(e){msg('Save failed: '+e.message+' (check Firestore rules)',false)})}
+
+function loadEntry(){var date=$('date').value;db.collection('cms').doc(TAB+'_'+date).get().then(function(s){
+ if(!s.exists)return msg('No saved entry for '+date,false);var d=JSON.parse(s.data().json);
+ if($('mode').value==='json'||!(TAB==='news'||TAB==='dailyquiz')){$('json').value=JSON.stringify(d,null,2)}
+ else{$('formArea').innerHTML='';(TAB==='news'?d.digest:d.questions||[]).forEach(function(x){addBlock(x)})}
+ msg('Loaded '+TAB+' · '+date+(s.data().published?' (published)':' (draft)'),true)})}
+
+function listAll(){$('rows').innerHTML='<tr><td colspan="5" class="muted">Loading…</td></tr>';
+ db.collection('cms').get().then(function(snap){var r=[];snap.forEach(function(s){r.push(Object.assign({id:s.id},s.data()))});
+  r.sort(function(a,b){return a.date<b.date?1:-1});
+  $('rows').innerHTML=r.length?r.map(function(x){var t=x.updatedAt&&x.updatedAt.toDate?x.updatedAt.toDate().toLocaleString('en-IN'):'';
+   return '<tr><td>'+esc(x.type)+'</td><td>'+esc(x.date)+'</td><td><span class="pill">'+(x.published?'Published':'Draft')+'</span></td><td class="muted">'+t+'</td><td style="white-space:nowrap">'+
+   '<button class="btn alt" onclick="openE(\''+x.type+'\',\''+x.date+'\')">Edit</button> <button class="btn alt" onclick="togglePub(\''+x.id+'\','+!x.published+')">'+(x.published?'Unpublish':'Publish')+'</button> <button class="btn red" onclick="delE(\''+x.id+'\')">Delete</button></td></tr>'}).join('')
+  :'<tr><td colspan="5" class="muted">No entries yet.</td></tr>'}).catch(function(e){$('rows').innerHTML='<tr><td colspan="5" class="bad">'+esc(e.message)+'</td></tr>'})}
+function openE(t,d){setTab(t);$('date').value=d;loadEntry()}
+function togglePub(id,p){db.collection('cms').doc(id).update({published:p}).then(listAll)}
+function delE(id){if(confirm('Delete '+id+'? This cannot be undone.'))db.collection('cms').doc(id).delete().then(listAll)}
+</script>
+</body>
+</html>
