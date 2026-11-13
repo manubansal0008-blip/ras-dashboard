@@ -578,7 +578,7 @@ function show(v){if(window.__LOCKED&&window.__LOCKED[v])return;window.__cur=v;
  document.getElementById('vtitle').textContent=t(v);window.scrollTo(0,0);render(v);try{botActive(v)}catch(e){}try{var _lt=document.getElementById('latest');if(_lt)_lt.style.display=(v==='home'?'':'none');}catch(e){}}
 function setLang(l){LANG=l;try{document.documentElement.lang=(l==='hi'?'hi':'en');}catch(e){}try{var _le=document.getElementById('latest-en'),_lh=document.getElementById('latest-hi');if(_le&&_lh){_le.style.display=l==='hi'?'none':'';_lh.style.display=l==='hi'?'':'none';}}catch(e){}document.getElementById('lang-en').classList.toggle('on',l==='en');document.getElementById('lang-hi').classList.toggle('on',l==='hi');
  const cur=window.__cur||'home';document.getElementById('vtitle').textContent=t(cur);
- if(cur==='mock'&&window.__mockActive){renderMockQ&&0;} render(cur,true)}
+ if(cur==='mock'&&window.__mockActive){try{renderMockRun()}catch(e){}return} render(cur,true)}
 function render(v,f){({home:renderHome,prelims:renderPrelims,papers:renderPapers,ca:renderCA,news:renderNews,edit:renderEdit,daily:renderDaily,practice:renderPractice,mock:renderMock,syllabus:renderSyl,progress:renderProgress,analysis:renderAnalysis,mains:renderMains,material:renderMaterial,caraj:renderCARaj,caind:renderCAInd,dailyquiz:renderDailyQuiz,thematic:renderThematic,sujas:renderSujas,interview:renderInterview,video:renderVideo}[v]||function(){})(f)}
 
 /* shared question card with instant feedback + explanation */
@@ -824,8 +824,8 @@ function renderMockRun(){const el=document.getElementById('view-mock');
   let oh=order.map((k,idx)=>`<div class="opt ${mock.ans[q.id]===k?'sel':''}" data-k="${k}" onclick="mockPick('${q.id}','${k}')"><span class="k">${DLET[idx]}</span><span>${opts[k]}</span></div>`).join('');
   oh+=`<div class="opt na ${mock.ans[q.id]==='__NA__'?'sel':''}" data-k="__NA__" onclick="mockPick('${q.id}','__NA__')"><span class="k">${DLET[order.length]}</span><span>${t('notattempted')}</span></div>`;
   return `<div class="q" id="mq-${q.id}"><div class="meta"><span class="qno">Q${i+1}${q.y!=='CA'?' · '+q.y:''}</span><span class="tag">${themeLabel(q.th)}</span></div><div class="stem">${fmt(qText(q))}</div><div class="opts">${oh}</div></div>`}).join('');
- el.innerHTML=`<div class="sticky"><div class="scorebar" style="margin:0"><div class="timer" id="mktimer">--:--</div><div class="small muted">${mock.set.length} ${t('qs')}</div><div style="flex:1"></div><button class="btn amber" onclick="submitMock()">${LANG==='hi'?'जमा करें':'Submit'}</button></div></div>${cards}
-  <div class="flexbtn"><button class="btn amber" onclick="submitMock()">${LANG==='hi'?'जमा करें':'Submit Test'}</button></div>`;tickMock()}
+ el.innerHTML=`<div class="sticky"><div class="scorebar" style="margin:0"><div class="timer" id="mktimer">--:--</div><div class="small muted">${mock.set.length} ${t('qs')}</div><div style="flex:1"></div><button class="btn amber" onclick="submitMock()">${LANG==='hi'?'सबमिट करें':'Submit'}</button></div></div>${cards}
+  <div class="flexbtn"><button class="btn amber" onclick="submitMock()">${LANG==='hi'?'सबमिट करें':'Submit Test'}</button></div>`;tickMock()}
 function mockPick(id,k){mock.ans[id]=k;const box=document.getElementById('mq-'+id);if(box)box.querySelectorAll('.opt').forEach(o=>{o.classList.toggle('sel',o.dataset.k===k)})}
 function submitMock(){clearInterval(window.__mt);window.__mockActive=false;let cor=0,wr=0,un=0;const byTheme={};
  mock.set.forEach(q=>{const a=mock.ans[q.id];const th=q.th;byTheme[th]=byTheme[th]||{c:0,t:0};byTheme[th].t++;
