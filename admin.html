@@ -158,5 +158,6 @@ function openE(t,d){setTab(t);$('date').value=d;loadEntry()}
 function togglePub(id,p){db.collection('cms').doc(id).update({published:p}).then(listAll)}
 function delE(id){if(confirm('Delete '+id+'? This cannot be undone.'))db.collection('cms').doc(id).delete().then(listAll)}
 </script>
+<script src="/admin-paid.js"></script>
 </body>
 </html>
