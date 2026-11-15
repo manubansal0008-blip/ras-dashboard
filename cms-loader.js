@@ -10,6 +10,16 @@
     st.textContent = '.badge.pro,.badge.soon{display:none!important}.edcard .row .chip[style*="good-bg"]{display:none!important}';
     (document.head || document.documentElement).appendChild(st);
   } catch (e) {}
+   
+  // Footer stamp: show the date the site was last updated (auto)
+  function fixStamp() {
+    try {
+      var d = new Date(document.lastModified); if (isNaN(d)) return;
+      var txt = 'updated ' + d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+      document.querySelectorAll('.sitefoot span').forEach(function (s) { if (/^\s*(build|updated)\s/i.test(s.textContent)) s.textContent = txt; });
+    } catch (e) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixStamp); else fixStamp();
 
   function ready(fn) {
     var n = 0;
