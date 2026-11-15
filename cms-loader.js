@@ -5,7 +5,8 @@
   var ADMIN_EMAILS = ['manubansal0008@gmail.com'];
 
   // Load question layout (RPSC style) and paid Full Length Tests
-  ['/q-format.js?v=1', '/paid-mocks.js?v=1'].forEach(function (src) {
+  var rrrV = Math.floor(Date.now() / 3600000); // new version every hour so visitors always get the latest
+  ['/q-format.js?v=' + rrrV, '/paid-mocks.js?v=' + rrrV].forEach(function (src) {
     try { var s = document.createElement('script'); s.src = src; s.defer = true; (document.head || document.documentElement).appendChild(s); } catch (e) {}
   });
 
