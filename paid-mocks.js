@@ -61,7 +61,23 @@
     var o = window.renderMock; window.__rrrPaidHook = true;
     window.renderMock = function () { var r = o.apply(this, arguments); try { injectCard(); } catch (e) {} return r; };
   }
-  function rerender() { try { if (window.__cur_v === 'mock' && typeof render === 'function') render('mock'); else injectCard(); } catch (e) {} }
+  function rerender() {
+    try {
+      var v = document.getElementById('view-mock');
+      var visible = v && v.offsetParent !== null;
+      if (visible && !window.__mockActive && typeof window.renderMock === 'function') window.renderMock();
+      else injectCard();
+    } catch (e) {}
+  }
+  // Re-check unlock status (after admin approval) without needing a page refresh
+  function recheck() {
+    if (!st.user || st.paid) return;
+    var em = (st.user.email || '').toLowerCase();
+    db().collection('paid_users').doc(em).get().then(function (s) { if (s.exists) { st.paid = true; loadMocks(); } }).catch(function () {});
+    db().collection('pay_requests').doc(em).get().then(function (s) { if (s.exists) { var d = s.data(); if (!st.req || st.req.status !== d.status) { st.req = d; rerender(); } } }).catch(function () {});
+  }
+  setInterval(recheck, 60000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) recheck(); });
 
   // ---------- payment modal ----------
   window.rrrPayOpen = function () {
