@@ -32,6 +32,44 @@
     } catch (e) {}
   }, 4000);
 
+  // Visitor count: show the last known total instantly, then update when the counter replies
+  try {
+    var vcEl = document.getElementById('vcount');
+    if (vcEl) {
+      var vcLast = null; try { vcLast = localStorage.getItem('rrr_vc'); } catch (e) {}
+      if (vcLast && !/\d/.test(vcEl.textContent)) vcEl.textContent = vcLast;
+      new MutationObserver(function () {
+        var t = vcEl.textContent; if (/\d/.test(t)) { try { localStorage.setItem('rrr_vc', t); } catch (e) {} }
+      }).observe(vcEl, { childList: true, characterData: true, subtree: true });
+    }
+  } catch (e) {}
+
+  // Footer + sidebar links: About Us and RAS exam-guide pages
+  function addGuideLinks() {
+    try {
+      var hi = (document.documentElement.lang || '').indexOf('hi') === 0 || /[?&]lang=hi/.test(location.search);
+      var p = hi ? '/hi' : '';
+      var foot = document.querySelector('.sitefoot');
+      if (foot && !document.getElementById('rrrGuideLinks')) {
+        var s = document.createElement('div'); s.id = 'rrrGuideLinks'; s.style.cssText = 'margin-top:6px';
+        s.innerHTML = '<a href="/about/">' + (hi ? 'हमारे बारे में' : 'About Us') + '</a> · ' +
+          '<a href="' + p + '/ras/ras-syllabus-changes-2026/">' + (hi ? 'पाठ्यक्रम बदलाव 2026' : 'Syllabus Changes 2026') + '</a> · ' +
+          '<a href="' + p + '/ras/ras-cut-off/">' + (hi ? 'कट ऑफ' : 'RAS Cut Off') + '</a> · ' +
+          '<a href="' + p + '/ras/ras-previous-year-papers/">' + (hi ? 'पिछले प्रश्न-पत्र' : 'Previous Year Papers') + '</a> · ' +
+          '<a href="' + p + '/ras/">' + (hi ? 'RAS परीक्षा गाइड' : 'RAS Exam Guide') + '</a>';
+        foot.appendChild(s);
+      }
+      var nav = document.querySelector('nav.nav');
+      if (nav && !document.getElementById('rrrAboutNav')) {
+        var b = document.createElement('button'); b.id = 'rrrAboutNav'; b.type = 'button';
+        b.innerHTML = '<span class="lf"><span class="ic">👥</span><span class="tx">' + (hi ? 'हमारे बारे में' : 'About Us') + '</span></span>';
+        b.addEventListener('click', function (e) { e.stopPropagation(); location.href = '/about/'; });
+        nav.appendChild(b);
+      }
+    } catch (e) {}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addGuideLinks); else addGuideLinks();
+
   function ready(fn) {
     var n = 0;
     (function wait() {
