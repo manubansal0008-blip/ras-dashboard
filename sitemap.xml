@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.rrrshala.com/ras/ras-syllabus-changes-2026/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-syllabus-changes-2026/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-syllabus-changes-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-syllabus-changes-2026/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/ras/ras-syllabus-changes-2026/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-syllabus-changes-2026/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-syllabus-changes-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-syllabus-changes-2026/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/ras/ras-cut-off/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-cut-off/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-cut-off/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-cut-off/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/ras/ras-cut-off/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-cut-off/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-cut-off/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-cut-off/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/ras/ras-previous-year-papers/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-previous-year-papers/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-previous-year-papers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-previous-year-papers/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/hi/ras/ras-previous-year-papers/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://www.rrrshala.com/ras/ras-previous-year-papers/"/>
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="https://www.rrrshala.com/hi/ras/ras-previous-year-papers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.rrrshala.com/ras/ras-previous-year-papers/"/>
+  </url>
+  <url>
+    <loc>https://www.rrrshala.com/about/</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.rrrshala.com/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>daily</changefreq>
