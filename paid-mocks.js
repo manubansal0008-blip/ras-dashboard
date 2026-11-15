@@ -121,6 +121,14 @@
     var doc = { email: em, utr: utr, name: nm.slice(0, 60), amount: PRICE, status: 'pending', at: firebase.firestore.FieldValue.serverTimestamp() };
     db().collection('pay_requests').doc(em).set(doc).then(function () {
       st.req = doc; out.className = 'ok'; out.textContent = T('Sent! We will unlock your tests after checking the payment.', 'भेज दिया! भुगतान जाँचने के बाद हम आपके टेस्ट अनलॉक कर देंगे।');
+      // Email the admin about the new request (FormSubmit)
+      try {
+        fetch('https://formsubmit.co/ajax/manubansal0008@gmail.com', {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ _subject: 'RRRSHALA: new Rs 29 approval request', _template: 'table', _captcha: 'false',
+            Student: em, Name: nm || '-', UTR: utr, Amount: 'Rs ' + PRICE, Approve_here: 'https://www.rrrshala.com/admin.html' })
+        }).catch(function () {});
+      } catch (e) {}
       rerender();
     }).catch(function (e) { out.className = 'bad'; out.textContent = T('Could not send. Please try again.', 'भेजा नहीं जा सका। कृपया दोबारा कोशिश करें।'); console.warn(e); });
   };
