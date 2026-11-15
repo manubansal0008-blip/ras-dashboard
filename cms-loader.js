@@ -82,6 +82,31 @@
     if (has('EDIT')) EDIT.forEach(function (e) { (e.items || []).forEach(function (it) { delete it.src; }); });
   }
 
+  // Homepage "Today's News" + "Recent daily editions": always show the latest admin content
+  function refreshLatest() {
+    try {
+      var sec = document.getElementById('latest'); if (!sec || !has('NEWS_BYDATE')) return;
+      var nd = Object.keys(NEWS_BYDATE).sort(), last = nd[nd.length - 1]; if (!last) return;
+      var z = NEWS_BYDATE[last], qd = has('DD_DATES') ? Object.keys(DD_DATES).sort().slice(-7).reverse() : [];
+      var esc = function (x) { return String(x == null ? '' : x).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+      var CH = 'background:#eef1f7;color:#26314f;text-decoration:none;font-weight:600;font-size:13px;border-radius:8px;padding:6px 11px';
+      ['en', 'hi'].forEach(function (L) {
+        var box = document.getElementById('latest-' + L); if (!box) return;
+        var hi = L === 'hi', k = hi ? '_hi' : '_en';
+        var links = box.querySelector('nav div[style*="font-size:13px"]'); links = links ? links.outerHTML : '';
+        var lbl = hi ? (z.label_hi || last) : (z.label_en || last);
+        var arts = (z.digest || []).map(function (it) {
+          var pts = it['points' + k] || it.points_en || [];
+          return '<article class="card"><h3>' + esc(it['head' + k] || it.head_en) + '</h3><ul>' + pts.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul></article>';
+        }).join('');
+        var chips = qd.map(function (d) { var e = DD_DATES[d]; return '<a href="/' + (hi ? 'hi/' : '') + 'current-affairs/' + d + '/" style="' + CH + '">' + esc(hi ? e.label_hi : e.label_en) + '</a>'; }).join('');
+        var navT = hi ? 'हाल की दैनिक प्रस्तुतियाँ' : 'Recent daily editions';
+        box.innerHTML = '<h2>' + (hi ? 'आज की ख़बरें · ' : 'Today’s News · ') + esc(lbl) + '</h2>' + arts +
+          '<nav aria-label="' + navT + '" style="border-top:1px solid var(--line);margin-top:14px;padding-top:12px"><h2 style="font-size:15px;margin:0 0 8px">' + navT + '</h2><div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px">' + chips + '</div>' + links + '</nav>';
+      });
+    } catch (e) { console.warn('latest refresh failed', e); }
+  }
+
   // Daily Quiz: show only the latest day's 5 questions
   function patchDailyQuiz() {
     if (typeof window.renderDailyQuiz !== 'function' || window.__dq5) return;
@@ -258,6 +283,7 @@
         try { merge(x.type, JSON.parse(x.json)); n++; } catch (e) { console.warn('cms entry skipped', doc.id, e); }
       });
       stripRelev();
+      refreshLatest();
       if (n && typeof render === 'function') { try { render(window.__cur_v || 'home'); } catch (e) {} }
     }).catch(function (e) { console.warn('cms load failed', e); });
 
