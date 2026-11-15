@@ -20,6 +20,17 @@
     } catch (e) {}
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fixStamp); else fixStamp();
+   
+  // Visitor count fallback: if the +1 request hangs, show the stored total
+  setTimeout(function () {
+    try {
+      var el = document.getElementById('vcount');
+      if (!el || /\d/.test(el.textContent)) return;
+      fetch('https://abacus.jasoncameron.dev/get/rrrshala-com/visits').then(function (r) { return r.json(); }).then(function (d) {
+        if (d && d.value != null && !/\d/.test(el.textContent)) el.textContent = Number(d.value).toLocaleString();
+      }).catch(function () {});
+    } catch (e) {}
+  }, 4000);
 
   function ready(fn) {
     var n = 0;
