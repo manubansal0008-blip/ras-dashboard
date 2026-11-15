@@ -4,6 +4,11 @@
 (function () {
   var ADMIN_EMAILS = ['manubansal0008@gmail.com'];
 
+  // Load question layout (RPSC style) and paid Full Length Tests
+  ['/q-format.js?v=1', '/paid-mocks.js?v=1'].forEach(function (src) {
+    try { var s = document.createElement('script'); s.src = src; s.defer = true; (document.head || document.documentElement).appendChild(s); } catch (e) {}
+  });
+
   // Hide "PRO" / "SOON" badges everywhere on the site
   try {
     var st = document.createElement('style');
