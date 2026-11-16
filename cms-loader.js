@@ -371,8 +371,8 @@
 (function () {
   var FLASH = {
     until: '2026-12-06',
-    en: 'NEW: October 2026 Current Affairs Quiz — 21 RPSC-level questions. Attempt now →',
-    hi: 'नया: अक्टूबर 2026 करंट अफेयर्स क्विज़ — RPSC स्तर के 21 प्रश्न। अभी हल करें →',
+    en: 'NEW: October 2026 Current Affairs Quiz — RPSC-level questions. Attempt now →',
+    hi: 'नया: अक्टूबर 2026 करंट अफेयर्स क्विज़ — RPSC स्तर के प्रश्न। अभी हल करें →',
     view: 'sujas', code: 'OCT'
   };
   function show() {
