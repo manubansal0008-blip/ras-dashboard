@@ -365,3 +365,35 @@
   }
   if (!patch()) document.addEventListener('DOMContentLoaded', patch);
 })();
+
+
+/* Flash banner: announces new content at the top of the homepage (edit FLASH below; it hides itself after "until") */
+(function () {
+  var FLASH = {
+    until: '2026-12-06',
+    en: 'NEW: October 2026 Current Affairs Quiz — 21 RPSC-level questions. Attempt now →',
+    hi: 'नया: अक्टूबर 2026 करंट अफेयर्स क्विज़ — RPSC स्तर के 21 प्रश्न। अभी हल करें →',
+    view: 'sujas', code: 'OCT'
+  };
+  function show() {
+    if (document.getElementById('rrrFlash')) return;
+    if (new Date() > new Date(FLASH.until + 'T23:59:59+05:30')) return;
+    try { if (localStorage.getItem('rrrFlashClosed') === FLASH.en) return; } catch (e) {}
+    var hi = (typeof LANG !== 'undefined' && LANG === 'hi');
+    var bar = document.createElement('div');
+    bar.id = 'rrrFlash';
+    bar.style.cssText = 'position:sticky;top:0;z-index:9998;display:flex;align-items:center;gap:10px;justify-content:center;' +
+      'background:linear-gradient(90deg,#e8a020,#f7d977);color:#23252e;font:700 14px system-ui,sans-serif;padding:9px 40px 9px 14px;' +
+      'text-align:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.15)';
+    bar.innerHTML = '<span style="background:#b3261e;color:#fff;border-radius:6px;padding:2px 7px;font-size:11px;animation:rrrBlink 1.2s infinite">' +
+      (hi ? 'नया' : 'NEW') + '</span><span>' + (hi ? FLASH.hi : FLASH.en) + '</span>' +
+      '<button aria-label="Close" style="position:absolute;right:10px;background:none;border:0;font:700 18px system-ui;color:#23252e;cursor:pointer">×</button>';
+    var st = document.createElement('style'); st.textContent = '@keyframes rrrBlink{50%{opacity:.35}}'; document.head.appendChild(st);
+    bar.onclick = function (e) {
+      if (e.target.tagName === 'BUTTON') { bar.remove(); try { localStorage.setItem('rrrFlashClosed', FLASH.en); } catch (x) {} return; }
+      try { window.__sjm = FLASH.code; if (typeof render === 'function') render(FLASH.view); window.scrollTo(0, 0); } catch (x) {}
+    };
+    document.body.insertBefore(bar, document.body.firstChild);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', show); else show();
+})();
