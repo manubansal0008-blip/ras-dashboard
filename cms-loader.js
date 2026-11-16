@@ -391,7 +391,7 @@
     var st = document.createElement('style'); st.textContent = '@keyframes rrrBlink{50%{opacity:.35}}'; document.head.appendChild(st);
     bar.onclick = function (e) {
       if (e.target.tagName === 'BUTTON') { bar.remove(); try { localStorage.setItem('rrrFlashClosed', FLASH.en); } catch (x) {} return; }
-      try { window.__sjm = FLASH.code; if (typeof render === 'function') render(FLASH.view); window.scrollTo(0, 0); } catch (x) {}
+      try { window.__sjm = FLASH.code; var nb = document.querySelector('[data-v="' + FLASH.view + '"]'); if (nb) nb.click(); else if (typeof render === 'function') render(FLASH.view); setTimeout(function () { window.__sjm = FLASH.code; if (typeof renderSujas === 'function' && FLASH.view === 'sujas') renderSujas(); }, 300); window.scrollTo(0, 0); } catch (x) {}
     };
     document.body.insertBefore(bar, document.body.firstChild);
   }
