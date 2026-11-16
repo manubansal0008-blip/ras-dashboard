@@ -373,7 +373,7 @@
     until: '2026-12-06',
     en: 'NEW: October 2026 Current Affairs Quiz — RPSC-level questions. Attempt now →',
     hi: 'नया: अक्टूबर 2026 करंट अफेयर्स क्विज़ — RPSC स्तर के प्रश्न। अभी हल करें →',
-    view: 'sujas', code: 'OCT'
+    view: 'caquiz', code: 'OCT'
   };
   function showFlash() {
     if (document.getElementById('rrrFlash')) return;
@@ -391,7 +391,7 @@
     var st = document.createElement('style'); st.textContent = '@keyframes rrrBlink{50%{opacity:.35}}'; document.head.appendChild(st);
     bar.onclick = function (e) {
       if (e.target.tagName === 'BUTTON') { bar.remove(); try { localStorage.setItem('rrrFlashClosed', FLASH.en); } catch (x) {} return; }
-      try { window.__sjm = FLASH.code; if (typeof window.show === 'function') window.show(FLASH.view); setTimeout(function () { window.__sjm = FLASH.code; if (typeof renderSujas === 'function' && FLASH.view === 'sujas') renderSujas(); }, 300); window.scrollTo(0, 0); } catch (x) {}
+      try { window.__sjm = FLASH.code; if (typeof window.show === 'function') window.show(FLASH.view); setTimeout(function () { window.__sjm = FLASH.code; if (typeof renderSujas === 'function' && (FLASH.view === 'sujas' || FLASH.view === 'caquiz')) renderSujas(); }, 300); window.scrollTo(0, 0); } catch (x) {}
     };
     document.body.insertBefore(bar, document.body.firstChild);
   }
@@ -433,4 +433,77 @@
     };
   }
   apply();
+})();
+
+// Current Affairs Quiz: its own section, kept separate from the Sujas quiz
+(function () {
+  function isCA(g) { return /^Current Affairs Quiz/i.test((g && g.label_en) || ''); }
+  function setMode(ca) {
+    if (typeof SUJASQ === 'undefined') return;
+    var seen = {}, all = [];
+    SUJASQ.concat(window.__sjStash || []).forEach(function (g) { if (g && !seen[g.code]) { seen[g.code] = 1; all.push(g); } });
+    var keep = all.filter(function (g) { return isCA(g) === ca; });
+    window.__sjStash = all.filter(function (g) { return isCA(g) !== ca; });
+    SUJASQ.splice.apply(SUJASQ, [0, SUJASQ.length].concat(keep));
+    if (!keep.some(function (g) { return g.code === window.__sjm; }) && window.__sjm !== 'ALL') window.__sjm = keep[0] ? keep[0].code : 'ALL';
+  }
+  function label() { return LANG === 'hi' ? 'करंट अफेयर्स क्विज़' : 'Current Affairs Quiz'; }
+  function init() {
+    if (typeof window.renderSujas !== 'function' || typeof window.show !== 'function' || typeof SUJASQ === 'undefined') return setTimeout(init, 400);
+    if (window.__caq) return; window.__caq = true;
+    var oR = window.renderSujas;
+    window.renderSujas = function () {
+      if (!window.__sjActive) setMode(!!window.__caMode);
+      var r = oR.apply(this, arguments);
+      try {
+        var el = document.getElementById('view-sujas'), hi = LANG === 'hi';
+        el.querySelectorAll('p').forEach(function (p) { if (/Copying\/downloading|कॉपी\/डाउनलोड/.test(p.textContent)) p.remove(); });
+        if (window.__caMode && !window.__sjActive) {
+          var h = el.querySelector('h2.h-sec'); if (h) h.textContent = label();
+          var ds = h && h.nextElementSibling; if (ds) ds.textContent = hi ? 'RPSC स्तर के मासिक करंट अफेयर्स प्रश्न। माह व प्रश्न-संख्या चुनकर क्विज़ शुरू करें।' : 'Monthly current affairs questions at RPSC level. Choose a month and set size, then start the quiz.';
+        }
+        if (window.__caMode) { var vt = document.getElementById('vtitle'); if (vt) vt.textContent = label(); }
+      } catch (e) {}
+      return r;
+    };
+    var oS = window.show;
+    window.show = function (v) {
+      if (v === 'caquiz') {
+        if (!window.__caMode) window.__sjActive = false;
+        window.__caMode = true;
+        var r = oS.call(this, 'sujas');
+        document.querySelectorAll('#nav [data-v]').forEach(function (b) { b.classList.toggle('active', b.dataset.v === 'caquiz'); });
+        return r;
+      }
+      if (v === 'sujas' && window.__caMode) { window.__caMode = false; window.__sjActive = false; }
+      return oS.apply(this, arguments);
+    };
+    try { show = window.show; } catch (e) {}
+    var dq = document.querySelector('#nav [data-v="dailyquiz"]');
+    if (dq && !document.querySelector('#nav [data-v="caquiz"]')) {
+      var b = dq.cloneNode(true); b.dataset.v = 'caquiz'; b.classList.remove('active');
+      b.removeAttribute('onclick'); b.onclick = function (e) { if (e) e.preventDefault(); window.show('caquiz'); };
+      b.innerHTML = '📝 ' + label();
+      dq.parentNode.insertBefore(b, dq.nextSibling);
+    }
+    if (typeof window.botSheet === 'function') {
+      var oB = window.botSheet;
+      window.botSheet = function (w) {
+        var r = oB.apply(this, arguments);
+        try {
+          if (w === 'quiz') {
+            var p = document.getElementById('botsheet-panel'), it = p && p.querySelector('.sh-item');
+            if (it && !p.querySelector('[data-caq]')) {
+              var n = it.cloneNode(false); n.setAttribute('data-caq', '1'); n.removeAttribute('onclick');
+              n.innerHTML = '<span>📝 ' + label() + '</span>';
+              n.onclick = function () { try { botClose(); } catch (e) {} window.show('caquiz'); };
+              var last = p.querySelectorAll('.sh-item'); last = last[last.length - 1]; last.parentNode.insertBefore(n, last.nextSibling);
+            }
+          }
+        } catch (e) {}
+        return r;
+      };
+    }
+  }
+  init();
 })();
