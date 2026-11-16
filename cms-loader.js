@@ -342,3 +342,26 @@
 
   });
 })();
+
+
+/* Rajasthan Specific cards: optional sections only, no source tag, no empty "Practice questions" heading */
+(function () {
+  function patch() {
+    if (typeof window.rsCard !== 'function' || typeof L2 !== 'function') return false;
+    window.rsCard = function (it) {
+      var theme = L2(it.theme_en, it.theme_hi), h = '<div class="card edcard">';
+      if (theme) h += '<div class="row" style="gap:6px;flex-wrap:wrap;align-items:center"><span class="chip">' + esc(theme) + '</span></div>';
+      h += '<h2 style="font-size:17px;color:var(--brand);margin:8px 0 2px">' + esc(L2(it.topic_en, it.topic_hi)) + '</h2>';
+      var sec = function (en, hi, body) { return '<div class="edh">' + L2(en, hi) + '</div>' + body; };
+      if (L2(it.why_en, it.why_hi)) h += sec('Why in news', 'समाचार में क्यों', '<p class="edp">' + L2(it.why_en, it.why_hi) + '</p>');
+      if ((L2(it.about_en, it.about_hi) || []).length) h += sec('About &amp; key facts', 'परिचय व मुख्य तथ्य', '<div class="eddata">' + edList(L2(it.about_en, it.about_hi)) + '</div>');
+      if (L2(it.issue_en, it.issue_hi)) h += sec('The issue', 'मुद्दा', '<p class="edp">' + L2(it.issue_en, it.issue_hi) + '</p>');
+      if ((L2(it.steps_en, it.steps_hi) || []).filter(Boolean).length) h += sec('Government steps', 'सरकारी कदम', edList(L2(it.steps_en, it.steps_hi)));
+      if (L2(it.stake_en, it.stake_hi)) h += sec('Stakeholders', 'हितधारक', '<p class="edp">' + L2(it.stake_en, it.stake_hi) + '</p>');
+      if ((it.mcqs || []).length) h += sec('Practice questions', 'अभ्यास प्रश्न', it.mcqs.map(function (q) { return qCard(q); }).join(''));
+      return h + '</div>';
+    };
+    return true;
+  }
+  if (!patch()) document.addEventListener('DOMContentLoaded', patch);
+})();
