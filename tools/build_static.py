@@ -155,7 +155,8 @@ def edit_body(z, hi):
 
 files = {}
 def put(path, s, keep_existing=False):
-    if keep_existing and os.path.exists(f'{REPO}/{path}'): return  # never overwrite a day page someone else made
+    # day pages up to 17 Jul 2026 were made by hand earlier: never overwrite those; later ones are rebuilt so CMS edits show up
+    if keep_existing and os.path.exists(f'{REPO}/{path}') and re.search(r'(\d{4}-\d\d-\d\d)', path).group(1) <= '2026-07-17': return
     files[path] = s
 
 all_news = sorted(set(existing('news')) | set(NEWS)); all_q = sorted(set(existing('current-affairs')) | set(QUIZ)); all_e = sorted(set(existing('editorials')) | set(EDIT))
