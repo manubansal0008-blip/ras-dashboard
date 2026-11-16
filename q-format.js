@@ -17,12 +17,30 @@
   var LABEL = /^(\(?([A-Da-d]|[ivxIVX]{1,4}|\d{1,2})\)?[.)])\s+/;
   var CLOSE = /([.।?:])\s+((?:How many|Which (?:of|one|is|are|among)|Select the|Choose the|Of the above|Of these|In the above|Using the codes?|Codes?\s*:|Find the|Identify the|उपर्युक्त|उपरोक्त|ऊपर (?:दिए|दिये)|नीचे (?:दिए|दिये)|इनमें से|कितने|कौन(?:-| )?सा|कौनसा|कौन से|कौन-से|सही उत्तर|सही कूट|कूट\s*:)[\s\S]*)$/;
 
+  // Stacked "List-I ... List-II ..." blocks are turned into side-by-side rows.
+  function sideBySide(s) {
+    var L = String(s).split(/\r?\n/), H1 = /^\s*(List\s*-?\s*I(?!I)|सूची\s*-?\s*I(?!I))\b.*$/i, H2 = /^\s*(List\s*-?\s*II|सूची\s*-?\s*II)\b.*$/i;
+    for (var i = 0; i < L.length; i++) {
+      if (!H1.test(L[i])) continue;
+      var a = [], j = i + 1;
+      while (j < L.length && LABEL.test(L[j].trim())) { a.push(L[j].trim()); j++; }
+      if (!a.length || j >= L.length || !H2.test(L[j])) continue;
+      var b = [], k = j + 1;
+      while (k < L.length && LABEL.test(L[k].trim()) && b.length < a.length + 2) { b.push(L[k].trim()); k++; }
+      if (!b.length) continue;
+      var n = Math.max(a.length, b.length), rows = [L[i].trim().replace(/:$/, '') + '\t' + L[j].trim().replace(/:$/, '')];
+      for (var r = 0; r < n; r++) rows.push((a[r] || '–') + '\t' + (b[r] || '–'));
+      Array.prototype.splice.apply(L, [i, k - i].concat(rows));
+      i += rows.length - 1;
+    }
+    return L.join('\n');
+  }
   function splitCols(line) {
     var p = line.split(/\t+|\s{2,}/).map(function (x) { return x.trim(); }).filter(Boolean);
     return p.length >= 2 ? p : null;
   }
   function render(s) {
-    var lines = String(s).split(/\r?\n/).map(function (x) { return x.replace(/[ \u00a0]+$/, ''); }).filter(function (x) { return x.trim(); });
+    var lines = sideBySide(s).split(/\r?\n/).map(function (x) { return x.replace(/[ \u00a0]+$/, ''); }).filter(function (x) { return x.trim(); });
     var out = [], i = 0, closing = '';
     while (i < lines.length) {
       var raw = lines[i], cols = i > 0 ? splitCols(raw.trim()) : null;
