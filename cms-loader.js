@@ -375,7 +375,7 @@
     hi: 'नया: अक्टूबर 2026 करंट अफेयर्स क्विज़ — RPSC स्तर के प्रश्न। अभी हल करें →',
     view: 'sujas', code: 'OCT'
   };
-  function show() {
+  function showFlash() {
     if (document.getElementById('rrrFlash')) return;
     if (new Date() > new Date(FLASH.until + 'T23:59:59+05:30')) return;
     try { if (localStorage.getItem('rrrFlashClosed') === FLASH.en) return; } catch (e) {}
@@ -391,11 +391,11 @@
     var st = document.createElement('style'); st.textContent = '@keyframes rrrBlink{50%{opacity:.35}}'; document.head.appendChild(st);
     bar.onclick = function (e) {
       if (e.target.tagName === 'BUTTON') { bar.remove(); try { localStorage.setItem('rrrFlashClosed', FLASH.en); } catch (x) {} return; }
-      try { window.__sjm = FLASH.code; if (typeof show === 'function') show(FLASH.view); setTimeout(function () { window.__sjm = FLASH.code; if (typeof renderSujas === 'function' && FLASH.view === 'sujas') renderSujas(); }, 300); window.scrollTo(0, 0); } catch (x) {}
+      try { window.__sjm = FLASH.code; if (typeof window.show === 'function') window.show(FLASH.view); setTimeout(function () { window.__sjm = FLASH.code; if (typeof renderSujas === 'function' && FLASH.view === 'sujas') renderSujas(); }, 300); window.scrollTo(0, 0); } catch (x) {}
     };
     document.body.insertBefore(bar, document.body.firstChild);
   }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', show); else show();
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', showFlash); else showFlash();
 })();
 
 // Current Affairs mock set: latest 100 questions, fixed 100 minutes
