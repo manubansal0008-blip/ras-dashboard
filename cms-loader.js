@@ -1,8 +1,7 @@
 /* RRR Shala CMS loader — merges admin-panel content (Firestore "cms") into the site,
-   and shows an "Admin" button to admin accounts. Add before </body> in index.html:
+   (no admin button is shown on the public site). Add before </body> in index.html:
    <script src="/cms-loader.js"></script>                                              */
 (function () {
-  var ADMIN_EMAILS = ['manubansal0008@gmail.com'];
 
   // Load question layout (RPSC style) and paid Full Length Tests
   var rrrV = Math.floor(Date.now() / 3600000); // new version every hour so visitors always get the latest
@@ -127,17 +126,6 @@
       if (gi >= 0) SUJASQ[gi] = d; else SUJASQ.unshift(d);
       (d.questions || []).forEach(function (q) { BYID[q.id] = q; });
     }
-  }
-
-  function adminButton() {
-    var a = document.getElementById('cmsAdminBtn');
-    if (a) return a;
-    a = document.createElement('a');
-    a.id = 'cmsAdminBtn'; a.href = '/admin.html'; a.textContent = '⚙ Admin';
-    a.style.cssText = 'display:none;position:fixed;right:16px;bottom:70px;z-index:9999;background:#1f2a3a;color:#fff;' +
-      'padding:9px 14px;border-radius:20px;font:600 13px system-ui,sans-serif;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.25)';
-    document.body.appendChild(a);
-    return a;
   }
 
   // Remove "Why it matters for RAS" and source lines from all current-affairs content
@@ -352,10 +340,5 @@
       if (n && typeof render === 'function') { try { render(window.__cur_v || 'home'); } catch (e) {} }
     }).catch(function (e) { console.warn('cms load failed', e); });
 
-    var btn = adminButton();
-    firebase.auth().onAuthStateChanged(function (u) {
-      var em = ((u && u.email) || '').toLowerCase();
-      if (btn) btn.style.display = ADMIN_EMAILS.indexOf(em) >= 0 ? 'inline-block' : 'none';
-    });
   });
 })();
