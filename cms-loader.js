@@ -397,3 +397,40 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', show); else show();
 })();
+
+// Current Affairs mock set: latest 100 questions, fixed 100 minutes
+(function () {
+  function apply() {
+    if (typeof window.startMock !== 'function' || typeof CA === 'undefined') return setTimeout(apply, 500);
+    if (window.__ca100) return; window.__ca100 = true;
+    var oS = window.startMock;
+    window.startMock = function () {
+      var sel = document.getElementById('mkpaper');
+      if (!sel || sel.value !== 'ca') return oS.apply(this, arguments);
+      mock = { set: CA.slice(-100), ans: {}, end: Date.now() + 100 * 60000, paper: 'ca' };
+      window.__mockActive = true; renderMockRun();
+      clearInterval(window.__mt); window.__mt = setInterval(tickMock, 1000);
+    };
+    var oR = window.renderMock;
+    if (typeof oR === 'function') window.renderMock = function () {
+      var r = oR.apply(this, arguments);
+      try {
+        var sel = document.getElementById('mkpaper'), tm = document.getElementById('mktime');
+        if (sel) {
+          var o = sel.querySelector('option[value="ca"]');
+          if (o) o.textContent = LANG === 'hi' ? 'CA सेट (100 प्रश्न · 100 मिनट)' : 'Current Affairs set (100 Q · 100 min)';
+          var sync = function () {
+            if (!tm) return;
+            if (sel.value === 'ca') {
+              if (!tm.querySelector('option[value="100"]')) { var x = document.createElement('option'); x.value = '100'; x.textContent = '100'; tm.appendChild(x); }
+              tm.value = '100'; tm.disabled = true;
+            } else tm.disabled = false;
+          };
+          sel.addEventListener('change', sync); sync();
+        }
+      } catch (e) {}
+      return r;
+    };
+  }
+  apply();
+})();
