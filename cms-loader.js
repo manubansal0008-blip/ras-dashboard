@@ -514,6 +514,14 @@
   function addMaps() {
     var host = document.getElementById('newsbody');
     if (!host || typeof NEWS_BYDATE === 'undefined') return;
+    var vn = document.getElementById('view-news');
+    if (vn) {
+      vn.querySelectorAll('.small.muted, .muted.small').forEach(function (el) {
+        var tx = el.textContent.trim();
+        if (/^(Source|स्रोत)\s*:/i.test(tx)) el.remove();
+        else if (/The Hindu|Hindustan|TOI/.test(tx)) el.textContent = LANG === 'hi' ? 'द्विभाषी दैनिक समाचार सार। नीचे कैलेंडर से दिनांक चुनें।' : 'Bilingual daily news digest. Pick a date below.';
+      });
+    }
     var items = [];
     Object.keys(NEWS_BYDATE).forEach(function (k) { ((NEWS_BYDATE[k] || {}).digest || []).forEach(function (d) { if (d && d.map) items.push(d); }); });
     if (!items.length) return;
