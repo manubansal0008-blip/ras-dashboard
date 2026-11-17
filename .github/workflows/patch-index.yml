@@ -1,0 +1,36 @@
+name: Patch index cache-busting
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/patch-index.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Load cms-loader.js with a 10-minute version tag
+        run: |
+          python3 - <<'PY'
+          p = 'index.html'
+          s = open(p, encoding='utf-8').read()
+          old = '<script src="/cms-loader.js"></script>'
+          new = '<script>document.write(\'<script src="/cms-loader.js?t=\'+Math.floor(Date.now()/600000)+\'"><\\/script>\')</script>'
+          if old in s:
+              s = s.replace(old, new, 1)
+              open(p, 'w', encoding='utf-8').write(s)
+              print('patched')
+          else:
+              print('already patched or tag not found')
+          PY
+      - name: Commit
+        run: |
+          git config user.name "rrrshala-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then echo "No change"; else git commit -m "Load cms-loader.js with cache-busting version" && git push; fi
