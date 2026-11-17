@@ -507,3 +507,30 @@
   }
   init();
 })();
+
+// News maps: items with a "map" field ({lat, lon, zoom, label}) get a small location map under the card
+(function () {
+  function bbox(m) { var z = m.zoom || 5, d = 180 / Math.pow(2, z); return [m.lon - d, m.lat - d / 2, m.lon + d, m.lat + d / 2].map(function (x) { return x.toFixed(3); }).join(','); }
+  function addMaps() {
+    var host = document.getElementById('newsbody');
+    if (!host || typeof NEWS_BYDATE === 'undefined') return;
+    var items = [];
+    Object.keys(NEWS_BYDATE).forEach(function (k) { ((NEWS_BYDATE[k] || {}).digest || []).forEach(function (d) { if (d && d.map) items.push(d); }); });
+    if (!items.length) return;
+    host.querySelectorAll('.card').forEach(function (card) {
+      if (card.querySelector('.rrr-map')) return;
+      var b = card.querySelector('b'); if (!b) return;
+      var t = b.textContent.trim();
+      var d = items.filter(function (x) { return x.head_en === t || x.head_hi === t; })[0];
+      if (!d) return;
+      var m = d.map, box = document.createElement('div');
+      box.className = 'rrr-map'; box.style.cssText = 'margin-top:8px';
+      box.innerHTML = '<iframe title="map" loading="lazy" style="width:100%;height:230px;border:0;border-radius:10px" src="https://www.openstreetmap.org/export/embed.html?bbox=' + bbox(m) + '&layer=mapnik&marker=' + m.lat + ',' + m.lon + '"></iframe>' +
+        '<div class="small muted" style="margin-top:3px">📍 ' + (m.label || '') + '</div>';
+      (card.querySelector('ul') || card).insertAdjacentElement('afterend', box);
+    });
+  }
+  var ob = new MutationObserver(function () { clearTimeout(window.__rrrMapT); window.__rrrMapT = setTimeout(addMaps, 150); });
+  function start() { ob.observe(document.body, { childList: true, subtree: true }); addMaps(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
