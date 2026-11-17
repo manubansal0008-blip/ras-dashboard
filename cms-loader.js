@@ -167,11 +167,11 @@
     window.renderDailyQuiz = function () {
       try {
         var hi = LANG === 'hi', dd = Object.keys(DD_DATES).sort(), last = dd[dd.length - 1];
-        var list = (last ? DD_DATES[last].ids : []).map(function (id) { return BYID[id]; }).filter(Boolean).slice(0, 5);
+        var list = (last ? DD_DATES[last].ids : []).map(function (id) { return BYID[id]; }).filter(Boolean).slice(0, 10);
         if (!list.length) return orig.apply(this, arguments);
         var lbl = hi ? DD_DATES[last].label_hi : DD_DATES[last].label_en;
         document.getElementById('view-dailyquiz').innerHTML = '<div class="card"><h2 class="h-sec">' + t('dailyquiz') + '</h2><p class="small muted">' +
-          (hi ? 'आज की समसामयिकी से 5 त्वरित प्रश्न — तुरंत उत्तर व व्याख्या।' : "5 quick questions from today's current affairs — instant answers and explanations.") +
+          (hi ? 'आज की समसामयिकी से त्वरित प्रश्न (राष्ट्रीय + राजस्थान) — तुरंत उत्तर व व्याख्या।' : "Quick questions from today's current affairs (National + Rajasthan) — instant answers and explanations.") +
           '</p><div class="small muted" style="margin-top:6px">' + list.length + ' ' + t('qs') + ' · ' + lbl + '</div></div>' +
           list.map(function (q) { return qCard(q); }).join('');
       } catch (e) { return orig.apply(this, arguments); }
