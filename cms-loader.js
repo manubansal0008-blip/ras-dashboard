@@ -371,8 +371,8 @@
 (function () {
   var FLASH = {
     until: '2026-12-06',
-    en: 'NEW: October 2026 Current Affairs Quiz — RPSC-level questions. Attempt now →',
-    hi: 'नया: अक्टूबर 2026 करंट अफेयर्स क्विज़ — RPSC स्तर के प्रश्न। अभी हल करें →',
+    en: 'NEW: October 2026 Current Affairs Quiz. Attempt now →',
+    hi: 'नया: अक्टूबर 2026 करंट अफेयर्स क्विज़। अभी हल करें →',
     view: 'caquiz', code: 'OCT'
   };
   function showFlash() {
@@ -460,7 +460,7 @@
         el.querySelectorAll('p').forEach(function (p) { if (/Copying\/downloading|कॉपी\/डाउनलोड/.test(p.textContent)) p.remove(); });
         if (window.__caMode && !window.__sjActive) {
           var h = el.querySelector('h2.h-sec'); if (h) h.textContent = label();
-          var ds = h && h.nextElementSibling; if (ds) ds.textContent = hi ? 'RPSC स्तर के मासिक करंट अफेयर्स प्रश्न। माह व प्रश्न-संख्या चुनकर क्विज़ शुरू करें।' : 'Monthly current affairs questions at RPSC level. Choose a month and set size, then start the quiz.';
+          var ds = h && h.nextElementSibling; if (ds) ds.textContent = hi ? 'मासिक करंट अफेयर्स प्रश्न। माह व प्रश्न-संख्या चुनकर क्विज़ शुरू करें।' : 'Monthly current affairs questions. Choose a month and set size, then start the quiz.';
         }
         if (window.__caMode) { var vt = document.getElementById('vtitle'); if (vt) vt.textContent = label(); }
       } catch (e) {}
