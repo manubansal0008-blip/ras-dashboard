@@ -28,6 +28,19 @@ jobs:
           else:
               print('already patched or tag not found')
           PY
+      - name: Hide stale homepage news until fresh news loads
+        run: |
+          python3 - <<'PY'
+          p = 'index.html'
+          s = open(p, encoding='utf-8').read()
+          snip = r'''<style id="rrrLatestHide">#latest-en>*,#latest-hi>*{visibility:hidden}#latest-en::before,#latest-hi::before{content:"Loading today\2019s news\2026";display:block;padding:12px;color:#667}</style><script>/*rrr-fast-latest*/(function(){function rm(){document.querySelectorAll('#rrrLatestHide').forEach(function(x){x.remove()})}setTimeout(rm,9000);document.addEventListener('DOMContentLoaded',function(){var ok=false;['en','hi'].forEach(function(L){var b=document.getElementById('latest-'+L),c=null;try{c=localStorage.getItem('rrrLatest_'+L)}catch(e){}if(b&&c){b.innerHTML=c;ok=true}});if(ok)rm()})})();</script>'''
+          if 'rrr-fast-latest' not in s and '</head>' in s:
+              s = s.replace('</head>', snip + '</head>', 1)
+              open(p, 'w', encoding='utf-8').write(s)
+              print('head patched')
+          else:
+              print('head already patched')
+          PY
       - name: Commit
         run: |
           git config user.name "rrrshala-bot"
