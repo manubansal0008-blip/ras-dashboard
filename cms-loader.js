@@ -1,3 +1,5 @@
+/* fast-latest: hide stale static news until fresh CMS news is ready; show cached copy instantly */
+(function(){try{var st=document.createElement('style');st.id='rrrLatestHide';st.textContent='#latest-en>*,#latest-hi>*{visibility:hidden}#latest-en::before,#latest-hi::before{content:"Loading today\u2019s news\u2026";display:block;padding:12px;color:#667}';var shown=false;['en','hi'].forEach(function(L){var b=document.getElementById('latest-'+L),c=null;try{c=localStorage.getItem('rrrLatest_'+L)}catch(e){}if(b&&c){b.innerHTML=c;shown=true;}});if(!shown)document.head.appendChild(st);window.__rrrRevealLatest=function(){var x=document.getElementById('rrrLatestHide');if(x)x.remove();['en','hi'].forEach(function(L){var b=document.getElementById('latest-'+L);if(b)try{localStorage.setItem('rrrLatest_'+L,b.innerHTML)}catch(e){}});};setTimeout(function(){var x=document.getElementById('rrrLatestHide');if(x)x.remove();},8000);}catch(e){}})();
 /* RRR Shala CMS loader — merges admin-panel content (Firestore "cms") into the site,
    (no admin button is shown on the public site). Add before </body> in index.html:
    <script src="/cms-loader.js"></script>                                              */
@@ -157,6 +159,7 @@
         box.innerHTML = '<h2>' + (hi ? 'आज की ख़बरें · ' : 'Today’s News · ') + esc(lbl) + '</h2>' + arts +
           '<nav aria-label="' + navT + '" style="border-top:1px solid var(--line);margin-top:14px;padding-top:12px"><h2 style="font-size:15px;margin:0 0 8px">' + navT + '</h2><div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px">' + chips + '</div>' + links + '</nav>';
       });
+      if (window.__rrrRevealLatest) window.__rrrRevealLatest();
     } catch (e) { console.warn('latest refresh failed', e); }
   }
 
