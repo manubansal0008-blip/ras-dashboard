@@ -152,7 +152,7 @@
         var lbl = hi ? (z.label_hi || last) : (z.label_en || last);
         var arts = (z.digest || []).map(function (it) {
           var pts = it['points' + k] || it.points_en || [];
-          return '<article class="card"><h3>' + esc(it['head' + k] || it.head_en) + '</h3><ul>' + pts.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul></article>';
+          return '<article class="card"><h3>' + esc(it['head' + k] || it.head_en) + '</h3><ul>' + pts.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' + (it.map ? (function (m) { var d = 0.6 * Math.pow(2, 8 - (m.zoom || 8)); var bb = [m.lon - d, m.lat - d * 0.6, m.lon + d, m.lat + d * 0.6].map(function (x) { return (+x).toFixed(4); }).join(','); return '<div class="rrr-map" style="margin-top:8px"><iframe title="map" loading="lazy" style="width:100%;height:230px;border:0;border-radius:10px" src="https://www.openstreetmap.org/export/embed.html?bbox=' + bb + '&layer=mapnik&marker=' + m.lat + ',' + m.lon + '"></iframe><div class="small muted" style="margin-top:3px">📍 ' + esc(m.label || '') + '</div></div>'; })(it.map) : '') + '</article>';
         }).join('');
         var chips = qd.map(function (d) { var e = DD_DATES[d]; return '<a href="/' + (hi ? 'hi/' : '') + 'current-affairs/' + d + '/" style="' + CH + '">' + esc(hi ? e.label_hi : e.label_en) + '</a>'; }).join('');
         var navT = hi ? 'हाल की दैनिक प्रस्तुतियाँ' : 'Recent daily editions';
