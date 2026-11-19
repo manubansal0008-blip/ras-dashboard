@@ -152,7 +152,7 @@
         var lbl = hi ? (z.label_hi || last) : (z.label_en || last);
         var arts = (z.digest || []).map(function (it) {
           var pts = it['points' + k] || it.points_en || [];
-          return '<article class="card"><h3>' + esc(it['head' + k] || it.head_en) + '</h3><ul>' + pts.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' + (it.map ? (function (m) { var d = 0.6 * Math.pow(2, 8 - (m.zoom || 8)); var bb = [m.lon - d, m.lat - d * 0.6, m.lon + d, m.lat + d * 0.6].map(function (x) { return (+x).toFixed(4); }).join(','); return '<div class="rrr-map" style="margin-top:8px"><iframe title="map" loading="lazy" style="width:100%;height:230px;border:0;border-radius:10px" src="https://www.openstreetmap.org/export/embed.html?bbox=' + bb + '&layer=mapnik&marker=' + m.lat + ',' + m.lon + '"></iframe><div class="small muted" style="margin-top:3px">📍 ' + esc(m.label || '') + '</div></div>'; })(it.map) : '') + '</article>';
+          return '<article class="card"><h3>' + esc(it['head' + k] || it.head_en) + '</h3><ul>' + pts.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' + (it.map ? (function (m) { var d = 0.6 * Math.pow(2, 8 - (m.zoom || 8)); var bb = [m.lon - d, m.lat - d * 0.6, m.lon + d, m.lat + d * 0.6].map(function (x) { return (+x).toFixed(4); }).join(','); return '<div class="rrr-map" style="margin-top:8px"><iframe title="map" loading="lazy" style="width:100%;height:230px;border:0;border-radius:10px" src="https://www.openstreetmap.org/export/embed.html?bbox=' + bb + '&layer=mapnik&marker=' + m.lat + ',' + m.lon + '"></iframe><div class="small muted" style="margin-top:3px">📍 ' + esc(m.label || '') + '</div></div>'; })(it.map) : '') + (window.rrrInfo ? window.rrrInfo(it, hi) : '') + '</article>';
         }).join('');
         var chips = qd.map(function (d) { var e = DD_DATES[d]; return '<a href="/' + (hi ? 'hi/' : '') + 'current-affairs/' + d + '/" style="' + CH + '">' + esc(hi ? e.label_hi : e.label_en) + '</a>'; }).join('');
         var navT = hi ? 'हाल की दैनिक प्रस्तुतियाँ' : 'Recent daily editions';
@@ -544,4 +544,35 @@
   var ob = new MutationObserver(function () { clearTimeout(window.__rrrMapT); window.__rrrMapT = setTimeout(addMaps, 150); });
   function start() { ob.observe(document.body, { childList: true, subtree: true }); addMaps(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+
+/* rrr-info: mind-map / infographic card for news items that carry an "info" field */
+(function () {
+  var COL = ['#2563eb', '#059669', '#d97706', '#dc2626', '#7c3aed', '#0891b2'];
+  function e(x) { return String(x == null ? '' : x).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  window.rrrInfo = function (it, hi) {
+    var f = it && it.info; if (!f) return '';
+    var c = hi ? (f.c_hi || f.c_en) : f.c_en, br = (hi ? (f.b_hi || f.b_en) : f.b_en) || [];
+    return '<div class="rrr-info" style="margin-top:10px;border:1px solid #e6e1d6;border-radius:12px;padding:12px;background:#fbfaf6">' +
+      '<div style="text-align:center;margin-bottom:10px"><span style="display:inline-block;background:#1f2a44;color:#fff;font-weight:700;padding:7px 14px;border-radius:999px;font-size:14px">🧠 ' + e(c) + '</span></div>' +
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px">' +
+      br.map(function (b, i) { var col = COL[i % COL.length]; return '<div style="border-top:4px solid ' + col + ';background:#fff;border-radius:10px;padding:8px 10px;box-shadow:0 1px 2px rgba(0,0,0,.06)"><div style="font-weight:700;color:' + col + ';font-size:13px;margin-bottom:4px">' + e(b.t) + '</div><ul style="margin:0;padding-left:16px;font-size:12.5px;line-height:1.45">' + (b.l || []).map(function (x) { return '<li>' + e(x) + '</li>'; }).join('') + '</ul></div>'; }).join('') +
+      '</div></div>';
+  };
+  function addInfo() {
+    var host = document.getElementById('newsbody'); if (!host || typeof NEWS_BYDATE === 'undefined') return;
+    var items = []; Object.keys(NEWS_BYDATE).forEach(function (k) { ((NEWS_BYDATE[k] || {}).digest || []).forEach(function (d) { if (d && d.info) items.push(d); }); });
+    if (!items.length) return;
+    host.querySelectorAll('.card').forEach(function (card) {
+      if (card.querySelector('.rrr-info')) return;
+      var b = card.querySelector('b'); if (!b) return; var t = b.textContent.trim();
+      var d = items.filter(function (x) { return x.head_en === t || x.head_hi === t; })[0]; if (!d) return;
+      var hi = d.head_hi === t && d.head_en !== t;
+      var w = document.createElement('div'); w.innerHTML = window.rrrInfo(d, hi);
+      var anchor = card.querySelector('.rrr-map') || card.querySelector('ul') || b;
+      anchor.insertAdjacentElement('afterend', w.firstChild);
+    });
+  }
+  var tm = null;
+  try { new MutationObserver(function () { if (tm) return; tm = setTimeout(function () { tm = null; try { addInfo(); } catch (x) {} }, 300); }).observe(document.body, { childList: true, subtree: true }); } catch (x) {}
 })();
