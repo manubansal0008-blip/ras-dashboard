@@ -150,9 +150,9 @@
         var hi = L === 'hi', k = hi ? '_hi' : '_en';
         var links = box.querySelector('nav div[style*="font-size:13px"]'); links = links ? links.outerHTML : '';
         var lbl = hi ? (z.label_hi || last) : (z.label_en || last);
-        var arts = (z.digest || []).map(function (it) {
+        var arts = (z.digest || []).map(function (it, ix) {
           var pts = it['points' + k] || it.points_en || [];
-          return '<article class="card"><h3>' + esc(it['head' + k] || it.head_en) + '</h3><ul>' + pts.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' + (it.map ? (function (m) { var d = 0.6 * Math.pow(2, 8 - (m.zoom || 8)); var bb = [m.lon - d, m.lat - d * 0.6, m.lon + d, m.lat + d * 0.6].map(function (x) { return (+x).toFixed(4); }).join(','); return '<div class="rrr-map" style="margin-top:8px"><iframe title="map" loading="lazy" style="width:100%;height:230px;border:0;border-radius:10px" src="https://www.openstreetmap.org/export/embed.html?bbox=' + bb + '&layer=mapnik&marker=' + m.lat + ',' + m.lon + '"></iframe><div class="small muted" style="margin-top:3px">📍 ' + esc(m.label || '') + '</div></div>'; })(it.map) : '') + (window.rrrInfo ? window.rrrInfo(it, hi) : '') + '</article>';
+          return '<article class="card"><h3>' + esc(it['head' + k] || it.head_en) + '</h3><ul>' + pts.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' + (it.map ? (function (m) { var d = 0.6 * Math.pow(2, 8 - (m.zoom || 8)); var bb = [m.lon - d, m.lat - d * 0.6, m.lon + d, m.lat + d * 0.6].map(function (x) { return (+x).toFixed(4); }).join(','); return '<div class="rrr-map" style="margin-top:8px"><iframe title="map" loading="lazy" style="width:100%;height:230px;border:0;border-radius:10px" src="https://www.openstreetmap.org/export/embed.html?bbox=' + bb + '&layer=mapnik&marker=' + m.lat + ',' + m.lon + '"></iframe><div class="small muted" style="margin-top:3px">📍 ' + esc(m.label || '') + '</div></div>'; })(it.map) : '') + (window.rrrInfo ? window.rrrInfo(it, hi, ix) : '') + '</article>';
         }).join('');
         var chips = qd.map(function (d) { var e = DD_DATES[d]; return '<a href="/' + (hi ? 'hi/' : '') + 'current-affairs/' + d + '/" style="' + CH + '">' + esc(hi ? e.label_hi : e.label_en) + '</a>'; }).join('');
         var navT = hi ? 'हाल की दैनिक प्रस्तुतियाँ' : 'Recent daily editions';
@@ -550,25 +550,66 @@
 (function () {
   var COL = ['#2563eb', '#059669', '#d97706', '#dc2626', '#7c3aed', '#0891b2'];
   function e(x) { return String(x == null ? '' : x).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-  window.rrrInfo = function (it, hi) {
+  var STY = ['tiles', 'radial', 'spine', 'flow', 'table', 'band'];
+  function lis(l, fs) { return (l || []).map(function (x) { return '<li>' + e(x) + '</li>'; }).join(''); }
+  window.rrrInfo = function (it, hi, ix) {
     var f = it && it.info; if (!f) return '';
     var c = hi ? (f.c_hi || f.c_en) : f.c_en, br = (hi ? (f.b_hi || f.b_en) : f.b_en) || [];
-    return '<div class="rrr-info" style="margin-top:10px;border:1px solid #e6e1d6;border-radius:12px;padding:12px;background:#fbfaf6">' +
+    var h = 0; String(f.c_en || '').split('').forEach(function (ch) { h = (h * 31 + ch.charCodeAt(0)) % 997; });
+    var st = f.s || STY[(typeof ix === 'number' ? ix : h) % STY.length];
+    var wrap = 'class="rrr-info" data-style="' + st + '" style="margin-top:10px;border-radius:12px;';
+    if (st === 'radial') {
+      var pos = ['1/1', '1/3', '3/1', '3/3', '2/1', '2/3'];
+      return '<div ' + wrap + 'padding:12px;background:#f7f9fc;border:1px solid #dfe6f1">' +
+        '<div style="display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:auto auto auto;gap:8px;align-items:center">' +
+        '<div style="grid-area:2/2;justify-self:center;width:118px;height:118px;border-radius:50%;background:radial-gradient(circle,#1f2a44,#34466e);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;font-size:13px;padding:10px;box-shadow:0 0 0 6px #dfe6f1">' + e(c) + '</div>' +
+        br.slice(0, 6).map(function (b, i) { var col = COL[i % COL.length]; return '<div style="grid-area:' + pos[i] + ';background:#fff;border:2px solid ' + col + ';border-radius:14px;padding:7px 9px"><div style="font-weight:700;color:' + col + ';font-size:12.5px">' + e(b.t) + '</div><ul style="margin:3px 0 0;padding-left:15px;font-size:12px;line-height:1.4">' + lis(b.l) + '</ul></div>'; }).join('') +
+        '</div></div>';
+    }
+    if (st === 'spine') {
+      return '<div ' + wrap + 'padding:12px 12px 6px;background:#fffdf7;border:1px dashed #d8c9a3">' +
+        '<div style="font-weight:800;font-size:14px;color:#7a4b00;margin-bottom:8px">🌳 ' + e(c) + '</div>' +
+        '<div style="border-left:3px solid #d8c9a3;margin-left:8px;padding-left:14px">' +
+        br.map(function (b, i) { var col = COL[i % COL.length]; return '<div style="position:relative;margin-bottom:10px"><span style="position:absolute;left:-22px;top:3px;width:13px;height:13px;border-radius:50%;background:' + col + ';border:2px solid #fffdf7"></span><b style="color:' + col + ';font-size:13px">' + e(b.t) + '</b><div style="font-size:12.5px;color:#333;line-height:1.45">' + (b.l || []).map(e).join(' &nbsp;•&nbsp; ') + '</div></div>'; }).join('') +
+        '</div></div>';
+    }
+    if (st === 'flow') {
+      return '<div ' + wrap + 'padding:12px;background:#f3fbf7;border:1px solid #cfe9dc">' +
+        '<div style="text-align:left;font-weight:800;color:#065f46;font-size:14px;margin-bottom:8px">➤ ' + e(c) + '</div>' +
+        '<div style="display:flex;flex-wrap:wrap;gap:6px;align-items:stretch">' +
+        br.map(function (b, i) { var col = COL[(i + 1) % COL.length]; return (i ? '<div style="align-self:center;font-size:18px;color:#94a3b8">➜</div>' : '') + '<div style="flex:1 1 140px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)"><div style="background:' + col + ';color:#fff;font-weight:700;font-size:12.5px;padding:5px 9px">' + (i + 1) + '. ' + e(b.t) + '</div><ul style="margin:6px 0;padding-left:20px;font-size:12px;line-height:1.4">' + lis(b.l) + '</ul></div>'; }).join('') +
+        '</div></div>';
+    }
+    if (st === 'table') {
+      return '<div ' + wrap + 'overflow:hidden;border:1px solid #e5e7eb;background:#fff">' +
+        '<div style="background:#7c3aed;color:#fff;font-weight:700;padding:8px 12px;font-size:14px">📋 ' + e(c) + '</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:12.5px">' +
+        br.map(function (b, i) { return '<tr style="background:' + (i % 2 ? '#faf5ff' : '#fff') + '"><td style="padding:7px 10px;font-weight:700;color:#5b21b6;width:32%;vertical-align:top;border-top:1px solid #ede9fe">' + e(b.t) + '</td><td style="padding:7px 10px;border-top:1px solid #ede9fe;line-height:1.45">' + (b.l || []).map(e).join('<br>') + '</td></tr>'; }).join('') +
+        '</table></div>';
+    }
+    if (st === 'band') {
+      return '<div ' + wrap + 'overflow:hidden;background:#fff;border:1px solid #fde2c4">' +
+        '<div style="background:linear-gradient(90deg,#f59e0b,#ef4444);color:#fff;padding:10px 12px;font-weight:800;font-size:15px">⚡ ' + e(c) + '</div>' +
+        '<div style="padding:8px 12px">' +
+        br.map(function (b, i) { var col = COL[(i + 2) % COL.length]; return '<div style="display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-bottom:' + (i < br.length - 1 ? '1px dotted #f3d9b5' : '0') + '"><span style="flex:0 0 auto;background:' + col + '1a;color:' + col + ';border:1px solid ' + col + ';border-radius:999px;padding:2px 9px;font-size:12px;font-weight:700">' + e(b.t) + '</span><span style="font-size:12.5px;line-height:1.5">' + (b.l || []).map(e).join(' · ') + '</span></div>'; }).join('') +
+        '</div></div>';
+    }
+    return '<div ' + wrap + 'border:1px solid #e6e1d6;padding:12px;background:#fbfaf6">' +
       '<div style="text-align:center;margin-bottom:10px"><span style="display:inline-block;background:#1f2a44;color:#fff;font-weight:700;padding:7px 14px;border-radius:999px;font-size:14px">🧠 ' + e(c) + '</span></div>' +
       '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px">' +
-      br.map(function (b, i) { var col = COL[i % COL.length]; return '<div style="border-top:4px solid ' + col + ';background:#fff;border-radius:10px;padding:8px 10px;box-shadow:0 1px 2px rgba(0,0,0,.06)"><div style="font-weight:700;color:' + col + ';font-size:13px;margin-bottom:4px">' + e(b.t) + '</div><ul style="margin:0;padding-left:16px;font-size:12.5px;line-height:1.45">' + (b.l || []).map(function (x) { return '<li>' + e(x) + '</li>'; }).join('') + '</ul></div>'; }).join('') +
+      br.map(function (b, i) { var col = COL[i % COL.length]; return '<div style="border-top:4px solid ' + col + ';background:#fff;border-radius:10px;padding:8px 10px;box-shadow:0 1px 2px rgba(0,0,0,.06)"><div style="font-weight:700;color:' + col + ';font-size:13px;margin-bottom:4px">' + e(b.t) + '</div><ul style="margin:0;padding-left:16px;font-size:12.5px;line-height:1.45">' + lis(b.l) + '</ul></div>'; }).join('') +
       '</div></div>';
   };
   function addInfo() {
     var host = document.getElementById('newsbody'); if (!host || typeof NEWS_BYDATE === 'undefined') return;
     var items = []; Object.keys(NEWS_BYDATE).forEach(function (k) { ((NEWS_BYDATE[k] || {}).digest || []).forEach(function (d) { if (d && d.info) items.push(d); }); });
     if (!items.length) return;
-    host.querySelectorAll('.card').forEach(function (card) {
+    host.querySelectorAll('.card').forEach(function (card, ci) {
       if (card.querySelector('.rrr-info')) return;
       var b = card.querySelector('b'); if (!b) return; var t = b.textContent.trim();
       var d = items.filter(function (x) { return x.head_en === t || x.head_hi === t; })[0]; if (!d) return;
       var hi = d.head_hi === t && d.head_en !== t;
-      var w = document.createElement('div'); w.innerHTML = window.rrrInfo(d, hi);
+      var w = document.createElement('div'); w.innerHTML = window.rrrInfo(d, hi, ci);
       var anchor = card.querySelector('.rrr-map') || card.querySelector('ul') || b;
       anchor.insertAdjacentElement('afterend', w.firstChild);
     });
